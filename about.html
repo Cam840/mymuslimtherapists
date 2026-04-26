@@ -59,8 +59,10 @@ h2.sec-title em{font-style:italic;color:var(--green)}
 .page-hero h1 em{font-style:italic;color:var(--gold-light)}
 .page-hero-sub{font-size:17px;color:rgba(255,255,255,.75);line-height:1.7;max-width:480px;font-weight:300}
 .page-hero-right{position:relative;overflow:hidden}
-/* geometric pattern right panel */
-.page-hero-art{position:absolute;inset:0}
+.page-hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.page-hero-photo-quote{position:absolute;bottom:0;left:0;right:0;padding:32px 40px;background:linear-gradient(to top, rgba(31,63,48,0.92) 0%, rgba(31,63,48,0) 100%)}
+.page-hero-photo-quote p{font-family:var(--fd);font-size:20px;font-style:italic;font-weight:300;color:var(--white);line-height:1.5;margin-bottom:6px}
+.page-hero-photo-quote span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light)}
 
 /* PROFILE SPLIT */
 .profile-split{display:grid;grid-template-columns:420px 1fr;background:var(--white)}
@@ -214,51 +216,10 @@ footer{background:var(--ink);color:#aaa;padding:72px 80px 32px}
       </div>
     </div>
     <div class="page-hero-right">
-      <div class="page-hero-art">
-        <svg width="100%" height="100%" viewBox="0 0 520 580" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <rect width="520" height="580" fill="#1f3f30"/>
-          <!-- Large geometric rings -->
-          <g stroke="#ffffff" stroke-width="0.5" opacity="0.08" fill="none">
-            <circle cx="260" cy="290" r="240"/>
-            <circle cx="260" cy="290" r="190"/>
-            <circle cx="260" cy="290" r="140"/>
-            <circle cx="260" cy="290" r="90"/>
-            <!-- Intersecting lines -->
-            <line x1="260" y1="50" x2="260" y2="530"/>
-            <line x1="20" y1="290" x2="500" y2="290"/>
-            <line x1="85" y1="115" x2="435" y2="465"/>
-            <line x1="435" y1="115" x2="85" y2="465"/>
-          </g>
-          <!-- Gold arabesque motifs -->
-          <g stroke="#b8963e" stroke-width="0.7" opacity="0.22" fill="none">
-            <!-- Top corner flourish -->
-            <path d="M 0 0 Q 80 0 80 80 Q 80 0 160 0"/>
-            <path d="M 0 0 Q 0 80 80 80 Q 0 80 0 160"/>
-            <path d="M 15 15 Q 70 15 70 70 Q 70 15 130 15"/>
-            <!-- Bottom corner -->
-            <path d="M 520 580 Q 440 580 440 500 Q 440 580 360 580"/>
-            <path d="M 520 580 Q 520 500 440 500 Q 520 500 520 420"/>
-          </g>
-          <!-- Central crescent -->
-          <g transform="translate(260,255)">
-            <defs><mask id="phm"><rect x="-100" y="-100" width="200" height="200" fill="white"/><circle cx="28" cy="-20" r="66" fill="black"/></mask></defs>
-            <circle cx="0" cy="0" r="78" fill="white" opacity="0.88" mask="url(#phm)"/>
-            <path d="M -25 18 Q 0 36 25 18" stroke="#2d5a45" stroke-width="3" fill="none" stroke-linecap="round"/>
-            <circle cx="-18" cy="4" r="4.5" fill="#2d5a45"/>
-            <circle cx="12" cy="-4" r="4.5" fill="#2d5a45"/>
-          </g>
-          <!-- Stars -->
-          <g fill="#b8963e" opacity="0.6">
-            <circle cx="80" cy="80" r="3"/>
-            <circle cx="440" cy="120" r="2.5"/>
-            <circle cx="100" cy="460" r="2"/>
-            <circle cx="460" cy="440" r="3"/>
-            <circle cx="260" cy="60" r="2"/>
-          </g>
-          <!-- Quote at bottom -->
-          <text x="260" y="440" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="17" font-style="italic" fill="white" opacity="0.8">"Healing is not a luxury — it's a right."</text>
-          <line x1="100" y1="460" x2="420" y2="460" stroke="#b8963e" stroke-width="0.5" opacity="0.25"/>
-        </svg>
+      <img src="images/muslim1.jpg" alt="Amna Ahmad, LPC">
+      <div class="page-hero-photo-quote">
+        <p>"Healing is not a luxury — it's a right."</p>
+        <span>— Amna Ahmad, LPC</span>
       </div>
     </div>
   </div>
