@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Muslim Therapists | Mental Health Care in Johns Creek, GA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf9f7;
+    --bg2: #f3f0eb;
+    --ink: #1a1a18;
+    --ink-mid: #4a4a45;
+    --ink-light: #9a9a94;
+    --green: #2d5a45;
+    --green-light: #3d7a5f;
+    --gold: #b8963e;
+    --gold-light: #d4af6a;
+    --cream: #f7f3ec;
+    --white: #ffffff;
+    --border: #e4e0d8;
+    --radius: 2px;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  /* ── GEO PATTERN ── */
+  .geo-bg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cg fill='none' stroke='%23b8963e' stroke-width='0.4' opacity='0.18'%3E%3Cpolygon points='30,2 58,16 58,44 30,58 2,44 2,16'/%3E%3Cpolygon points='30,10 50,20 50,40 30,50 10,40 10,20'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 60px 60px;
+  }
+
+  /* ── NAV ── */
+  .top-bar {
+    background: var(--green);
+    color: #c9e8d8;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-align: center;
+    padding: 8px 24px;
+    font-weight: 400;
+  }
+  .top-bar a { color: var(--gold-light); text-decoration: none; }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    height: 68px;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  .nav-logo-icon {
+    width: 38px;
+    height: 38px;
+    background: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .nav-logo-icon svg { width: 20px; height: 20px; }
+  .nav-logo-text {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+  }
+  .nav-logo-text span { color: var(--green); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: var(--ink-mid);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--green); }
+
+  .nav-cta {
+    background: var(--green);
+    color: var(--white) !important;
+    padding: 10px 22px;
+    border-radius: var(--radius);
+    transition: background 0.2s !important;
+    font-weight: 400 !important;
+  }
+  .nav-cta:hover { background: var(--green-light) !important; color: var(--white) !important; }
+
+  /* ── QUICK LINKS SUB-NAV ── */
+  .quick-nav {
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    overflow-x: auto;
+  }
+  .quick-nav a {
+    font-size: 12px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-right: 1px solid var(--border);
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+    font-weight: 400;
+  }
+  .quick-nav a:first-child { border-left: 1px solid var(--border); }
+  .quick-nav a:hover { background: var(--green); color: var(--white); }
+
+  /* ── HERO ── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    min-height: 560px;
+    background: var(--white);
+    overflow: hidden;
+  }
+  .hero-content {
+    padding: 72px 64px 72px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+  }
+  .hero-breadcrumb {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .hero-breadcrumb::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 1.12;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--green);
+  }
+  .hero-sub {
+    font-size: 16px;
+    color: var(--ink-mid);
+    font-weight: 300;
+    max-width: 480px;
+    line-height: 1.7;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .btn-primary {
+    background: var(--green);
+    color: var(--white);
+    padding: 14px 28px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: inline-block;
+    font-weight: 400;
+  }
+  .btn-primary:hover { background: var(--green-light); }
+  .btn-outline {
+    background: transparent;
+    color: var(--green);
+    padding: 13px 28px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--green);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-block;
+    font-weight: 400;
+  }
+  .btn-outline:hover { background: var(--green); color: var(--white); }
+
+  .hero-image {
+    background: var(--green);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='0.5' opacity='0.1'%3E%3Cpolygon points='40,2 78,21 78,59 40,78 2,59 2,21'/%3E%3Cpolygon points='40,12 68,27 68,53 40,68 12,53 12,27'/%3E%3Cpolygon points='40,22 58,33 58,47 40,58 22,47 22,33'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 80px 80px;
+  }
+  .hero-image-inner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 48px;
+    text-align: center;
+  }
+  .hero-crescent {
+    width: 80px;
+    height: 80px;
+    opacity: 0.7;
+  }
+  .hero-image-text {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.5;
+  }
+  .hero-image-quote {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+  }
+
+  /* ── SECTION GENERIC ── */
+  section { padding: 88px 80px; }
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+  }
+  h2.section-title {
+    font-family: var(--font-display);
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1.18;
+    color: var(--ink);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  h2.section-title em { font-style: italic; color: var(--green); }
+  .section-desc {
+    color: var(--ink-mid);
+    font-size: 15px;
+    max-width: 580px;
+    line-height: 1.75;
+    font-weight: 300;
+  }
+  .divider {
+    width: 48px;
+    height: 1px;
+    background: var(--gold);
+    margin: 24px 0;
+  }
+
+  /* ── MEET THE DIRECTOR ── */
+  .director-section {
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .director-img {
+    background: var(--bg2);
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .avatar-placeholder {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--white);
+  }
+  .director-content {
+    padding: 72px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+  .director-name {
+    font-family: var(--font-display);
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--ink);
+  }
+  .director-title {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .director-bio {
+    color: var(--ink-mid);
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 540px;
+    font-weight: 300;
+  }
+
+  /* ── TEAM GRID ── */
+  .team-section {
+    background: var(--bg2);
+    padding: 88px 80px;
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 2px;
+    margin-top: 48px;
+  }
+  .team-card {
+    background: var(--white);
+    padding: 32px 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+  }
+  .team-card:hover { background: var(--green); border-color: var(--green); }
+  .team-card:hover .tc-name, .team-card:hover .tc-cred, .team-card:hover .tc-role { color: var(--white); }
+  .team-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--bg2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 300;
+    color: var(--green);
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+  .team-card:hover .team-avatar { background: rgba(255,255,255,0.15); color: var(--white); border-color: rgba(255,255,255,0.3); }
+  .tc-name { font-family: var(--font-display); font-size: 18px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
+  .tc-cred { font-size: 12px; letter-spacing: 0.06em; color: var(--gold); font-weight: 500; margin-bottom: 6px; }
+  .tc-role { font-size: 12px; color: var(--ink-light); text-transform: uppercase; letter-spacing: 0.06em; }
+
+  .help-banner {
+    background: var(--green);
+    padding: 48px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .help-banner h3 {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--white);
+    font-style: italic;
+  }
+  .help-banner p { font-size: 14px; color: #c9e8d8; margin-top: 6px; }
+  .btn-gold {
+    background: var(--gold);
+    color: var(--white);
+    padding: 14px 32px;
+    font-size: 13px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .btn-gold:hover { background: var(--gold-light); }
+
+  /* ── SERVICES ── */
+  .services-section { background: var(--white); }
+  .services-intro { max-width: 640px; margin-bottom: 56px; }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .service-card {
+    background: var(--white);
+    padding: 36px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: background 0.2s;
+  }
+  .service-card:hover { background: var(--cream); }
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .service-icon svg { width: 28px; height: 28px; stroke: var(--green); fill: none; stroke-width: 1.5; }
+  .service-name {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .service-desc { font-size: 14px; color: var(--ink-mid); line-height: 1.7; font-weight: 300; }
+  .service-link { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); text-decoration: none; font-weight: 500; margin-top: auto; }
+  .service-link:hover { color: var(--green); }
+  .services-cta {
+    margin-top: 56px;
+    padding: 48px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .services-cta p {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--ink);
+  }
+
+  /* ── GROUP THERAPY ── */
+  .group-section {
+    background: var(--bg2);
+    padding: 88px 80px;
+  }
+  .group-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .group-card {
+    background: var(--white);
+    padding: 40px;
+    border-left: 3px solid var(--green);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .group-card h4 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .group-age {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    background: var(--cream);
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    width: fit-content;
+  }
+  .group-card p { font-size: 14px; color: var(--ink-mid); line-height: 1.75; font-weight: 300; }
+  .group-card a { font-size: 12px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--green); text-decoration: none; font-weight: 500; }
+
+  /* ── CONDITIONS ── */
+  .conditions-section {
+    background: var(--green);
+    padding: 88px 80px;
+  }
+  .conditions-section .section-label { color: var(--gold-light); }
+  .conditions-section .section-label::before { background: var(--gold-light); }
+  .conditions-section h2.section-title { color: var(--white); }
+  .conditions-section .section-desc { color: #c9e8d8; }
+  .conditions-section .divider { background: var(--gold-light); }
+  .conditions-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    margin-top: 48px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .condition-item {
+    background: rgba(255,255,255,0.04);
+    padding: 18px 20px;
+    font-size: 13px;
+    color: #c9e8d8;
+    letter-spacing: 0.02em;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .condition-item::before { content: '·'; color: var(--gold-light); font-size: 18px; flex-shrink: 0; }
+  .condition-item:hover { background: rgba(255,255,255,0.1); color: var(--white); }
+  .conditions-cta { margin-top: 48px; }
+
+  /* ── INSURANCE ── */
+  .insurance-section { background: var(--white); }
+  .insurance-intro { display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; margin-bottom: 56px; }
+  .insurance-intro-left { flex: 1; }
+  .insurance-intro-right { display: flex; flex-direction: column; gap: 12px; flex-shrink: 0; }
+  .insurance-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .insurance-item {
+    background: var(--white);
+    padding: 20px 24px;
+    font-size: 14px;
+    color: var(--ink-mid);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.2s;
+  }
+  .insurance-item::before { content: '✓'; color: var(--green); font-size: 12px; font-weight: 500; }
+  .insurance-item:hover { background: var(--cream); }
+
+  /* ── LOCATION ── */
+  .location-section {
+    background: var(--bg2);
+    padding: 88px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .location-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 40px;
+  }
+  .loc-block h4 {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .loc-block p, .loc-block a {
+    font-size: 15px;
+    color: var(--ink-mid);
+    text-decoration: none;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+  .loc-block a:hover { color: var(--green); }
+  .map-placeholder {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .map-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+  }
+  .map-icon { color: var(--green); }
+  .map-inner p { font-size: 13px; color: var(--ink-light); }
+  .map-inner a { font-size: 13px; color: var(--green); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; }
+  .social-links { display: flex; gap: 12px; flex-wrap: wrap; }
+  .social-links a {
+    font-size: 12px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    transition: all 0.2s;
+  }
+  .social-links a:hover { background: var(--green); color: var(--white); border-color: var(--green); }
+
+  /* ── MATCHING ── */
+  .match-section {
+    background: var(--ink);
+    padding: 88px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .match-section .section-label { color: var(--gold-light); }
+  .match-section .section-label::before { background: var(--gold-light); }
+  .match-section h2.section-title { color: var(--white); }
+  .match-section .section-desc { color: #aaa; }
+  .match-section .divider { background: var(--gold); }
+  .match-visual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .match-stat {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .match-stat-num {
+    font-family: var(--font-display);
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1;
+  }
+  .match-stat-label { font-size: 12px; color: #888; letter-spacing: 0.06em; text-transform: uppercase; }
+  .match-stat.accent { background: var(--green); border-color: var(--green); }
+  .match-stat.accent .match-stat-num { color: var(--white); }
+  .match-stat.accent .match-stat-label { color: #c9e8d8; }
+
+  /* ── BLOG ── */
+  .blog-section { background: var(--white); }
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-top: 48px;
+  }
+  .blog-card {
+    background: var(--white);
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .blog-card:hover { background: var(--cream); }
+  .blog-tag {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .blog-card h4 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .blog-card p { font-size: 14px; color: var(--ink-mid); line-height: 1.7; font-weight: 300; }
+  .blog-author { font-size: 12px; color: var(--ink-light); margin-top: auto; letter-spacing: 0.03em; }
+
+  /* ── CAREERS ── */
+  .careers-section {
+    background: var(--cream);
+    padding: 88px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .careers-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .career-badge {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 24px 28px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .career-badge-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .career-badge-icon svg { width: 22px; height: 22px; stroke: white; fill: none; stroke-width: 1.5; }
+  .career-badge h5 { font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 4px; font-family: var(--font-display); }
+  .career-badge p { font-size: 13px; color: var(--ink-mid); font-weight: 300; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    color: #aaa;
+    padding: 64px 80px 32px;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+  .footer-brand { display: flex; flex-direction: column; gap: 16px; }
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer-logo-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-logo-text {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--white);
+  }
+  .footer-tagline { font-size: 13px; color: #666; line-height: 1.7; font-weight: 300; }
+  .footer-col h5 {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul li a {
+    font-size: 13px;
+    color: #777;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 300;
+  }
+  .footer-col ul li a:hover { color: var(--white); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-bottom p { font-size: 12px; color: #555; }
+  .footer-bottom a { color: #666; text-decoration: none; }
+  .footer-bottom a:hover { color: var(--white); }
+  .crisis-banner {
+    background: rgba(184, 150, 62, 0.1);
+    border: 1px solid rgba(184, 150, 62, 0.2);
+    padding: 16px 24px;
+    margin-top: 32px;
+    font-size: 13px;
+    color: #999;
+    line-height: 1.6;
+  }
+  .crisis-banner a { color: var(--gold-light); }
+
+  /* ── FADE-IN ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up { animation: fadeUp 0.7s ease both; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+  .delay-4 { animation-delay: 0.45s; }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <a href="tel:+14703001234">(470) 300-1234</a> &nbsp;·&nbsp; 
+  Accepting New Clients &nbsp;·&nbsp; 
+  <a href="#location">Johns Creek, GA</a> &nbsp;·&nbsp; 
+  <a href="#portal">Client Portal</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+        <path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4"/>
+      </svg>
+    </div>
+    <span class="nav-logo-text">my<span>muslim</span>therapists</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#team">Our Therapists</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#conditions">Conditions</a></li>
+    <li><a href="#insurance">Insurance</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#schedule" class="nav-cta">Schedule Now</a></li>
+  </ul>
+</nav>
+
+<!-- QUICK LINKS -->
+<div class="quick-nav">
+  <a href="#team">Our Therapists</a>
+  <a href="#services">Services</a>
+  <a href="#insurance">Insurance</a>
+  <a href="#location">Contact</a>
+  <a href="#blog">Blog</a>
+  <a href="#careers">Careers</a>
+  <a href="#portal">Patient Portal</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-breadcrumb fade-up">Johns Creek, Georgia</div>
+    <h1 class="fade-up delay-1">
+      Mental Health Care<br>rooted in <em>faith,</em><br>community & trust.
+    </h1>
+    <p class="hero-sub fade-up delay-2">
+      Compassionate, culturally-informed therapy for Muslim individuals, couples, and families — in person or online.
+    </p>
+    <div class="hero-actions fade-up delay-3">
+      <a href="tel:+14703001234" class="btn-primary">Call: (470) 300-1234</a>
+      <a href="#schedule" class="btn-outline">Schedule Online</a>
+    </div>
+  </div>
+  <div class="hero-image geo-bg">
+    <div class="hero-image-inner">
+      <svg class="hero-crescent" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M65 20a35 35 0 1 0 0 60A28 28 0 0 1 65 20z" fill="white" opacity="0.85"/>
+        <circle cx="72" cy="22" r="3.5" fill="#b8963e" opacity="0.9"/>
+      </svg>
+      <p class="hero-image-text">"Verily, with hardship<br>comes ease."</p>
+      <p class="hero-image-quote">— Quran 94:5–6</p>
+    </div>
+  </div>
+</div>
+
+<!-- MEET THE DIRECTOR -->
+<div class="director-section">
+  <div class="director-img">
+    <div class="avatar-placeholder">FH</div>
+  </div>
+  <div class="director-content">
+    <div class="section-label">Clinic Director</div>
+    <div class="director-title">PhD, Licensed Psychologist · Clinical Director</div>
+    <div class="director-name">Dr. Fatima Hassan</div>
+    <div class="divider"></div>
+    <p class="director-bio">
+      Dr. Fatima is a licensed psychologist with over 15 years of experience supporting Muslim communities through culturally sensitive, evidence-based mental health care. As the daughter of immigrants and a practicing Muslim herself, she deeply understands the intersection of faith, family, and emotional wellbeing. She founded mymuslimtherapists to create a space where clients never have to explain their identity before beginning their healing journey.
+    </p>
+    <a href="#team" class="btn-outline" style="width:fit-content; margin-top:8px;">Meet the Full Team</a>
+  </div>
+</div>
+
+<!-- TEAM GRID -->
+<section class="team-section" id="team">
+  <div class="section-label">The Team</div>
+  <h2 class="section-title">Meet your <em>therapists</em></h2>
+  <p class="section-desc">Every member of our team is dedicated to providing culturally affirming, trauma-informed care in a judgment-free space.</p>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-avatar">AK</div>
+      <div class="tc-name">Aisha Karimi</div>
+      <div class="tc-cred">LMFT</div>
+      <div class="tc-role">Therapist</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">YA</div>
+      <div class="tc-name">Yusuf Abdallah</div>
+      <div class="tc-cred">LPC</div>
+      <div class="tc-role">Therapist</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">NR</div>
+      <div class="tc-name">Nadia Rahman</div>
+      <div class="tc-cred">PsyD</div>
+      <div class="tc-role">Therapist</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">OI</div>
+      <div class="tc-name">Omar Ibrahim</div>
+      <div class="tc-cred">LCSW</div>
+      <div class="tc-role">Clinical Supervisor</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">ZM</div>
+      <div class="tc-name">Zainab Malik</div>
+      <div class="tc-cred">LPC, CPCS</div>
+      <div class="tc-role">Clinical Supervisor</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">HA</div>
+      <div class="tc-name">Hana Al-Amin</div>
+      <div class="tc-cred">LMSW</div>
+      <div class="tc-role">Therapist</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">SQ</div>
+      <div class="tc-name">Samir Qureshi</div>
+      <div class="tc-cred">LAPC</div>
+      <div class="tc-role">Therapist</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">RI</div>
+      <div class="tc-name">Rania Idris</div>
+      <div class="tc-cred">MSW Intern</div>
+      <div class="tc-role">MSW Intern</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">TH</div>
+      <div class="tc-name">Tariq Hassan</div>
+      <div class="tc-cred">MSW Intern</div>
+      <div class="tc-role">MSW Intern</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">LA</div>
+      <div class="tc-name">Layla Ahmad</div>
+      <div class="tc-cred">LCSW</div>
+      <div class="tc-role">Therapist</div>
+    </div>
+  </div>
+</section>
+
+<!-- HELP BANNER -->
+<div class="help-banner">
+  <div>
+    <h3>Not sure who to choose? We'll help you find the right fit.</h3>
+    <p>Our care coordinators will match you based on your needs, availability, and preferences.</p>
+  </div>
+  <a href="tel:+14703001234" class="btn-gold">Call (470) 300-1234</a>
+</div>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="services-intro">
+    <div class="section-label">What We Offer</div>
+    <h2 class="section-title">Therapy services in <em>Johns Creek</em></h2>
+    <div class="divider"></div>
+    <p class="section-desc">
+      mymuslimtherapists offers a full range of counseling services designed to meet your unique mental health needs — while honoring your faith, culture, and identity. We provide care in person and online.
+    </p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/></svg>
+      </div>
+      <div class="service-name">Individual Therapy</div>
+      <p class="service-desc">One-on-one sessions with a therapist who provides care personalized to your needs — whether you're managing a mental health condition, navigating a life change, or seeking personal growth.</p>
+      <a href="#" class="service-link">Learn More →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="4"/><circle cx="16" cy="8" r="4"/><path d="M2 20c0-3 2.69-5.5 6-5.5h8c3.31 0 6 2.5 6 5.5"/></svg>
+      </div>
+      <div class="service-name">Couples Therapy</div>
+      <p class="service-desc">Build a stronger marriage or partnership through guided sessions. Whether pre-marital counseling, navigating conflict, or rebuilding trust, we're here for every stage.</p>
+      <a href="#" class="service-link">Learn More →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <div class="service-name">Online Therapy</div>
+      <p class="service-desc">Access high-quality mental health care from anywhere with a secure internet connection. Ideal for busy schedules, remote clients, or those preferring the comfort of home.</p>
+      <a href="#" class="service-link">Learn More →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="service-name">Family Therapy</div>
+      <p class="service-desc">Strengthen family bonds and resolve conflict with a skilled facilitator. Bring in any family members — partners, children, parents, or extended family.</p>
+      <a href="#" class="service-link">Learn More →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="service-name">Play Therapy</div>
+      <p class="service-desc">Children communicate through play. Our play therapists help younger children process emotions, trauma, and behavioral challenges in a safe, expressive environment.</p>
+      <a href="#" class="service-link">Learn More →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <div class="service-name">Grief Therapy</div>
+      <p class="service-desc">Loss — whether a loved one, a marriage, or a way of life — deserves compassionate support. We help you process grief and find a path forward with meaning and hope.</p>
+      <a href="#" class="service-link">Learn More →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <div class="service-name">Trauma-Informed Therapy</div>
+      <p class="service-desc">Our therapists approach every client with an awareness of how trauma — including religious, racial, and intergenerational — shapes your wellbeing and sense of self.</p>
+      <a href="#" class="service-link">Learn More →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="service-name">Group Therapy</div>
+      <p class="service-desc">Heal in community with others who share your experiences. Our culturally-focused groups are designed for Muslims navigating shared challenges in today's world.</p>
+      <a href="#" class="service-link">Learn More →</a>
+    </div>
+  </div>
+  <div class="services-cta">
+    <p>Ready to begin your healing journey?</p>
+    <a href="#schedule" class="btn-primary">Request My Appointment</a>
+  </div>
+</section>
+
+<!-- GROUP THERAPY -->
+<section class="group-section" id="groups">
+  <div class="section-label">Group Therapy</div>
+  <h2 class="section-title">Grow with <em>community</em></h2>
+  <p class="section-desc">Our groups bring together people with shared experiences in a safe, nurturing space guided by a licensed therapist.</p>
+  <div class="group-grid">
+    <div class="group-card">
+      <span class="group-age">Ages 18–65</span>
+      <h4>Muslim Identity & Belonging</h4>
+      <p>A process group for Muslims navigating questions of identity, belonging, and faith in American society. Explore the intersection of your religious and cultural identity in a confidential, affirming space.</p>
+      <a href="mailto:info@mymuslimtherapists.com">Email Dr. Hassan to learn more →</a>
+    </div>
+    <div class="group-card">
+      <span class="group-age">Ages 13–17</span>
+      <h4>Teen Muslim Minds: Anxiety & Depression Group</h4>
+      <p>A skills-based group for Muslim teens experiencing anxiety, depression, or mood difficulties. Uses evidence-based approaches alongside Islamic concepts of resilience to help teens build confidence and healthy coping.</p>
+      <a href="mailto:info@mymuslimtherapists.com">Email Aisha Karimi, LMFT to learn more →</a>
+    </div>
+    <div class="group-card">
+      <span class="group-age">Ages 25–55</span>
+      <h4>Sisters' Circle: Women's Wellness Group</h4>
+      <p>A closed support group for Muslim women navigating marriage, motherhood, grief, and personal growth. A space to speak freely, be witnessed, and heal together.</p>
+      <a href="mailto:info@mymuslimtherapists.com">Email Zainab Malik, LPC to learn more →</a>
+    </div>
+    <div class="group-card">
+      <span class="group-age">Ages 18–40</span>
+      <h4>New Parents Support Group</h4>
+      <p>Designed for Muslim new parents facing postpartum adjustment, parenting anxiety, or the transition to parenthood. Balancing deen and family life is hard — you don't have to do it alone.</p>
+      <a href="mailto:info@mymuslimtherapists.com">Email Nadia Rahman, PsyD to learn more →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONDITIONS -->
+<section class="conditions-section" id="conditions">
+  <div class="section-label">Conditions & Specialties</div>
+  <h2 class="section-title">We treat a wide range of <em>conditions</em></h2>
+  <p class="section-desc">No matter what you're facing, your therapist will meet you with non-judgmental, culturally-informed care.</p>
+  <div class="divider"></div>
+  <a href="tel:+14703001234" class="btn-gold" style="margin-bottom:0;">Questions? Call us</a>
+  <div class="conditions-grid">
+    <div class="condition-item">Religious Trauma</div>
+    <div class="condition-item">Islamophobia & Discrimination</div>
+    <div class="condition-item">Anxiety Disorders</div>
+    <div class="condition-item">Depression</div>
+    <div class="condition-item">Post-Traumatic Stress (PTSD)</div>
+    <div class="condition-item">Obsessive Compulsive Disorder</div>
+    <div class="condition-item">Grief & Bereavement</div>
+    <div class="condition-item">Marriage & Relationship Issues</div>
+    <div class="condition-item">Postpartum Depression</div>
+    <div class="condition-item">Identity & Belonging</div>
+    <div class="condition-item">Intergenerational Trauma</div>
+    <div class="condition-item">Bipolar Disorder</div>
+    <div class="condition-item">Panic Disorders</div>
+    <div class="condition-item">Social Anxiety</div>
+    <div class="condition-item">Adolescent Therapy</div>
+    <div class="condition-item">Anger Management</div>
+    <div class="condition-item">Burnout & Stress</div>
+    <div class="condition-item">Self-Esteem</div>
+    <div class="condition-item">Phobias</div>
+    <div class="condition-item">Dissociative Disorders</div>
+  </div>
+</section>
+
+<!-- INSURANCE -->
+<section class="insurance-section" id="insurance">
+  <div class="insurance-intro">
+    <div class="insurance-intro-left">
+      <div class="section-label">Payment & Insurance</div>
+      <h2 class="section-title">Affordable care for <em>everyone</em></h2>
+      <div class="divider"></div>
+      <p class="section-desc">We accept a wide range of insurance plans and offer self-pay options to ensure your mental health care is accessible. Contact us with any questions about coverage.</p>
+    </div>
+    <div class="insurance-intro-right">
+      <a href="tel:+14703001234" class="btn-outline">Have Questions?</a>
+      <a href="#portal" class="btn-primary">Pay My Bill</a>
+    </div>
+  </div>
+  <div class="insurance-grid">
+    <div class="insurance-item">Aetna</div>
+    <div class="insurance-item">Anthem Blue Cross Blue Shield</div>
+    <div class="insurance-item">Blue Cross Blue Shield</div>
+    <div class="insurance-item">ChampVA</div>
+    <div class="insurance-item">Cigna / Evernorth</div>
+    <div class="insurance-item">Claritev (Multiplan)</div>
+    <div class="insurance-item">Magellan</div>
+    <div class="insurance-item">Magellan EAP</div>
+    <div class="insurance-item">Medicare</div>
+    <div class="insurance-item">Optum / United Healthcare</div>
+    <div class="insurance-item">Tricare Certified Providers</div>
+    <div class="insurance-item">Self-Pay Available</div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location-section" id="location" style="padding:88px 80px;">
+  <div>
+    <div class="section-label">Find Us</div>
+    <h2 class="section-title">Johns Creek <em>Clinic</em></h2>
+    <div class="location-detail">
+      <div class="loc-block">
+        <h4>Address</h4>
+        <p>4895 Kimball Bridge Road<br>Suite 204<br>Johns Creek, GA 30022</p>
+        <a href="https://maps.google.com" target="_blank" style="color:var(--green); font-size:13px; text-transform:uppercase; letter-spacing:0.06em; font-weight:500;">Get Directions →</a>
+      </div>
+      <div class="loc-block">
+        <h4>Clinic Hours</h4>
+        <p>By Appointment Only</p>
+      </div>
+      <div class="loc-block">
+        <h4>Contact</h4>
+        <p><a href="tel:+14703001234">(470) 300-1234</a></p>
+        <p><a href="tel:+14703001235">(470) 300-1235 FAX</a></p>
+        <p><a href="mailto:info@mymuslimtherapists.com">info@mymuslimtherapists.com</a></p>
+      </div>
+      <div class="loc-block">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#">Google Reviews</a>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="map-placeholder">
+      <div class="map-inner">
+        <svg class="map-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        <p>4895 Kimball Bridge Road, Suite 204<br>Johns Creek, GA 30022</p>
+        <a href="https://maps.google.com" target="_blank">Open in Google Maps →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATCHING -->
+<section class="match-section" id="match">
+  <div>
+    <div class="section-label">Therapist Matching</div>
+    <h2 class="section-title">We'll find your <em>perfect</em> match</h2>
+    <div class="divider"></div>
+    <p class="section-desc" style="color:#aaa;">
+      Choosing a therapist is deeply personal. Our care coordinators will take time to understand your background, preferences, language needs, and therapy goals — then match you with the right provider from day one.
+    </p>
+    <a href="tel:+14703001234" class="btn-gold" style="margin-top:28px; display:inline-block;">Get Matched Now</a>
+  </div>
+  <div class="match-visual">
+    <div class="match-stat accent">
+      <div class="match-stat-num">10+</div>
+      <div class="match-stat-label">Licensed Therapists</div>
+    </div>
+    <div class="match-stat">
+      <div class="match-stat-num">5+</div>
+      <div class="match-stat-label">Languages Spoken</div>
+    </div>
+    <div class="match-stat">
+      <div class="match-stat-num">100%</div>
+      <div class="match-stat-label">Culturally Affirming</div>
+    </div>
+    <div class="match-stat">
+      <div class="match-stat-num">In & Online</div>
+      <div class="match-stat-label">Flexible Formats</div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog-section" id="blog">
+  <div class="section-label">Resources & Insights</div>
+  <h2 class="section-title">Tips for a more <em>balanced</em> life</h2>
+  <div class="blog-grid">
+    <div class="blog-card">
+      <div class="blog-tag">Faith & Mental Health</div>
+      <h4>How Islamic Concepts of Sabr and Tawakkul Can Support Your Therapy Journey</h4>
+      <p>Exploring the psychological wisdom embedded in Islamic practice — and how it can work alongside modern therapeutic approaches to support genuine healing.</p>
+      <div class="blog-author">By Dr. Fatima Hassan, PhD</div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-tag">Community & Belonging</div>
+      <h4>Why Muslim Americans Seek Culturally Informed Therapy — And Why It Matters</h4>
+      <p>When your therapist understands your culture, your faith, and your family dynamics, you spend less time explaining and more time healing. Here's what research shows.</p>
+      <div class="blog-author">By Aisha Karimi, LMFT</div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-tag">Teen Mental Health</div>
+      <h4>Raising Resilient Muslim Teens in a Polarizing World</h4>
+      <p>Muslim adolescents face unique pressures at school, online, and within their communities. Here are practical, faith-affirming strategies to support their mental health.</p>
+      <div class="blog-author">By Nadia Rahman, PsyD</div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREERS -->
+<section class="careers-section" id="careers">
+  <div>
+    <div class="section-label">Join Our Team</div>
+    <h2 class="section-title">Therapy jobs in <em>Johns Creek</em></h2>
+    <div class="divider"></div>
+    <p class="section-desc">
+      We've built an employment model centered on purpose, community impact, and professional growth. If you're a licensed therapist who values culturally informed care, we'd love to meet you.
+    </p>
+    <a href="#" class="btn-primary" style="margin-top:28px; display:inline-block;">Browse Open Positions</a>
+  </div>
+  <div class="careers-badges">
+    <div class="career-badge">
+      <div class="career-badge-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div>
+        <h5>Purpose-Driven Culture</h5>
+        <p>Work where your faith, values, and clinical skills are all welcome.</p>
+      </div>
+    </div>
+    <div class="career-badge">
+      <div class="career-badge-icon">
+        <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      </div>
+      <div>
+        <h5>Competitive Compensation</h5>
+        <p>Transparent pay, flexible scheduling, and full clinical autonomy.</p>
+      </div>
+    </div>
+    <div class="career-badge">
+      <div class="career-badge-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <div>
+        <h5>Ongoing Supervision & Growth</h5>
+        <p>Regular supervision, CE opportunities, and a supportive clinical team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+            <path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4"/>
+          </svg>
+        </div>
+        <span class="footer-logo-text">mymuslimtherapists</span>
+      </div>
+      <p class="footer-tagline">Compassionate, culturally-informed mental health care for Muslim individuals, couples, and families in Johns Creek, GA.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="#team">Our Therapists</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#conditions">Conditions</a></li>
+        <li><a href="#insurance">Insurance</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#careers">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#">Individual Therapy</a></li>
+        <li><a href="#">Couples Therapy</a></li>
+        <li><a href="#">Family Therapy</a></li>
+        <li><a href="#">Online Therapy</a></li>
+        <li><a href="#">Group Therapy</a></li>
+        <li><a href="#">Play Therapy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="#">4895 Kimball Bridge Rd, Suite 204</a></li>
+        <li><a href="#">Johns Creek, GA 30022</a></li>
+        <li><a href="tel:+14703001234">(470) 300-1234</a></li>
+        <li><a href="mailto:info@mymuslimtherapists.com">info@mymuslimtherapists.com</a></li>
+        <li><a href="#">Patient Portal</a></li>
+        <li><a href="#">Schedule Online</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="crisis-banner">
+    <strong style="color:#bbb;">mymuslimtherapists is not a crisis facility.</strong> If you or someone you know is experiencing a mental health emergency, please call or text <a href="tel:988">988</a> (Suicide & Crisis Lifeline) at any time to be connected with a trained counselor. For ongoing mental health support, we're here for you.
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 mymuslimtherapists. All Rights Reserved.</p>
+    <p><a href="#">Privacy Policy</a> · <a href="#">Legal & Compliance</a> · <a href="#">Accessibility</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
