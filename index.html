@@ -3,292 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Muslim Therapists | Mental Health Care in Johns Creek, GA</title>
+<title>My Muslim Therapists | Mental Health Care in Lawrenceville, GA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #faf9f7; --bg2: #f3f0eb;
-    --ink: #1a1a18; --ink-mid: #4a4a45; --ink-light: #9a9a94;
-    --green: #2d5a45; --green-light: #3d7a5f; --green-dark: #1f3f30;
-    --gold: #b8963e; --gold-light: #d4af6a;
-    --cream: #f7f3ec; --white: #ffffff; --border: #e4e0d8;
-    --radius: 2px;
-    --font-display: 'Cormorant Garamond', serif;
-    --font-body: 'DM Sans', sans-serif;
+    --bg:#faf9f7; --bg2:#f3f0eb;
+    --ink:#1a1a18; --ink-mid:#4a4a45; --ink-light:#9a9a94;
+    --green:#2d5a45; --green-light:#3d7a5f; --green-dark:#1f3f30;
+    --gold:#b8963e; --gold-light:#d4af6a; --gold-pale:#f5edd8;
+    --cream:#f7f3ec; --white:#fff; --border:#e4e0d8;
+    --font-d:'Cormorant Garamond',serif;
+    --font-b:'DM Sans',sans-serif;
   }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--font-body); background: var(--bg); color: var(--ink); line-height: 1.6; font-size: 16px; font-weight: 300; }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font-b);background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;font-weight:300}
 
-  .geo-bg {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cg fill='none' stroke='%23b8963e' stroke-width='0.4' opacity='0.18'%3E%3Cpolygon points='30,2 58,16 58,44 30,58 2,44 2,16'/%3E%3Cpolygon points='30,10 50,20 50,40 30,50 10,40 10,20'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 60px 60px;
-  }
+  /* ── TOP BAR ── */
+  .top-bar{background:var(--green-dark);color:#c9e8d8;font-size:12px;letter-spacing:.06em;text-align:center;padding:9px 24px;font-weight:400}
+  .top-bar a{color:var(--gold-light);text-decoration:none}.top-bar a:hover{color:var(--white)}
 
-  /* TOP BAR */
-  .top-bar { background: var(--green-dark); color: #c9e8d8; font-size: 12px; letter-spacing: 0.06em; text-align: center; padding: 9px 24px; font-weight: 400; }
-  .top-bar a { color: var(--gold-light); text-decoration: none; }
-  .top-bar a:hover { color: var(--white); }
+  /* ── MAIN NAV ── */
+  nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:76px}
+  .logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+  /* Crescent moon smile icon */
+  .logo-icon{width:46px;height:46px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center}
+  .logo-text{font-family:var(--font-d);font-size:22px;font-weight:500;color:var(--ink);letter-spacing:.01em}
+  .logo-text em{font-style:normal;color:var(--green)}
+  .nav-links{display:flex;align-items:center;gap:40px;list-style:none}
+  .nav-links a{font-size:12px;font-weight:400;letter-spacing:.08em;color:var(--ink-mid);text-decoration:none;text-transform:uppercase;transition:color .2s}
+  .nav-links a:hover{color:var(--green)}
+  .nav-cta{background:var(--green);color:var(--white)!important;padding:12px 26px;font-weight:400!important;transition:background .2s!important}
+  .nav-cta:hover{background:var(--green-light)!important}
 
-  /* MAIN NAV */
-  nav.main-nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 72px; }
-  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .nav-logo-icon { width: 40px; height: 40px; background: var(--green); display: flex; align-items: center; justify-content: center; border-radius: 50%; }
-  .nav-logo-icon svg { width: 20px; height: 20px; }
-  .nav-logo-text { font-family: var(--font-display); font-size: 21px; font-weight: 500; color: var(--ink); letter-spacing: 0.01em; }
-  .nav-logo-text span { color: var(--green); }
-  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-  .nav-links a { font-size: 13px; font-weight: 400; letter-spacing: 0.06em; color: var(--ink-mid); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--green); }
-  .nav-cta { background: var(--green); color: var(--white) !important; padding: 11px 24px; border-radius: var(--radius); transition: background 0.2s !important; font-weight: 400 !important; }
-  .nav-cta:hover { background: var(--green-light) !important; color: var(--white) !important; }
+  /* ── QUICK NAV ── */
+  .qnav{background:var(--cream);border-bottom:1px solid var(--border);display:flex;justify-content:center;overflow-x:auto}
+  .qnav a{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mid);text-decoration:none;padding:13px 20px;border-right:1px solid var(--border);white-space:nowrap;transition:background .2s,color .2s;font-weight:400}
+  .qnav a:first-child{border-left:1px solid var(--border)}.qnav a:hover{background:var(--green);color:var(--white)}
 
-  /* QUICK NAV */
-  .quick-nav { background: var(--cream); border-bottom: 1px solid var(--border); display: flex; justify-content: center; overflow-x: auto; }
-  .quick-nav a { font-size: 12px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-mid); text-decoration: none; padding: 13px 22px; border-right: 1px solid var(--border); white-space: nowrap; transition: background 0.2s, color 0.2s; font-weight: 400; }
-  .quick-nav a:first-child { border-left: 1px solid var(--border); }
-  .quick-nav a:hover { background: var(--green); color: var(--white); }
+  /* ── HERO ── */
+  .hero{display:grid;grid-template-columns:1fr 500px;background:var(--white)}
+  .hero-left{padding:88px 64px 88px 80px;display:flex;flex-direction:column;gap:26px}
+  .badge{display:inline-flex;align-items:center;gap:10px;background:rgba(45,90,69,.07);color:var(--green);padding:8px 18px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:500;width:fit-content;border:1px solid rgba(45,90,69,.15)}
+  .badge::before{content:'';width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  .hero-loc{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:10px}
+  .hero-loc::before{content:'';display:block;width:36px;height:1px;background:var(--gold)}
+  .hero h1{font-family:var(--font-d);font-size:58px;font-weight:300;line-height:1.07;letter-spacing:-.015em}
+  .hero h1 em{font-style:italic;color:var(--green)}
+  .hero-sub{font-size:17px;color:var(--ink-mid);line-height:1.7;max-width:510px}
+  /* Schedule card */
+  .sched-card{background:var(--cream);border:1px solid var(--border);padding:28px 32px;margin-top:8px;display:flex;flex-direction:column;gap:18px;max-width:520px}
+  .sched-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-light);font-weight:500}
+  .sched-row{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .sched-phone{display:flex;flex-direction:column;gap:4px;padding:12px 0;border-right:1px solid var(--border)}
+  .sched-phone-lbl{font-size:10px;color:var(--ink-light);letter-spacing:.1em;text-transform:uppercase}
+  .sched-num{font-family:var(--font-d);font-size:28px;font-weight:500;color:var(--green);text-decoration:none;line-height:1}
+  .sched-online{display:flex;flex-direction:column;justify-content:center;padding-left:16px;gap:8px}
+  .sched-online a{background:var(--green);color:var(--white);text-align:center;padding:13px;font-size:11px;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;transition:background .2s;font-weight:400}
+  .sched-online a:hover{background:var(--green-light)}
+  .sched-checks{display:flex;gap:20px;font-size:12px;color:var(--ink-light)}
+  .sched-checks span{display:flex;align-items:center;gap:6px}
+  .sched-checks span::before{content:'✓';color:var(--green);font-size:11px;font-weight:600}
 
-  /* HERO */
-  .hero { display: grid; grid-template-columns: 1fr 460px; background: var(--white); overflow: hidden; }
-  .hero-content { padding: 80px 64px 80px 80px; display: flex; flex-direction: column; justify-content: center; gap: 24px; }
-  .new-client-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(45, 90, 69, 0.08); color: var(--green); padding: 8px 16px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; width: fit-content; border: 1px solid rgba(45, 90, 69, 0.15); }
-  .new-client-badge::before { content: ''; width: 8px; height: 8px; background: var(--green); border-radius: 50%; animation: pulse 2s infinite; }
-  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-  .hero-location { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); font-weight: 500; display: flex; align-items: center; gap: 8px; }
-  .hero-location::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
-  .hero h1 { font-family: var(--font-display); font-size: 56px; font-weight: 300; line-height: 1.08; color: var(--ink); letter-spacing: -0.015em; }
-  .hero h1 em { font-style: italic; color: var(--green); }
-  .hero-sub { font-size: 17px; color: var(--ink-mid); font-weight: 300; max-width: 520px; line-height: 1.65; }
+  /* HERO RIGHT ILLUSTRATION */
+  .hero-right{background:var(--green);position:relative;overflow:hidden;min-height:620px}
+  .hero-art{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
 
-  /* SCHEDULE CARD */
-  .schedule-card { background: var(--cream); border: 1px solid var(--border); padding: 28px 32px; margin-top: 16px; display: flex; flex-direction: column; gap: 20px; max-width: 540px; }
-  .schedule-card-header { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-light); font-weight: 500; }
-  .schedule-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .schedule-phone { display: flex; flex-direction: column; gap: 4px; padding: 14px 0; border-right: 1px solid var(--border); }
-  .schedule-phone-label { font-size: 11px; color: var(--ink-light); letter-spacing: 0.08em; text-transform: uppercase; }
-  .schedule-phone-num { font-family: var(--font-display); font-size: 26px; font-weight: 500; color: var(--green); text-decoration: none; line-height: 1; }
-  .schedule-phone-num:hover { color: var(--green-light); }
-  .schedule-online { display: flex; flex-direction: column; justify-content: center; gap: 8px; padding-left: 8px; }
-  .schedule-online a { background: var(--green); color: var(--white); text-align: center; padding: 12px 18px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; font-weight: 400; }
-  .schedule-online a:hover { background: var(--green-light); }
-  .hero-meta { display: flex; gap: 20px; font-size: 12px; color: var(--ink-light); margin-top: 12px; }
-  .hero-meta span { display: flex; align-items: center; gap: 6px; }
-  .hero-meta span::before { content: '✓'; color: var(--green); font-size: 11px; font-weight: 500; }
+  /* TRUST STRIP */
+  .trust{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(4,1fr)}
+  .trust-item{padding:30px 16px;text-align:center;border-right:1px solid var(--border)}
+  .trust-item:last-child{border-right:none}
+  .trust-num{font-family:var(--font-d);font-size:34px;font-weight:400;color:var(--green);line-height:1;margin-bottom:6px}
+  .trust-lbl{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light)}
 
-  .hero-image { background: var(--green); position: relative; overflow: hidden; min-height: 600px; }
-  .hero-image::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='0.5' opacity='0.1'%3E%3Cpolygon points='40,2 78,21 78,59 40,78 2,59 2,21'/%3E%3Cpolygon points='40,12 68,27 68,53 40,68 12,53 12,27'/%3E%3Cpolygon points='40,22 58,33 58,47 40,58 22,47 22,33'/%3E%3C/g%3E%3C/svg%3E"); background-size: 80px 80px; }
-  .hero-image-inner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; padding: 48px; text-align: center; }
-  .hero-crescent { width: 90px; height: 90px; opacity: 0.85; }
-  .hero-image-text { font-family: var(--font-display); font-size: 24px; font-weight: 300; font-style: italic; color: var(--white); line-height: 1.5; max-width: 320px; }
-  .hero-image-quote { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-light); }
-
-  /* TRUST */
-  .trust-strip { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); display: grid; grid-template-columns: repeat(4, 1fr); }
-  .trust-item { padding: 28px 24px; text-align: center; border-right: 1px solid var(--border); }
-  .trust-item:last-child { border-right: none; }
-  .trust-num { font-family: var(--font-display); font-size: 32px; font-weight: 400; color: var(--green); line-height: 1; margin-bottom: 6px; }
-  .trust-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); }
-
-  /* SECTIONS */
-  section { padding: 96px 80px; }
-  .section-label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
-  .section-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--gold); }
-  h2.section-title { font-family: var(--font-display); font-size: 44px; font-weight: 300; line-height: 1.15; color: var(--ink); margin-bottom: 16px; letter-spacing: -0.01em; }
-  h2.section-title em { font-style: italic; color: var(--green); }
-  .section-desc { color: var(--ink-mid); font-size: 16px; max-width: 620px; line-height: 1.75; font-weight: 300; }
-  .divider { width: 48px; height: 1px; background: var(--gold); margin: 24px 0; }
+  /* GENERIC SECTION */
+  section{padding:96px 80px}
+  .sec-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+  .sec-label::before{content:'';display:block;width:24px;height:1px;background:var(--gold)}
+  h2.sec-title{font-family:var(--font-d);font-size:46px;font-weight:300;line-height:1.12;color:var(--ink);margin-bottom:16px;letter-spacing:-.01em}
+  h2.sec-title em{font-style:italic;color:var(--green)}
+  .sec-desc{color:var(--ink-mid);font-size:16px;max-width:620px;line-height:1.8;font-weight:300}
+  .divider{width:44px;height:1px;background:var(--gold);margin:22px 0}
 
   /* BUTTONS */
-  .btn-primary, .btn-outline, .btn-gold, .btn-dark { padding: 14px 28px; font-family: var(--font-body); font-size: 13px; letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none; border: 1px solid; cursor: pointer; transition: all 0.2s; display: inline-block; font-weight: 400; }
-  .btn-primary { background: var(--green); color: var(--white); border-color: var(--green); }
-  .btn-primary:hover { background: var(--green-light); border-color: var(--green-light); }
-  .btn-outline { background: transparent; color: var(--green); border-color: var(--green); }
-  .btn-outline:hover { background: var(--green); color: var(--white); }
-  .btn-gold { background: var(--gold); color: var(--white); border-color: var(--gold); }
-  .btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); }
-  .btn-dark { background: var(--ink); color: var(--white); border-color: var(--ink); }
-  .btn-dark:hover { background: var(--green); border-color: var(--green); }
+  .btn-g,.btn-o,.btn-gold,.btn-dk{padding:14px 30px;font-family:var(--font-b);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid;cursor:pointer;transition:all .2s;display:inline-block;font-weight:400}
+  .btn-g{background:var(--green);color:var(--white);border-color:var(--green)}.btn-g:hover{background:var(--green-light);border-color:var(--green-light)}
+  .btn-o{background:transparent;color:var(--green);border-color:var(--green)}.btn-o:hover{background:var(--green);color:var(--white)}
+  .btn-gold{background:var(--gold);color:var(--white);border-color:var(--gold)}.btn-gold:hover{background:var(--gold-light);border-color:var(--gold-light)}
+  .btn-dk{background:var(--ink);color:var(--white);border-color:var(--ink)}.btn-dk:hover{background:var(--green);border-color:var(--green)}
 
-  /* THERAPIST PROFILE */
-  .therapist-section { background: var(--white); padding: 0; display: grid; grid-template-columns: 480px 1fr; overflow: hidden; }
-  .therapist-photo { background: var(--bg2); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cg fill='none' stroke='%232d5a45' stroke-width='0.5' opacity='0.05'%3E%3Cpolygon points='30,2 58,16 58,44 30,58 2,44 2,16'/%3E%3C/g%3E%3C/svg%3E"); background-size: 60px 60px; display: flex; align-items: center; justify-content: center; min-height: 720px; border-right: 1px solid var(--border); }
-  .therapist-photo-inner { display: flex; flex-direction: column; align-items: center; gap: 24px; }
-  .therapist-avatar { width: 220px; height: 220px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 72px; font-weight: 300; color: var(--white); box-shadow: 0 8px 32px rgba(45, 90, 69, 0.15); }
-  .therapist-name-card { text-align: center; padding: 0 32px; }
-  .therapist-name-card h3 { font-family: var(--font-display); font-size: 30px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
-  .therapist-name-card .title { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
-  .therapist-content { padding: 88px 64px; display: flex; flex-direction: column; gap: 24px; }
-  .therapist-content h4 { font-family: var(--font-display); font-size: 20px; font-weight: 500; color: var(--ink); margin-top: 16px; }
-  .therapist-content p { font-size: 15px; color: var(--ink-mid); line-height: 1.85; font-weight: 300; }
-  .therapist-meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 24px; padding-top: 32px; border-top: 1px solid var(--border); }
-  .therapist-meta-block h5 { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; font-weight: 500; }
-  .therapist-meta-block ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-  .therapist-meta-block ul li { font-size: 14px; color: var(--ink-mid); font-weight: 300; padding-left: 16px; position: relative; }
-  .therapist-meta-block ul li::before { content: '·'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+  /* ── THERAPIST SECTION ── */
+  .therapist{display:grid;grid-template-columns:500px 1fr;background:var(--white)}
+  .t-left{background:var(--bg2);display:flex;align-items:center;justify-content:center;min-height:740px;position:relative;overflow:hidden;border-right:1px solid var(--border)}
+  .t-left-art{position:absolute;inset:0;opacity:.06}
+  .t-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:20px;padding:48px}
+  .t-avatar{width:200px;height:200px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-size:68px;font-weight:300;color:var(--white);box-shadow:0 12px 40px rgba(45,90,69,.18);border:4px solid var(--white)}
+  .t-name-block{text-align:center}
+  .t-name-block h3{font-family:var(--font-d);font-size:32px;font-weight:500;color:var(--ink);margin-bottom:6px}
+  .t-name-block .tcred{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  /* decorative element below name */
+  .t-deco{display:flex;align-items:center;gap:10px;margin-top:8px}
+  .t-deco-line{width:40px;height:1px;background:var(--gold)}
+  .t-deco-star{color:var(--gold);font-size:14px}
 
-  /* CTA STYLES */
-  .cta-banner { background: var(--green); padding: 52px 80px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
-  .cta-banner h3 { font-family: var(--font-display); font-size: 30px; font-weight: 300; color: var(--white); font-style: italic; line-height: 1.3; max-width: 640px; }
-  .cta-banner p { font-size: 14px; color: #c9e8d8; margin-top: 6px; max-width: 520px; }
-  .cta-banner-actions { display: flex; gap: 12px; flex-shrink: 0; }
+  .t-right{padding:80px 64px;display:flex;flex-direction:column;gap:22px}
+  .t-right h4{font-family:var(--font-d);font-size:21px;font-weight:500;color:var(--ink);margin-top:12px}
+  .t-right p{font-size:15px;color:var(--ink-mid);line-height:1.88;font-weight:300}
+  .t-meta{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:20px;padding-top:28px;border-top:1px solid var(--border)}
+  .t-meta-block h5{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:500}
+  .t-meta-block ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .t-meta-block ul li{font-size:14px;color:var(--ink-mid);font-weight:300;padding-left:16px;position:relative}
+  .t-meta-block ul li::before{content:'·';position:absolute;left:0;color:var(--gold);font-weight:700;font-size:18px;line-height:1}
 
-  .cta-split { background: var(--cream); padding: 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-  .cta-split-half { padding: 48px 64px; display: flex; flex-direction: column; gap: 12px; border-right: 1px solid var(--border); }
-  .cta-split-half:last-child { border-right: none; background: var(--white); }
-  .cta-split-half h4 { font-family: var(--font-display); font-size: 24px; font-weight: 400; color: var(--ink); }
-  .cta-split-half p { font-size: 14px; color: var(--ink-mid); }
-  .cta-split-half a.phone-link { font-family: var(--font-display); font-size: 32px; font-weight: 500; color: var(--green); text-decoration: none; margin-top: 4px; }
-  .cta-split-half .btn-primary { width: fit-content; margin-top: 8px; }
+  /* ── CTA STYLES ── */
+  /* 1: Full green banner */
+  .cta-green{background:var(--green);padding:56px 80px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+  .cta-green h3{font-family:var(--font-d);font-size:32px;font-weight:300;font-style:italic;color:var(--white);line-height:1.3;max-width:600px}
+  .cta-green p{font-size:14px;color:#c9e8d8;margin-top:6px}
+  .cta-green-btns{display:flex;gap:12px;flex-shrink:0}
 
-  .cta-quote { background: var(--bg); padding: 88px 80px; text-align: center; }
-  .cta-quote-text { font-family: var(--font-display); font-size: 36px; font-weight: 300; font-style: italic; color: var(--ink); max-width: 720px; margin: 0 auto 24px; line-height: 1.4; }
-  .cta-quote-text em { color: var(--green); font-style: italic; font-weight: 400; }
-  .cta-quote-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  /* 2: Quote centered */
+  .cta-quote{background:var(--bg);padding:88px 80px;text-align:center}
+  .cta-quote-txt{font-family:var(--font-d);font-size:38px;font-weight:300;font-style:italic;color:var(--ink);max-width:740px;margin:0 auto 28px;line-height:1.35}
+  .cta-quote-txt em{color:var(--green);font-style:italic}
+  .cta-q-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
-  .cta-dark { background: var(--ink); padding: 44px 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
-  .cta-dark h4 { font-family: var(--font-display); font-size: 24px; font-weight: 400; color: var(--white); font-style: italic; }
-  .cta-dark p { font-size: 14px; color: #999; margin-top: 4px; }
+  /* 3: Split two-col */
+  .cta-split{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .cta-half{padding:52px 64px;display:flex;flex-direction:column;gap:12px;border-right:1px solid var(--border)}
+  .cta-half:last-child{border-right:none;background:var(--white)}
+  .cta-half h4{font-family:var(--font-d);font-size:26px;font-weight:400;color:var(--ink)}
+  .cta-half p{font-size:14px;color:var(--ink-mid)}
+  .cta-half .big-phone{font-family:var(--font-d);font-size:34px;font-weight:500;color:var(--green);text-decoration:none;margin-top:4px;display:block}
+  .cta-half .btn-g{width:fit-content;margin-top:8px}
 
-  .cta-strip { background: var(--gold); padding: 28px 80px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-  .cta-strip p { font-size: 15px; color: var(--white); font-weight: 400; }
-  .cta-strip a { background: var(--white); color: var(--gold); padding: 10px 22px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; font-weight: 500; transition: all 0.2s; }
-  .cta-strip a:hover { background: var(--ink); color: var(--white); }
+  /* 4: Dark strip */
+  .cta-dark{background:var(--ink);padding:46px 80px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .cta-dark h4{font-family:var(--font-d);font-size:26px;font-weight:400;font-style:italic;color:var(--white)}
+  .cta-dark p{font-size:13px;color:#888;margin-top:4px}
 
-  .cta-card { background: var(--white); border: 2px solid var(--green); margin: 64px 80px; padding: 48px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 32px; }
-  .cta-card h4 { font-family: var(--font-display); font-size: 28px; font-weight: 400; color: var(--ink); margin-bottom: 6px; }
-  .cta-card p { font-size: 14px; color: var(--ink-mid); }
-  .cta-card-actions { display: flex; gap: 10px; flex-shrink: 0; }
+  /* 5: Gold strip */
+  .cta-strip{background:var(--gold);padding:28px 80px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .cta-strip p{font-size:15px;color:var(--white);font-weight:400}
+  .cta-strip a{background:var(--white);color:var(--gold);padding:10px 22px;font-size:11px;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:all .2s}
+  .cta-strip a:hover{background:var(--ink);color:var(--white)}
 
-  /* APPROACH */
-  .approach-section { background: var(--bg2); }
-  .approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 56px; background: var(--border); border: 1px solid var(--border); }
-  .approach-card { background: var(--white); padding: 44px 36px; display: flex; flex-direction: column; gap: 14px; transition: background 0.2s; }
-  .approach-card:hover { background: var(--cream); }
-  .approach-num { font-family: var(--font-display); font-size: 36px; font-weight: 300; color: var(--gold); line-height: 1; }
-  .approach-card h4 { font-family: var(--font-display); font-size: 24px; font-weight: 500; color: var(--ink); line-height: 1.3; }
-  .approach-card p { font-size: 14px; color: var(--ink-mid); line-height: 1.75; font-weight: 300; }
+  /* 6: Bordered card */
+  .cta-card{background:var(--white);border:2px solid var(--green);margin:64px 80px;padding:48px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:32px}
+  .cta-card h4{font-family:var(--font-d);font-size:30px;font-weight:400;color:var(--ink);margin-bottom:6px}
+  .cta-card p{font-size:14px;color:var(--ink-mid)}
+  .cta-card-btns{display:flex;gap:10px;flex-shrink:0}
 
-  /* SERVICES */
-  .services-section { background: var(--white); }
-  .services-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-bottom: 56px; align-items: end; }
-  .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-  .service-card { background: var(--white); padding: 44px 40px; display: flex; flex-direction: column; gap: 16px; transition: background 0.2s; }
-  .service-card:hover { background: var(--cream); }
-  .service-icon { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; margin-bottom: 4px; }
-  .service-icon svg { width: 32px; height: 32px; stroke: var(--green); fill: none; stroke-width: 1.5; }
-  .service-name { font-family: var(--font-display); font-size: 26px; font-weight: 500; color: var(--ink); }
-  .service-desc { font-size: 15px; color: var(--ink-mid); line-height: 1.75; font-weight: 300; }
-  .service-meta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
-  .service-meta span { font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--green); background: rgba(45, 90, 69, 0.08); padding: 4px 10px; border-radius: 1px; }
+  /* ── APPROACH ── */
+  .approach-section{background:var(--bg2)}
+  .approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:56px;background:var(--border);border:1px solid var(--border)}
+  .approach-card{background:var(--white);padding:44px 36px;display:flex;flex-direction:column;gap:14px;transition:background .2s}
+  .approach-card:hover{background:var(--cream)}
+  .approach-icon{width:52px;height:52px;margin-bottom:8px}
+  .approach-card h4{font-family:var(--font-d);font-size:24px;font-weight:500;color:var(--ink);line-height:1.25}
+  .approach-card p{font-size:14px;color:var(--ink-mid);line-height:1.8;font-weight:300}
 
-  /* EXPECT */
-  .expect-section { background: var(--white); border-top: 1px solid var(--border); }
-  .expect-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 56px; }
-  .expect-step { padding: 32px 24px; border-top: 2px solid var(--green); }
-  .expect-step-num { font-family: var(--font-display); font-size: 13px; color: var(--gold); font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 16px; }
-  .expect-step h4 { font-family: var(--font-display); font-size: 22px; font-weight: 500; color: var(--ink); margin-bottom: 12px; }
-  .expect-step p { font-size: 14px; color: var(--ink-mid); line-height: 1.75; font-weight: 300; }
+  /* ── SERVICES ── */
+  .services-section{background:var(--white)}
+  .svc-intro{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-bottom:56px;align-items:end}
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+  .svc-card{background:var(--white);padding:44px 40px;display:flex;flex-direction:column;gap:16px;transition:background .2s;position:relative;overflow:hidden}
+  .svc-card:hover{background:var(--cream)}
+  .svc-icon{width:56px;height:56px;display:flex;align-items:center;justify-content:center;margin-bottom:4px}
+  .svc-name{font-family:var(--font-d);font-size:27px;font-weight:500;color:var(--ink)}
+  .svc-desc{font-size:14px;color:var(--ink-mid);line-height:1.8;font-weight:300}
+  .svc-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+  .svc-tags span{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);background:rgba(45,90,69,.07);padding:4px 10px}
+  .svc-num{position:absolute;right:24px;top:24px;font-family:var(--font-d);font-size:48px;font-weight:300;color:rgba(45,90,69,.06);line-height:1}
 
-  /* CONDITIONS */
-  .conditions-section { background: var(--green); }
-  .conditions-section .section-label { color: var(--gold-light); }
-  .conditions-section .section-label::before { background: var(--gold-light); }
-  .conditions-section h2.section-title { color: var(--white); }
-  .conditions-section .section-desc { color: #c9e8d8; }
-  .conditions-section .divider { background: var(--gold-light); }
-  .conditions-categories { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 56px; }
-  .condition-category h4 { font-family: var(--font-display); font-size: 22px; color: var(--white); font-weight: 500; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.15); }
-  .condition-category ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-  .condition-category ul li { font-size: 14px; color: #c9e8d8; padding-left: 18px; position: relative; font-weight: 300; }
-  .condition-category ul li::before { content: ''; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+  /* ── WHAT TO EXPECT ── */
+  .expect-section{background:var(--white);border-top:1px solid var(--border)}
+  .expect-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;border:1px solid var(--border)}
+  .expect-step{padding:40px 28px;border-right:1px solid var(--border);position:relative;display:flex;flex-direction:column;gap:14px}
+  .expect-step:last-child{border-right:none}
+  .expect-step-art{width:64px;height:64px;margin-bottom:4px}
+  .expect-num{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  .expect-step h4{font-family:var(--font-d);font-size:22px;font-weight:500;color:var(--ink)}
+  .expect-step p{font-size:14px;color:var(--ink-mid);line-height:1.75;font-weight:300}
 
-  /* INSURANCE */
-  .insurance-section { background: var(--white); }
-  .insurance-intro { display: flex; align-items: end; justify-content: space-between; gap: 64px; margin-bottom: 56px; }
-  .insurance-intro-left { flex: 1; }
-  .insurance-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-  .insurance-item { background: var(--white); padding: 22px 24px; font-size: 14px; color: var(--ink-mid); display: flex; align-items: center; gap: 10px; transition: background 0.2s; }
-  .insurance-item::before { content: '✓'; color: var(--green); font-size: 12px; font-weight: 500; }
-  .insurance-item:hover { background: var(--cream); }
-  .insurance-note { margin-top: 32px; padding: 24px 32px; background: var(--cream); border-left: 3px solid var(--gold); font-size: 14px; color: var(--ink-mid); line-height: 1.75; font-weight: 300; }
+  /* ── CONDITIONS ── */
+  .cond-section{background:var(--green)}
+  .cond-section .sec-label{color:var(--gold-light)}.cond-section .sec-label::before{background:var(--gold-light)}
+  .cond-section h2.sec-title{color:var(--white)}.cond-section .sec-desc{color:#c9e8d8}.cond-section .divider{background:var(--gold-light)}
+  .cond-header{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:56px}
+  .cond-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .cond-col h4{font-family:var(--font-d);font-size:22px;color:var(--white);font-weight:500;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.15)}
+  .cond-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .cond-col ul li{font-size:14px;color:#c9e8d8;padding-left:18px;position:relative;font-weight:300}
+  .cond-col ul li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--gold);border-radius:50%}
 
-  /* GROUPS */
-  .group-section { background: var(--bg2); }
-  .group-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 56px; }
-  .group-card { background: var(--white); padding: 40px; border-left: 3px solid var(--green); display: flex; flex-direction: column; gap: 14px; }
-  .group-card h4 { font-family: var(--font-display); font-size: 24px; font-weight: 500; color: var(--ink); }
-  .group-age { display: inline-block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); font-weight: 500; background: var(--cream); padding: 4px 10px; border: 1px solid var(--border); width: fit-content; }
-  .group-card p { font-size: 14px; color: var(--ink-mid); line-height: 1.75; font-weight: 300; }
-  .group-card a { font-size: 12px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--green); text-decoration: none; font-weight: 500; margin-top: 8px; }
+  /* ── GROUPS ── */
+  .group-section{background:var(--bg2)}
+  .group-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px}
+  .group-card{background:var(--white);padding:40px;border-left:3px solid var(--green);display:flex;flex-direction:column;gap:14px;transition:background .2s}
+  .group-card:hover{background:var(--cream)}
+  .group-card-icon{width:56px;height:56px;margin-bottom:4px}
+  .group-card h4{font-family:var(--font-d);font-size:24px;font-weight:500;color:var(--ink)}
+  .group-age{display:inline-block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:500;background:var(--cream);padding:4px 10px;border:1px solid var(--border);width:fit-content}
+  .group-card p{font-size:14px;color:var(--ink-mid);line-height:1.78;font-weight:300}
+  .group-card a{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);text-decoration:none;font-weight:500;margin-top:8px}
 
-  /* FAQ */
-  .faq-section { background: var(--white); }
-  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 56px; background: var(--border); border: 1px solid var(--border); }
-  .faq-item { background: var(--white); padding: 32px 36px; transition: background 0.2s; }
-  .faq-item:hover { background: var(--cream); }
-  .faq-item h4 { font-family: var(--font-display); font-size: 20px; font-weight: 500; color: var(--ink); margin-bottom: 12px; display: flex; align-items: start; gap: 12px; }
-  .faq-item h4::before { content: 'Q'; font-family: var(--font-display); font-style: italic; color: var(--gold); font-size: 26px; line-height: 0.9; flex-shrink: 0; }
-  .faq-item p { font-size: 14px; color: var(--ink-mid); line-height: 1.75; font-weight: 300; padding-left: 28px; }
+  /* ── FAQ ── */
+  .faq-section{background:var(--white)}
+  .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:56px;background:var(--border);border:1px solid var(--border)}
+  .faq-item{background:var(--white);padding:32px 36px;transition:background .2s}
+  .faq-item:hover{background:var(--cream)}
+  .faq-item h4{font-family:var(--font-d);font-size:20px;font-weight:500;color:var(--ink);margin-bottom:12px;display:flex;align-items:start;gap:12px}
+  .faq-item h4::before{content:'Q';font-family:var(--font-d);font-style:italic;color:var(--gold);font-size:28px;line-height:.85;flex-shrink:0}
+  .faq-item p{font-size:14px;color:var(--ink-mid);line-height:1.78;font-weight:300;padding-left:30px}
 
-  /* BLOG */
-  .blog-section { background: var(--bg2); }
-  .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 56px; }
-  .blog-card { background: var(--white); padding: 40px 32px; display: flex; flex-direction: column; gap: 14px; cursor: pointer; transition: background 0.2s; }
-  .blog-card:hover { background: var(--cream); }
-  .blog-tag { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
-  .blog-card h4 { font-family: var(--font-display); font-size: 22px; font-weight: 400; color: var(--ink); line-height: 1.3; }
-  .blog-card p { font-size: 14px; color: var(--ink-mid); line-height: 1.7; font-weight: 300; }
-  .blog-author { font-size: 12px; color: var(--ink-light); margin-top: auto; letter-spacing: 0.03em; padding-top: 12px; border-top: 1px solid var(--border); }
+  /* ── LOCATION ── */
+  .loc-section{background:var(--white);padding:96px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+  .loc-detail{display:flex;flex-direction:column;gap:32px;margin-top:40px}
+  .loc-block h4{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:10px}
+  .loc-block p,.loc-block a{font-size:15px;color:var(--ink-mid);text-decoration:none;line-height:1.75;font-weight:300;display:block}
+  .loc-block a:hover{color:var(--green)}
+  .map-box{background:var(--bg);border:1px solid var(--border);height:480px;display:flex;align-items:center;justify-content:center}
+  .map-inner{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+  .map-inner p{font-size:13px;color:var(--ink-light)}
+  .map-inner a{font-size:12px;color:var(--green);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+  .soc-links{display:flex;gap:10px;flex-wrap:wrap}
+  .soc-links a{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-mid);text-decoration:none;border:1px solid var(--border);padding:8px 14px;transition:all .2s}
+  .soc-links a:hover{background:var(--green);color:var(--white);border-color:var(--green)}
 
-  /* LOCATION */
-  .location-section { background: var(--white); padding: 96px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-  .location-detail { display: flex; flex-direction: column; gap: 32px; margin-top: 40px; }
-  .loc-block h4 { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 10px; }
-  .loc-block p, .loc-block a { font-size: 15px; color: var(--ink-mid); text-decoration: none; line-height: 1.7; font-weight: 300; }
-  .loc-block a:hover { color: var(--green); }
-  .map-placeholder { background: var(--bg); border: 1px solid var(--border); height: 460px; display: flex; align-items: center; justify-content: center; }
-  .map-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
-  .map-icon { color: var(--green); }
-  .map-inner p { font-size: 13px; color: var(--ink-light); }
-  .map-inner a { font-size: 13px; color: var(--green); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; }
-  .social-links { display: flex; gap: 12px; flex-wrap: wrap; }
-  .social-links a { font-size: 12px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-mid); text-decoration: none; border: 1px solid var(--border); padding: 8px 16px; transition: all 0.2s; }
-  .social-links a:hover { background: var(--green); color: var(--white); border-color: var(--green); }
+  /* ── FOOTER ── */
+  footer{background:var(--ink);color:#aaa;padding:72px 80px 32px}
+  .footer-top{display:grid;grid-template-columns:300px 1fr 1fr;gap:56px;margin-bottom:56px}
+  .footer-brand{display:flex;flex-direction:column;gap:18px}
+  .footer-logo{display:flex;align-items:center;gap:12px}
+  .footer-logo-icon{width:38px;height:38px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center}
+  .footer-logo-text{font-family:var(--font-d);font-size:19px;font-weight:400;color:var(--white)}
+  .footer-tagline{font-size:13px;color:#666;line-height:1.75;font-weight:300}
+  .footer-col h5{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-light);margin-bottom:20px;font-weight:500}
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .footer-col ul li,.footer-col ul li a{font-size:13px;color:#777;text-decoration:none;font-weight:300;transition:color .2s}
+  .footer-col ul li a:hover{color:var(--white)}
+  .footer-btm{border-top:1px solid rgba(255,255,255,.06);padding-top:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .footer-btm p{font-size:12px;color:#555}
+  .footer-btm a{color:#666;text-decoration:none}.footer-btm a:hover{color:var(--white)}
+  .crisis{background:rgba(184,150,62,.1);border:1px solid rgba(184,150,62,.2);padding:18px 24px;margin-top:32px;font-size:13px;color:#999;line-height:1.65}
+  .crisis a{color:var(--gold-light)}
 
-  /* FOOTER */
-  footer { background: var(--ink); color: #aaa; padding: 72px 80px 32px; }
-  .footer-top { display: grid; grid-template-columns: 280px 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
-  .footer-brand { display: flex; flex-direction: column; gap: 16px; }
-  .footer-logo { display: flex; align-items: center; gap: 10px; }
-  .footer-logo-icon { width: 36px; height: 36px; background: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-  .footer-logo-text { font-family: var(--font-display); font-size: 18px; font-weight: 400; color: var(--white); }
-  .footer-tagline { font-size: 13px; color: #666; line-height: 1.7; font-weight: 300; }
-  .footer-col h5 { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 20px; font-weight: 500; }
-  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-  .footer-col ul li, .footer-col ul li a { font-size: 13px; color: #777; text-decoration: none; transition: color 0.2s; font-weight: 300; }
-  .footer-col ul li a:hover { color: var(--white); }
-  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-  .footer-bottom p { font-size: 12px; color: #555; }
-  .footer-bottom a { color: #666; text-decoration: none; }
-  .footer-bottom a:hover { color: var(--white); }
-  .crisis-banner { background: rgba(184, 150, 62, 0.1); border: 1px solid rgba(184, 150, 62, 0.2); padding: 18px 24px; margin-top: 32px; font-size: 13px; color: #999; line-height: 1.6; }
-  .crisis-banner a { color: var(--gold-light); }
+  /* ANIMS */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+  .fu{animation:fadeUp .7s ease both}
+  .d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.32s}.d4{animation-delay:.46s}
 
-  /* ANIM */
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-  .fade-up { animation: fadeUp 0.7s ease both; }
-  .delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.2s; } .delay-3 { animation-delay: 0.3s; } .delay-4 { animation-delay: 0.45s; }
-
-  @media (max-width: 980px) {
-    .hero, .therapist-section, .location-section, .cta-card { grid-template-columns: 1fr; }
-    .services-grid, .approach-grid, .insurance-grid, .conditions-categories, .blog-grid, .faq-grid, .group-grid, .expect-steps, .trust-strip { grid-template-columns: 1fr 1fr; }
-    nav.main-nav { padding: 0 20px; }
-    .nav-links { gap: 16px; }
-    section, .cta-banner, .cta-quote, .cta-dark, .cta-strip, footer { padding-left: 24px; padding-right: 24px; }
-    .hero-content, .therapist-content { padding: 48px 24px; }
-    .therapist-photo { min-height: 480px; }
+  @media(max-width:1024px){
+    .hero,.therapist,.loc-section,.cta-card{grid-template-columns:1fr}
+    .svc-grid,.approach-grid,.cond-cols,.group-grid,.faq-grid,.expect-grid,.trust{grid-template-columns:1fr 1fr}
+    nav{padding:0 24px}.nav-links{gap:18px}
+    section,.cta-green,.cta-quote,.cta-dark,.cta-strip,footer{padding-left:24px;padding-right:24px}
+    .hero-left,.t-right{padding:52px 24px}
+    .t-left{min-height:500px}
+    .hero-right{min-height:380px}
   }
 </style>
 </head>
@@ -296,660 +271,816 @@
 
 <!-- TOP BAR -->
 <div class="top-bar">
-  Now Accepting New Clients &nbsp;·&nbsp; <a href="tel:+14703001234">(470) 300-1234</a> &nbsp;·&nbsp; Johns Creek, GA &nbsp;·&nbsp; <a href="contact.html">Send a Message</a>
+  Now Accepting New Clients &nbsp;·&nbsp; <a href="tel:+14703001234">(470) 300-1234</a> &nbsp;·&nbsp; Lawrenceville, GA &nbsp;·&nbsp; <a href="schedule.html">Book a Free Consultation</a>
 </div>
 
 <!-- MAIN NAV -->
-<nav class="main-nav">
-  <a class="nav-logo" href="index.html">
-    <div class="nav-logo-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-        <path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4"/>
+<nav>
+  <a class="logo" href="index.html">
+    <div class="logo-icon">
+      <!-- Crescent moon smile logo -->
+      <svg width="30" height="30" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Moon crescent using mask technique -->
+        <defs>
+          <mask id="cmask">
+            <rect width="44" height="44" fill="white"/>
+            <circle cx="28" cy="19" r="13" fill="black"/>
+          </mask>
+        </defs>
+        <circle cx="20" cy="22" r="15" fill="white" mask="url(#cmask)"/>
+        <!-- Smile on the crescent face -->
+        <path d="M 11 25 Q 15 30 19 25" stroke="#2d5a45" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <!-- Eyes -->
+        <circle cx="11.5" cy="20" r="1.4" fill="#2d5a45"/>
+        <circle cx="17.5" cy="18" r="1.4" fill="#2d5a45"/>
+        <!-- Star -->
+        <path d="M 32 12 L 33.2 15.6 L 37 15.6 L 34 17.9 L 35.1 21.5 L 32 19.2 L 28.9 21.5 L 30 17.9 L 27 15.6 L 30.8 15.6 Z" fill="#b8963e" opacity="0.9" transform="scale(0.55) translate(26, 6)"/>
       </svg>
     </div>
-    <span class="nav-logo-text">my<span>muslim</span>therapists</span>
+    <span class="logo-text">my<em>muslim</em>therapists</span>
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="insurance.html">Insurance</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="contact.html">Contact</a></li>
     <li><a href="schedule.html" class="nav-cta">Schedule Now</a></li>
   </ul>
 </nav>
 
 <!-- QUICK NAV -->
-<div class="quick-nav">
+<div class="qnav">
   <a href="#therapist">Your Therapist</a>
   <a href="#approach">Our Approach</a>
   <a href="#services">Services</a>
   <a href="#expect">What to Expect</a>
   <a href="#conditions">Conditions</a>
-  <a href="#insurance">Insurance</a>
+  <a href="#groups">Groups</a>
   <a href="#faq">FAQ</a>
-  <a href="#location">Contact</a>
+  <a href="#location">Find Us</a>
 </div>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-content">
-    <div class="new-client-badge fade-up">Now Accepting New Clients</div>
-    <div class="hero-location fade-up delay-1">Johns Creek, Georgia</div>
-    <h1 class="fade-up delay-2">
-      Mental health care<br>rooted in <em>faith,</em><br>community & trust.
-    </h1>
-    <p class="hero-sub fade-up delay-3">
-      Compassionate, culturally-informed therapy for Muslim individuals, couples, and families — provided in person at our Johns Creek office or online from anywhere in Georgia.
-    </p>
-    <div class="schedule-card fade-up delay-4">
-      <div class="schedule-card-header">Schedule Your First Appointment</div>
-      <div class="schedule-options">
-        <div class="schedule-phone">
-          <span class="schedule-phone-label">Call us directly</span>
-          <a href="tel:+14703001234" class="schedule-phone-num">(470) 300-1234</a>
+  <div class="hero-left">
+    <div class="badge fu">Now Accepting New Clients</div>
+    <div class="hero-loc fu d1">Lawrenceville, Georgia</div>
+    <h1 class="fu d2">Mental health care<br>rooted in <em>faith,</em><br>community & trust.</h1>
+    <p class="hero-sub fu d3">Compassionate, culturally-informed therapy for Muslim individuals, couples, and families — offered in person in Lawrenceville or online from anywhere in Georgia.</p>
+    <div class="sched-card fu d4">
+      <div class="sched-label">Schedule Your First Appointment</div>
+      <div class="sched-row">
+        <div class="sched-phone">
+          <span class="sched-phone-lbl">Call directly</span>
+          <a href="tel:+14703001234" class="sched-num">(470) 300-1234</a>
         </div>
-        <div class="schedule-online">
+        <div class="sched-online">
           <a href="schedule.html">Schedule Online →</a>
         </div>
       </div>
-      <div class="hero-meta">
-        <span>Free 15-min consultation</span>
-        <span>Most insurances accepted</span>
+      <div class="sched-checks">
+        <span>Free 15-min consult</span>
+        <span>Seen within one week</span>
+        <span>Virtual or in-person</span>
       </div>
     </div>
   </div>
-  <div class="hero-image geo-bg">
-    <div class="hero-image-inner">
-      <svg class="hero-crescent" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M65 20a35 35 0 1 0 0 60A28 28 0 0 1 65 20z" fill="white" opacity="0.85"/>
-        <circle cx="72" cy="22" r="3.5" fill="#b8963e" opacity="0.9"/>
+
+  <!-- Hero illustration panel -->
+  <div class="hero-right">
+    <div class="hero-art">
+      <svg width="100%" height="100%" viewBox="0 0 500 620" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <!-- Deep background -->
+        <rect width="500" height="620" fill="#2d5a45"/>
+        <!-- Large geometric Islamic pattern -->
+        <!-- Outer ring of hexagonal forms -->
+        <g stroke="#ffffff" stroke-width="0.6" opacity="0.12" fill="none">
+          <!-- Concentric polygon frames -->
+          <polygon points="250,30 460,145 460,375 250,490 40,375 40,145"/>
+          <polygon points="250,60 430,160 430,360 250,460 70,360 70,160"/>
+          <polygon points="250,90 400,175 400,345 250,430 100,345 100,175"/>
+          <polygon points="250,120 370,190 370,330 250,400 130,330 130,190"/>
+          <!-- Star lines -->
+          <line x1="250" y1="30" x2="250" y2="490"/>
+          <line x1="40" y1="145" x2="460" y2="375"/>
+          <line x1="460" y1="145" x2="40" y2="375"/>
+        </g>
+        <!-- Arabesque corner flourishes -->
+        <g stroke="#b8963e" stroke-width="0.8" opacity="0.25" fill="none">
+          <!-- top-left corner -->
+          <path d="M 0 0 Q 60 0 60 60 Q 60 0 120 0"/>
+          <path d="M 0 0 Q 0 60 60 60 Q 0 60 0 120"/>
+          <path d="M 10 10 Q 55 10 55 55 Q 55 10 100 10"/>
+          <!-- bottom-right corner -->
+          <path d="M 500 620 Q 440 620 440 560 Q 440 620 380 620"/>
+          <path d="M 500 620 Q 500 560 440 560 Q 500 560 500 500"/>
+          <path d="M 490 610 Q 445 610 445 565 Q 445 610 400 610"/>
+          <!-- top-right -->
+          <path d="M 500 0 Q 440 0 440 60 Q 440 0 380 0"/>
+          <path d="M 500 0 Q 500 60 440 60 Q 500 60 500 120"/>
+          <!-- bottom-left -->
+          <path d="M 0 620 Q 60 620 60 560 Q 60 620 120 620"/>
+          <path d="M 0 620 Q 0 560 60 560 Q 0 560 0 500"/>
+        </g>
+        <!-- Center crescent moon - large decorative -->
+        <g transform="translate(250, 230)">
+          <defs>
+            <mask id="heroMoon">
+              <rect x="-120" y="-120" width="240" height="240" fill="white"/>
+              <circle cx="32" cy="-24" r="78" fill="black"/>
+            </mask>
+          </defs>
+          <circle cx="0" cy="0" r="90" fill="white" opacity="0.92" mask="url(#heroMoon)"/>
+          <!-- Moon smile -->
+          <path d="M -28 20 Q 0 42 28 20" stroke="#2d5a45" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <!-- Moon eyes -->
+          <circle cx="-22" cy="4" r="5" fill="#2d5a45"/>
+          <circle cx="12" cy="-4" r="5" fill="#2d5a45"/>
+        </g>
+        <!-- Stars scattered -->
+        <g fill="#b8963e" opacity="0.75">
+          <!-- Star 1 -->
+          <polygon points="120,80 124,93 138,93 127,101 131,114 120,106 109,114 113,101 102,93 116,93" transform="scale(0.4) translate(185, 125)"/>
+          <!-- Star 2 -->
+          <polygon points="380,100 384,113 398,113 387,121 391,134 380,126 369,134 373,121 362,113 376,113" transform="scale(0.3) translate(900, 185)"/>
+          <!-- Star 3 -->
+          <polygon points="90,480 94,493 108,493 97,501 101,514 90,506 79,514 83,501 72,493 86,493" transform="scale(0.35) translate(130, 900)"/>
+          <!-- Star 4 (small) -->
+          <polygon points="420,500 422,506 428,506 424,510 426,516 420,512 414,516 416,510 412,506 418,506" transform="scale(0.5) translate(410, 490)"/>
+          <!-- Star 5 -->
+          <polygon points="450,180 453,189 462,189 455,195 458,204 450,198 442,204 445,195 438,189 447,189" transform="scale(0.4) translate(680, 255)"/>
+        </g>
+        <!-- Quran quote text -->
+        <text x="250" y="410" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="20" font-style="italic" fill="white" opacity="0.88">"Verily, with hardship comes ease."</text>
+        <text x="250" y="438" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" letter-spacing="3" fill="#b8963e" opacity="0.85">— QURAN 94:5–6</text>
+        <!-- Bottom geometric band -->
+        <g stroke="#b8963e" stroke-width="0.6" opacity="0.2" fill="none">
+          <line x1="0" y1="570" x2="500" y2="570"/>
+          <path d="M 0 570 Q 50 550 100 570 Q 150 590 200 570 Q 250 550 300 570 Q 350 590 400 570 Q 450 550 500 570"/>
+        </g>
       </svg>
-      <p class="hero-image-text">"Verily, with hardship<br>comes ease."</p>
-      <p class="hero-image-quote">— Quran 94:5–6</p>
     </div>
   </div>
 </div>
 
-<!-- TRUST -->
-<div class="trust-strip">
+<!-- TRUST STRIP -->
+<div class="trust">
   <div class="trust-item">
-    <div class="trust-num">15+</div>
-    <div class="trust-label">Years of Experience</div>
+    <div class="trust-num">10+</div>
+    <div class="trust-lbl">Years of Experience</div>
   </div>
   <div class="trust-item">
-    <div class="trust-num">PhD</div>
-    <div class="trust-label">Licensed Psychologist</div>
+    <div class="trust-num">LPC</div>
+    <div class="trust-lbl">Licensed Counselor</div>
   </div>
   <div class="trust-item">
     <div class="trust-num">In + Online</div>
-    <div class="trust-label">Flexible Sessions</div>
+    <div class="trust-lbl">Flexible Sessions</div>
   </div>
   <div class="trust-item">
-    <div class="trust-num">12+</div>
-    <div class="trust-label">Insurances Accepted</div>
+    <div class="trust-num">All of GA</div>
+    <div class="trust-lbl">Telehealth Statewide</div>
   </div>
 </div>
 
 <!-- THERAPIST -->
-<section class="therapist-section" id="therapist" style="padding:0;">
-  <div class="therapist-photo">
-    <div class="therapist-photo-inner">
-      <div class="therapist-avatar">FH</div>
-      <div class="therapist-name-card">
-        <h3>Dr. Fatima Hassan</h3>
-        <p class="title">PhD · Licensed Psychologist · Founder</p>
+<div class="therapist" id="therapist">
+  <div class="t-left">
+    <!-- Background geometric art -->
+    <svg class="t-left-art" viewBox="0 0 500 740" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%">
+      <g stroke="#2d5a45" stroke-width="1" fill="none">
+        <polygon points="250,10 490,140 490,600 250,730 10,600 10,140"/>
+        <polygon points="250,50 450,165 450,575 250,690 50,575 50,165"/>
+        <polygon points="250,90 410,190 410,550 250,650 90,550 90,190"/>
+        <circle cx="250" cy="370" r="200"/>
+        <circle cx="250" cy="370" r="150"/>
+        <circle cx="250" cy="370" r="100"/>
+      </g>
+      <g fill="#b8963e">
+        <circle cx="250" cy="170" r="4" opacity="0.4"/>
+        <circle cx="250" cy="570" r="4" opacity="0.4"/>
+        <circle cx="50" cy="370" r="4" opacity="0.4"/>
+        <circle cx="450" cy="370" r="4" opacity="0.4"/>
+      </g>
+    </svg>
+    <div class="t-inner">
+      <div class="t-avatar">AA</div>
+      <div class="t-name-block">
+        <h3>Amna Ahmad</h3>
+        <p class="tcred">LPC · Licensed Professional Counselor · Founder</p>
+        <div class="t-deco">
+          <div class="t-deco-line"></div>
+          <span class="t-deco-star">✦</span>
+          <div class="t-deco-line"></div>
+        </div>
       </div>
+      <!-- Small crescent icon below name -->
+      <svg width="48" height="30" viewBox="0 0 48 30" fill="none" style="margin-top:4px">
+        <defs><mask id="sm"><rect width="48" height="30" fill="white"/><circle cx="28" cy="12" r="10" fill="black"/></mask></defs>
+        <circle cx="20" cy="15" r="12" fill="#b8963e" opacity="0.35" mask="url(#sm)"/>
+        <path d="M 11 18 Q 17 23 22 18" stroke="#b8963e" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+      </svg>
     </div>
   </div>
-  <div class="therapist-content">
-    <div class="section-label">Meet Your Therapist</div>
-    <h2 class="section-title" style="font-size:38px;">A space where you don't have to <em>explain yourself.</em></h2>
+
+  <div class="t-right">
+    <div class="sec-label">Meet Your Therapist</div>
+    <h2 class="sec-title" style="font-size:38px;">A space where you never have to<br><em>explain yourself.</em></h2>
     <div class="divider"></div>
     <p>
-      Dr. Fatima Hassan is a licensed psychologist with over 15 years of clinical experience supporting Muslim individuals, couples, and families through anxiety, depression, trauma, marital challenges, parenting struggles, identity questions, and life transitions. She founded mymuslimtherapists with a clear vision: to create a clinical space where Muslim clients never have to translate their faith, justify their values, or set aside their identity to receive excellent mental health care.
+      Amna Ahmad is a Licensed Professional Counselor with over a decade of clinical experience working with Muslim individuals, couples, and families. She founded mymuslimtherapists with a singular purpose: to create a therapeutic space where Muslim clients never have to translate their faith, justify their cultural values, or set aside their identity in order to receive excellent mental health care.
     </p>
     <p>
-      Her approach is integrative — drawing from Cognitive Behavioral Therapy (CBT), Acceptance and Commitment Therapy (ACT), trauma-focused care (EMDR-trained), and family systems work — while remaining deeply respectful of each client's relationship with their faith. For some clients, that means weaving Islamic concepts like sabr, tawakkul, and shukr into the therapeutic conversation. For others, it simply means knowing that their therapist understands their cultural context without explanation. Both are equally welcome here.
+      Her approach is integrative and evidence-based — drawing from Cognitive Behavioral Therapy (CBT), Acceptance and Commitment Therapy (ACT), trauma-informed care, and family systems frameworks — while remaining deeply attentive to each client's relationship with their faith. For some clients, that means weaving Islamic concepts like <em>sabr, tawakkul,</em> and <em>shukr</em> into the therapeutic conversation. For others, it simply means working with a counselor who understands their world without needing it explained. Both are equally welcome here.
     </p>
     <p>
-      Dr. Hassan has worked across community mental health, university counseling centers, and private practice. She is particularly passionate about the mental health needs of second-generation Muslim Americans, women navigating multiple roles, and those carrying the invisible weight of intergenerational and religious trauma.
+      Amna has worked across university counseling centers, community mental health settings, and private practice. She is particularly passionate about supporting second-generation Muslim Americans, women navigating multiple roles, and those carrying the weight of intergenerational or religious trauma. She believes deeply that healing is possible — and that no one should have to face it alone.
     </p>
-    <h4>My approach in three words: warm, honest, evidence-based.</h4>
+    <h4>My approach: warm, collaborative, and evidence-rooted.</h4>
     <p>
-      Therapy with me is collaborative. We work together to understand what's happening, why it matters, and what change might look like for you. I lean on what the research tells us about effective treatment — and I trust that you are the expert on your own life, your faith, and what feels right for you.
+      Therapy with Amna is a partnership. Together, you work to understand what's happening, why it matters to you, and what meaningful change might look like in your life. She leans on what the research shows about effective treatment, while trusting that you are the expert on your own life, your faith, and what feels right for you.
     </p>
-    <div class="therapist-meta-grid">
-      <div class="therapist-meta-block">
+    <div class="t-meta">
+      <div class="t-meta-block">
         <h5>Specialties</h5>
         <ul>
           <li>Anxiety & Depression</li>
-          <li>Trauma & PTSD (EMDR)</li>
+          <li>Trauma & PTSD</li>
           <li>Religious & Identity Trauma</li>
-          <li>Marriage & Couples Counseling</li>
-          <li>Parenting & Family Dynamics</li>
-          <li>Life Transitions</li>
+          <li>Marriage & Pre-Marital</li>
+          <li>Parenting & Family Conflict</li>
           <li>Women's Mental Health</li>
+          <li>Life Transitions & Grief</li>
         </ul>
       </div>
-      <div class="therapist-meta-block">
+      <div class="t-meta-block">
         <h5>Credentials</h5>
         <ul>
-          <li>PhD, Clinical Psychology</li>
-          <li>Licensed in Georgia (PSY-XXXXX)</li>
-          <li>EMDR Certified</li>
-          <li>15+ Years Clinical Experience</li>
+          <li>LPC — Licensed in Georgia</li>
+          <li>10+ Years Clinical Experience</li>
+          <li>Trauma-Informed Training</li>
+          <li>Faith-Integrated Therapy</li>
         </ul>
       </div>
-      <div class="therapist-meta-block">
+      <div class="t-meta-block">
         <h5>Languages</h5>
         <ul>
           <li>English</li>
+          <li>Urdu</li>
           <li>Arabic (conversational)</li>
-          <li>Urdu (conversational)</li>
         </ul>
       </div>
-      <div class="therapist-meta-block">
+      <div class="t-meta-block">
         <h5>Works With</h5>
         <ul>
           <li>Adults (18+)</li>
           <li>Couples & Families</li>
           <li>Adolescents (14+)</li>
-          <li>In Person & Online</li>
+          <li>In Person & Telehealth</li>
         </ul>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- CTA #1 -->
-<div class="cta-banner">
+<!-- CTA 1 -->
+<div class="cta-green">
   <div>
-    <h3>Book your first session with Dr. Hassan</h3>
-    <p>New clients receive a complimentary 15-minute consultation to make sure we're the right fit before scheduling a full session.</p>
+    <h3>Book your first session with Amna Ahmad</h3>
+    <p>New clients receive a complimentary 15-minute phone consultation — no commitment required.</p>
   </div>
-  <div class="cta-banner-actions">
+  <div class="cta-green-btns">
     <a href="tel:+14703001234" class="btn-gold">Call (470) 300-1234</a>
-    <a href="schedule.html" class="btn-outline" style="border-color:white; color:white;">Schedule Online</a>
+    <a href="schedule.html" class="btn-o" style="border-color:white;color:white;">Schedule Online</a>
   </div>
 </div>
 
 <!-- APPROACH -->
 <section class="approach-section" id="approach">
-  <div class="section-label">Our Philosophy</div>
-  <h2 class="section-title">Therapy that <em>honors</em> who you are.</h2>
-  <p class="section-desc">We blend evidence-based clinical care with deep cultural humility — so you can focus on healing instead of explaining.</p>
+  <div class="sec-label">Our Philosophy</div>
+  <h2 class="sec-title">Therapy that <em>honors</em> who you are.</h2>
+  <p class="sec-desc">Grounded in evidence, informed by culture, and open to faith — our approach is built around you as a whole person, not just a presenting concern.</p>
   <div class="divider"></div>
   <div class="approach-grid">
     <div class="approach-card">
-      <div class="approach-num">01</div>
+      <!-- Icon: crescent + heart -->
+      <svg class="approach-icon" viewBox="0 0 52 52" fill="none">
+        <defs><mask id="am1"><rect width="52" height="52" fill="white"/><circle cx="30" cy="20" r="11" fill="black"/></mask></defs>
+        <circle cx="22" cy="24" r="13" fill="#2d5a45" opacity="0.12" mask="url(#am1)"/>
+        <circle cx="22" cy="24" r="13" stroke="#2d5a45" stroke-width="1.5" fill="none" mask="url(#am1)"/>
+        <path d="M 26 34 Q 30 40 34 34" stroke="#b8963e" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+        <path d="M 34 10 C 34 10 26 16 34 22 C 42 16 34 10 34 10Z" fill="#b8963e" opacity="0.6" transform="scale(0.6) translate(20, 8)"/>
+      </svg>
       <h4>Faith-Integrated Care</h4>
-      <p>For clients who want it, we incorporate Islamic concepts of patience, gratitude, trust, and self-reflection alongside modern therapeutic methods. For those who don't, your beliefs are still respected and never questioned. The choice is always yours.</p>
+      <p>For clients who want it, we weave Islamic concepts of patience, gratitude, trust, and self-reflection alongside modern therapeutic methods. For those who don't, your beliefs are respected and never questioned. The choice is always yours.</p>
     </div>
     <div class="approach-card">
-      <div class="approach-num">02</div>
+      <!-- Icon: shield with checkmark -->
+      <svg class="approach-icon" viewBox="0 0 52 52" fill="none">
+        <path d="M 10 14 L 26 8 L 42 14 L 42 28 C 42 38 26 46 26 46 C 26 46 10 38 10 28 Z" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.08"/>
+        <path d="M 19 27 L 24 32 L 34 20" stroke="#2d5a45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="40" cy="10" r="4" fill="#b8963e" opacity="0.6"/>
+      </svg>
       <h4>Evidence-Based Methods</h4>
-      <p>We rely on therapeutic approaches with strong research support — CBT, ACT, EMDR for trauma, emotion-focused therapy for couples, and family systems work — adapted to your cultural and personal context.</p>
+      <p>We rely on therapeutic approaches with strong research support — CBT, ACT, trauma-focused care, emotion-focused therapy for couples, and family systems work — all adapted to your cultural and personal context.</p>
     </div>
     <div class="approach-card">
-      <div class="approach-num">03</div>
+      <!-- Icon: person with radiant lines -->
+      <svg class="approach-icon" viewBox="0 0 52 52" fill="none">
+        <circle cx="26" cy="16" r="8" stroke="#2d5a45" stroke-width="1.5"/>
+        <path d="M 12 44 C 12 36 18 30 26 30 C 34 30 40 36 40 44" stroke="#2d5a45" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="26" y1="2" x2="26" y2="6" stroke="#b8963e" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="36" y1="6" x2="34" y2="9" stroke="#b8963e" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="42" y1="16" x2="38" y2="16" stroke="#b8963e" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="16" y1="6" x2="18" y2="9" stroke="#b8963e" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="10" y1="16" x2="14" y2="16" stroke="#b8963e" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
       <h4>Whole-Person Healing</h4>
-      <p>You're not just a diagnosis. We consider your relationships, your community, your spiritual life, your work, and your past — because real healing happens when all of these are seen and supported together.</p>
+      <p>You're more than a diagnosis. We consider your relationships, community, spiritual life, work, and history — because real healing happens when all parts of you are acknowledged and supported together.</p>
     </div>
     <div class="approach-card">
-      <div class="approach-num">04</div>
+      <!-- Icon: hands cupped -->
+      <svg class="approach-icon" viewBox="0 0 52 52" fill="none">
+        <path d="M 8 32 Q 8 20 18 18 L 26 16 L 34 18 Q 44 20 44 32" stroke="#2d5a45" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M 8 32 Q 14 44 26 44 Q 38 44 44 32" stroke="#2d5a45" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <circle cx="26" cy="26" r="6" fill="#b8963e" opacity="0.2" stroke="#b8963e" stroke-width="1"/>
+        <path d="M 23 26 L 25.5 28.5 L 30 23" stroke="#b8963e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
       <h4>Cultural Humility</h4>
-      <p>We don't assume — we listen. Every Muslim client comes from a unique cultural, ethnic, and family background. Your therapist's job is to understand yours, not to apply generalizations.</p>
+      <p>We don't assume — we listen. Every Muslim client comes from a unique cultural, ethnic, and family background. Your therapist's role is to understand your specific world, not apply generalizations about what Muslim life looks like.</p>
     </div>
     <div class="approach-card">
-      <div class="approach-num">05</div>
+      <!-- Icon: lock -->
+      <svg class="approach-icon" viewBox="0 0 52 52" fill="none">
+        <rect x="12" y="24" width="28" height="22" rx="2" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.07"/>
+        <path d="M 18 24 L 18 18 C 18 12 34 12 34 18 L 34 24" stroke="#2d5a45" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <circle cx="26" cy="34" r="4" fill="#2d5a45" opacity="0.4"/>
+        <line x1="26" y1="34" x2="26" y2="40" stroke="#2d5a45" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="40" cy="12" r="3" fill="#b8963e" opacity="0.5"/>
+      </svg>
       <h4>Privacy & Discretion</h4>
-      <p>We understand the cultural weight of seeking mental health support. Your sessions, your records, and your participation here are held in the strictest confidence — protected legally and ethically.</p>
+      <p>We understand the cultural weight of seeking mental health support. Your sessions, your records, and your participation here are held in the strictest legal and ethical confidence — always.</p>
     </div>
     <div class="approach-card">
-      <div class="approach-num">06</div>
+      <!-- Icon: open circle / embrace -->
+      <svg class="approach-icon" viewBox="0 0 52 52" fill="none">
+        <circle cx="26" cy="26" r="18" stroke="#2d5a45" stroke-width="1.5" stroke-dasharray="3 5" opacity="0.4"/>
+        <circle cx="26" cy="26" r="10" stroke="#2d5a45" stroke-width="1.5"/>
+        <path d="M 21 26 L 24.5 29.5 L 32 22" stroke="#b8963e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
       <h4>No Judgment, Ever</h4>
-      <p>This is a space to be honest about where you actually are — not where you think you should be. There is no version of you that needs to be hidden, fixed, or apologized for here.</p>
+      <p>This is a space to be honest about where you actually are — not where you think you should be. There is no version of yourself that needs to be hidden, fixed, or apologized for when you walk through our door.</p>
     </div>
   </div>
 </section>
 
-<!-- CTA #2 -->
+<!-- CTA 2 -->
 <div class="cta-quote">
-  <p class="cta-quote-text">"You don't have to be in crisis to deserve <em>support.</em>"</p>
-  <div class="cta-quote-actions">
-    <a href="tel:+14703001234" class="btn-primary">Call Now: (470) 300-1234</a>
-    <a href="schedule.html" class="btn-outline">Request an Appointment</a>
+  <p class="cta-quote-txt">"You don't have to be in crisis to deserve <em>support.</em>"</p>
+  <div class="cta-q-btns">
+    <a href="tel:+14703001234" class="btn-g">Call Now: (470) 300-1234</a>
+    <a href="schedule.html" class="btn-o">Request an Appointment</a>
   </div>
 </div>
 
 <!-- SERVICES -->
 <section class="services-section" id="services">
-  <div class="services-intro">
+  <div class="svc-intro">
     <div>
-      <div class="section-label">What We Offer</div>
-      <h2 class="section-title">Therapy services in <em>Johns Creek</em></h2>
+      <div class="sec-label">What We Offer</div>
+      <h2 class="sec-title">Therapy services in <em>Lawrenceville</em></h2>
       <div class="divider"></div>
     </div>
-    <p class="section-desc">
-      Whether you're seeking individual support, working through a relationship, or navigating a family transition, we offer a full range of evidence-based therapy services — all delivered with cultural awareness and clinical excellence.
-    </p>
+    <p class="sec-desc">Whether you're seeking support for yourself, working through a relationship, or navigating a family challenge, we offer a full range of evidence-based services — all delivered with cultural awareness and clinical excellence.</p>
   </div>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/></svg>
+  <div class="svc-grid">
+    <!-- Individual -->
+    <div class="svc-card">
+      <div class="svc-num">01</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 56 56" fill="none" stroke="#2d5a45" stroke-width="1.5">
+          <circle cx="28" cy="18" r="10"/>
+          <path d="M 8 50 C 8 38 17 30 28 30 C 39 30 48 38 48 50"/>
+          <!-- small halo/light above -->
+          <path d="M 22 6 Q 28 2 34 6" stroke="#b8963e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        </svg>
       </div>
-      <div class="service-name">Individual Therapy</div>
-      <p class="service-desc">
-        One-on-one sessions tailored to your needs, goals, and pace. Whether you're working through anxiety, processing trauma, navigating a major life change, or seeking deeper self-understanding, individual therapy gives you a confidential space to be fully heard. Sessions typically last 50 minutes and meet weekly or biweekly.
-      </p>
-      <div class="service-meta"><span>50 min sessions</span><span>In person + online</span></div>
+      <div class="svc-name">Individual Therapy</div>
+      <p class="svc-desc">One-on-one sessions tailored to your needs, goals, and pace. Whether you're navigating anxiety, processing trauma, facing a life transition, or seeking deeper self-understanding, individual therapy gives you a confidential space to be fully heard and supported. Sessions are 50 minutes and offered weekly or biweekly.</p>
+      <div class="svc-tags"><span>50 min</span><span>In person + online</span><span>Weekly or biweekly</span></div>
     </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="4"/><circle cx="16" cy="8" r="4"/><path d="M2 20c0-3 2.69-5.5 6-5.5h8c3.31 0 6 2.5 6 5.5"/></svg>
+    <!-- Couples -->
+    <div class="svc-card">
+      <div class="svc-num">02</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 56 56" fill="none" stroke="#2d5a45" stroke-width="1.5">
+          <circle cx="18" cy="16" r="8"/>
+          <circle cx="38" cy="16" r="8"/>
+          <path d="M 2 48 C 2 38 9 32 18 32"/>
+          <path d="M 54 48 C 54 38 47 32 38 32"/>
+          <path d="M 18 32 Q 28 28 38 32"/>
+          <!-- linking heart between -->
+          <path d="M 24 20 C 24 17 20 15 20 19 C 20 23 28 27 28 27 C 28 27 36 23 36 19 C 36 15 32 17 32 20" stroke="#b8963e" stroke-width="1.2" fill="none"/>
+        </svg>
       </div>
-      <div class="service-name">Couples & Marriage Counseling</div>
-      <p class="service-desc">
-        Pre-marital counseling, conflict resolution, communication rebuilding, navigating in-laws, intimacy concerns, parenting disagreements — couples therapy is for any partnership wanting to grow stronger. We use emotion-focused and Gottman-informed methods adapted thoughtfully for Muslim couples.
-      </p>
-      <div class="service-meta"><span>60–75 min sessions</span><span>Pre-marital welcome</span></div>
+      <div class="svc-name">Couples & Marriage Counseling</div>
+      <p class="svc-desc">Pre-marital counseling, conflict resolution, communication rebuilding, navigating in-laws, intimacy concerns, parenting disagreements — couples therapy is for any partnership wanting to grow stronger. We use emotion-focused and Gottman-informed methods thoughtfully adapted for Muslim couples and Islamic values.</p>
+      <div class="svc-tags"><span>60–75 min</span><span>Pre-marital welcome</span><span>Muslim-centered</span></div>
     </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+    <!-- Online -->
+    <div class="svc-card">
+      <div class="svc-num">03</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 56 56" fill="none" stroke="#2d5a45" stroke-width="1.5">
+          <rect x="8" y="10" width="40" height="28" rx="3"/>
+          <path d="M 20 38 L 20 46 M 36 38 L 36 46 M 14 46 L 42 46"/>
+          <!-- wifi-like signal inside -->
+          <path d="M 20 26 Q 28 20 36 26" stroke="#b8963e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <path d="M 23 30 Q 28 27 33 30" stroke="#b8963e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <circle cx="28" cy="33" r="2" fill="#b8963e"/>
+        </svg>
       </div>
-      <div class="service-name">Online Therapy</div>
-      <p class="service-desc">
-        High-quality therapy from anywhere in Georgia, conducted over a secure HIPAA-compliant platform. Online sessions are ideal for busy parents, college students, those without easy transportation, or anyone who feels more at ease at home. Just as effective as in-person care for most concerns.
-      </p>
-      <div class="service-meta"><span>Statewide GA</span><span>HIPAA secure</span></div>
+      <div class="svc-name">Online Therapy (Telehealth)</div>
+      <p class="svc-desc">High-quality therapy from anywhere in Georgia, on a secure HIPAA-compliant platform. Online sessions are ideal for busy parents, college students, those without easy access to transportation, or anyone who feels more comfortable at home. Research shows telehealth is just as effective as in-person care for most concerns.</p>
+      <div class="svc-tags"><span>All of Georgia</span><span>HIPAA secure</span><span>Same therapist</span></div>
     </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    <!-- Family -->
+    <div class="svc-card">
+      <div class="svc-num">04</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 56 56" fill="none" stroke="#2d5a45" stroke-width="1.5">
+          <circle cx="28" cy="12" r="7"/>
+          <circle cx="12" cy="28" r="6"/>
+          <circle cx="44" cy="28" r="6"/>
+          <line x1="28" y1="19" x2="16" y2="24"/>
+          <line x1="28" y1="19" x2="40" y2="24"/>
+          <path d="M 6 48 C 6 40 8 34 12 34"/>
+          <path d="M 18 34 Q 28 30 38 34"/>
+          <path d="M 50 48 C 50 40 48 34 44 34"/>
+          <path d="M 22 19 Q 28 16 34 19" stroke="#b8963e" stroke-width="1" fill="none"/>
+        </svg>
       </div>
-      <div class="service-name">Family Therapy</div>
-      <p class="service-desc">
-        Strengthen family communication, resolve recurring conflict, support a struggling family member, or process a shared loss. Family therapy can include parents, children, siblings, and extended family. We work with the cultural reality of close-knit Muslim families and the complexity that comes with them.
-      </p>
-      <div class="service-meta"><span>Multi-generational</span><span>60–90 min sessions</span></div>
+      <div class="svc-name">Family Therapy</div>
+      <p class="svc-desc">Strengthen family communication, resolve long-standing conflict, support a struggling family member, or process a shared loss together. Family therapy can include parents, children, siblings, and extended family. We work with the full complexity of close-knit Muslim families — multigenerational households, cultural expectations, and all.</p>
+      <div class="svc-tags"><span>All family structures</span><span>60–90 min</span></div>
     </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    <!-- Trauma -->
+    <div class="svc-card">
+      <div class="svc-num">05</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 56 56" fill="none" stroke="#2d5a45" stroke-width="1.5">
+          <path d="M 28 10 L 28 46 M 10 28 L 46 28" stroke-linecap="round" opacity="0.2"/>
+          <path d="M 28 8 C 28 8 44 20 44 30 C 44 40 36 48 28 48 C 20 48 12 40 12 30 C 12 20 28 8 28 8Z"/>
+          <path d="M 22 30 L 26 34 L 36 22" stroke="#b8963e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </div>
-      <div class="service-name">Trauma-Focused Therapy</div>
-      <p class="service-desc">
-        Using EMDR and other trauma-focused approaches, we help you process unresolved experiences — including childhood trauma, religious trauma, racial and identity-based trauma, immigration trauma, and acute incidents. Trauma work is paced to your readiness; we never push faster than you're prepared to go.
-      </p>
-      <div class="service-meta"><span>EMDR available</span><span>Adult trauma</span></div>
+      <div class="svc-name">Trauma-Focused Therapy</div>
+      <p class="svc-desc">Using trauma-focused approaches, we help you process unresolved experiences — including childhood trauma, religious trauma, racial and identity-based trauma, immigration trauma, grief, and acute incidents. Trauma work is always paced to your readiness; we never push further or faster than you're ready to go.</p>
+      <div class="svc-tags"><span>Trauma-informed</span><span>Paced to you</span></div>
     </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    <!-- Adolescent -->
+    <div class="svc-card">
+      <div class="svc-num">06</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 56 56" fill="none" stroke="#2d5a45" stroke-width="1.5">
+          <circle cx="28" cy="16" r="9"/>
+          <path d="M 10 48 C 10 37 18 30 28 30 C 38 30 46 37 46 48"/>
+          <!-- book/growth icon -->
+          <path d="M 18 22 Q 28 18 38 22" stroke="#b8963e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <!-- stars of growth -->
+          <circle cx="42" cy="10" r="2" fill="#b8963e" opacity="0.7"/>
+          <circle cx="46" cy="16" r="1.5" fill="#b8963e" opacity="0.5"/>
+        </svg>
       </div>
-      <div class="service-name">Grief & Loss Counseling</div>
-      <p class="service-desc">
-        The death of a loved one, the end of a marriage, the loss of a pregnancy, leaving home, or losing a sense of identity — grief takes many forms. We hold space for the full spectrum of loss, honoring Islamic perspectives on death and remembrance while supporting your individual grieving process.
-      </p>
-      <div class="service-meta"><span>All forms of loss</span><span>Bereavement</span></div>
+      <div class="svc-name">Adolescent Therapy</div>
+      <p class="svc-desc">Therapy for teens (ages 14+) navigating identity, anxiety, depression, family conflict, school stress, social media pressure, and the unique challenges of growing up Muslim in America. We work collaboratively with parents where appropriate, while fully respecting the teen's confidentiality and autonomy as they develop.</p>
+      <div class="svc-tags"><span>Ages 14+</span><span>Parent-aware</span><span>Identity-affirming</span></div>
     </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+    <!-- Grief -->
+    <div class="svc-card">
+      <div class="svc-num">07</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 56 56" fill="none" stroke="#2d5a45" stroke-width="1.5">
+          <path d="M 28 46 C 28 46 10 36 10 22 C 10 14 18 10 28 16 C 38 10 46 14 46 22 C 46 36 28 46 28 46Z"/>
+          <path d="M 22 26 Q 28 32 34 26" stroke="#b8963e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <!-- tear drop -->
+          <path d="M 28 8 Q 26 4 28 2 Q 30 4 28 8Z" fill="#b8963e" opacity="0.5"/>
+        </svg>
       </div>
-      <div class="service-name">Adolescent Therapy</div>
-      <p class="service-desc">
-        Therapy for teens (ages 14+) navigating identity, anxiety, depression, family conflict, school stress, social media pressure, and the unique challenges of growing up Muslim in America. We work collaboratively with parents while respecting the teen's confidentiality and developmental autonomy.
-      </p>
-      <div class="service-meta"><span>Ages 14+</span><span>Parent-aware</span></div>
+      <div class="svc-name">Grief & Loss Counseling</div>
+      <p class="svc-desc">The death of a loved one, the end of a marriage, pregnancy loss, leaving home, or losing a sense of identity — grief takes many forms. We hold space for the full spectrum, honoring Islamic perspectives on death and remembrance while supporting your individual grieving process with compassion and patience.</p>
+      <div class="svc-tags"><span>All forms of loss</span><span>Faith-sensitive</span></div>
     </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    <!-- Group -->
+    <div class="svc-card">
+      <div class="svc-num">08</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 56 56" fill="none" stroke="#2d5a45" stroke-width="1.5">
+          <circle cx="28" cy="22" r="8"/>
+          <circle cx="12" cy="34" r="6"/>
+          <circle cx="44" cy="34" r="6"/>
+          <path d="M 4 50 C 4 43 7 38 12 38"/>
+          <path d="M 20 38 Q 28 34 36 38"/>
+          <path d="M 52 50 C 52 43 49 38 44 38"/>
+          <path d="M 20 30 Q 28 26 36 30" stroke="#b8963e" stroke-width="1.2" fill="none"/>
+        </svg>
       </div>
-      <div class="service-name">Group Therapy</div>
-      <p class="service-desc">
-        Heal in community with others who share your experiences. Our culturally focused groups create a confidential, supportive space for connection — whether processing identity, navigating early parenthood, or working through anxiety as a teen. Limited spots; new groups begin quarterly.
-      </p>
-      <div class="service-meta"><span>Small groups</span><span>Quarterly cohorts</span></div>
+      <div class="svc-name">Group Therapy</div>
+      <p class="svc-desc">Heal in community with others who share your life experiences. Our small, culturally-focused groups provide a confidential and supportive space for connection, growth, and shared healing. Groups are led by a licensed therapist, capped at 6–8 participants, and run in quarterly cohorts. Waitlist available.</p>
+      <div class="svc-tags"><span>Small groups</span><span>Quarterly cohorts</span><span>Muslim-focused</span></div>
     </div>
   </div>
 </section>
 
-<!-- CTA #3 -->
-<div class="cta-split">
-  <div class="cta-split-half">
-    <h4>Prefer to talk?</h4>
-    <p>Call us directly. We'll answer questions about scheduling, insurance, or whether we're a fit for what you're looking for.</p>
-    <a href="tel:+14703001234" class="phone-link">(470) 300-1234</a>
+<!-- CTA 3 -->
+<div class="cta-split" style="background:var(--cream)">
+  <div class="cta-half" style="background:var(--cream)">
+    <h4>Prefer to talk first?</h4>
+    <p>We'll answer questions about scheduling, fees, or whether we're a good fit — no pressure, no commitment.</p>
+    <a href="tel:+14703001234" class="big-phone">(470) 300-1234</a>
   </div>
-  <div class="cta-split-half">
+  <div class="cta-half">
     <h4>Ready to schedule?</h4>
-    <p>Pick a time that works for you. Most new clients are seen within a week of their first inquiry.</p>
-    <a href="schedule.html" class="btn-primary">Request an Appointment</a>
+    <p>Most new clients are seen within a week of their first inquiry. Pick a time that works for you.</p>
+    <a href="schedule.html" class="btn-g">Request an Appointment</a>
   </div>
 </div>
 
-<!-- EXPECT -->
+<!-- WHAT TO EXPECT -->
 <section class="expect-section" id="expect">
-  <div class="section-label">Your First Steps</div>
-  <h2 class="section-title">What to expect, <em>step by step</em>.</h2>
-  <p class="section-desc">Starting therapy can feel uncertain. Here's exactly what happens from your first call to your first session.</p>
+  <div class="sec-label">Your First Steps</div>
+  <h2 class="sec-title">What to expect, <em>step by step.</em></h2>
+  <p class="sec-desc">Starting therapy can feel uncertain. Here's exactly what happens from your first contact to your first full session.</p>
   <div class="divider"></div>
-  <div class="expect-steps">
+  <div class="expect-grid">
     <div class="expect-step">
-      <div class="expect-step-num">Step 01</div>
-      <h4>Reach out</h4>
-      <p>Call, text, or fill out our online form. We respond within one business day to all new client inquiries — usually much sooner.</p>
+      <!-- Illustration: phone/message -->
+      <svg class="expect-step-art" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="28" fill="#2d5a45" opacity="0.07"/>
+        <circle cx="32" cy="32" r="20" stroke="#2d5a45" stroke-width="1" opacity="0.15"/>
+        <text x="32" y="38" text-anchor="middle" font-family="Cormorant Garamond" font-size="22" fill="#2d5a45" font-weight="400">01</text>
+      </svg>
+      <div class="expect-num">Step One</div>
+      <h4>Reach Out</h4>
+      <p>Call, text, or use our online form. We respond to all new client inquiries within one business day — usually much sooner. No lengthy intake forms required to start.</p>
     </div>
     <div class="expect-step">
-      <div class="expect-step-num">Step 02</div>
-      <h4>Free consultation</h4>
-      <p>We'll schedule a complimentary 15-minute phone call to understand what you're looking for and answer any questions about working together.</p>
+      <svg class="expect-step-art" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="28" fill="#2d5a45" opacity="0.07"/>
+        <circle cx="32" cy="32" r="20" stroke="#2d5a45" stroke-width="1" opacity="0.15"/>
+        <text x="32" y="38" text-anchor="middle" font-family="Cormorant Garamond" font-size="22" fill="#2d5a45" font-weight="400">02</text>
+      </svg>
+      <div class="expect-num">Step Two</div>
+      <h4>Free Consultation</h4>
+      <p>A complimentary 15-minute phone call with Amna to talk through what you're looking for, ask questions, and make sure we're the right fit — before any commitment is made.</p>
     </div>
     <div class="expect-step">
-      <div class="expect-step-num">Step 03</div>
-      <h4>Initial session</h4>
-      <p>Your first full session is a thorough conversation about your background, goals, and what you'd like to work on. No pressure, no rush — we move at your pace.</p>
+      <svg class="expect-step-art" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="28" fill="#2d5a45" opacity="0.07"/>
+        <circle cx="32" cy="32" r="20" stroke="#2d5a45" stroke-width="1" opacity="0.15"/>
+        <text x="32" y="38" text-anchor="middle" font-family="Cormorant Garamond" font-size="22" fill="#2d5a45" font-weight="400">03</text>
+      </svg>
+      <div class="expect-num">Step Three</div>
+      <h4>Initial Session</h4>
+      <p>Your first full session is a thorough, relaxed conversation about your background, your goals, and what you'd like to work on. There's no pressure and no rush — we go at your pace entirely.</p>
     </div>
     <div class="expect-step">
-      <div class="expect-step-num">Step 04</div>
-      <h4>Ongoing care</h4>
-      <p>We typically meet weekly or biweekly. Together we'll review progress regularly and adjust the plan as your needs evolve. You're in charge of your care.</p>
+      <svg class="expect-step-art" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="28" fill="#2d5a45" opacity="0.07"/>
+        <circle cx="32" cy="32" r="20" stroke="#2d5a45" stroke-width="1" opacity="0.15"/>
+        <text x="32" y="38" text-anchor="middle" font-family="Cormorant Garamath" font-size="22" fill="#2d5a45" font-weight="400">04</text>
+      </svg>
+      <div class="expect-num">Step Four</div>
+      <h4>Ongoing Care</h4>
+      <p>We typically meet weekly or biweekly. Together, we regularly review your progress and adjust the treatment plan as your needs evolve. You remain in full control of your care — always.</p>
     </div>
   </div>
 </section>
 
-<!-- CTA #4 -->
+<!-- CTA 4 -->
 <div class="cta-dark">
   <div>
     <h4>Take the first step today.</h4>
-    <p>Most clients say the hardest part was picking up the phone — and that they're glad they did.</p>
+    <p>Most clients say the hardest part was making the first call — and that they're glad they did.</p>
   </div>
   <a href="tel:+14703001234" class="btn-gold">Call (470) 300-1234</a>
 </div>
 
 <!-- CONDITIONS -->
-<section class="conditions-section" id="conditions">
-  <div class="section-label">Conditions & Specialties</div>
-  <h2 class="section-title">A wide range of <em>concerns</em> we can help with.</h2>
-  <p class="section-desc">Whether you have a clinical diagnosis or simply feel stuck, we provide thoughtful, non-judgmental support for the issues that affect daily life and long-term wellbeing.</p>
-  <div class="divider"></div>
-  <div class="conditions-categories">
-    <div class="condition-category">
+<section class="cond-section" id="conditions">
+  <div class="cond-header">
+    <div>
+      <div class="sec-label">Conditions & Specialties</div>
+      <h2 class="sec-title">A wide range of concerns<br>we can <em>help with.</em></h2>
+      <div class="divider"></div>
+    </div>
+    <p class="sec-desc">Whether you have a clinical diagnosis or simply feel stuck, we provide thoughtful, non-judgmental support for the issues that affect daily life and long-term wellbeing.</p>
+  </div>
+  <div class="cond-cols">
+    <div class="cond-col">
       <h4>Mood & Anxiety</h4>
       <ul>
-        <li>Generalized Anxiety</li>
+        <li>Generalized Anxiety Disorder</li>
         <li>Panic Disorder</li>
         <li>Social Anxiety</li>
         <li>Depression</li>
-        <li>Postpartum Depression</li>
+        <li>Postpartum Depression & Anxiety</li>
         <li>Bipolar Disorder</li>
-        <li>Phobias</li>
-        <li>Obsessive Compulsive Disorder (OCD)</li>
+        <li>Obsessive Compulsive Disorder</li>
+        <li>Phobias & Specific Fears</li>
+        <li>Burnout & Chronic Stress</li>
       </ul>
     </div>
-    <div class="condition-category">
+    <div class="cond-col">
       <h4>Trauma & Identity</h4>
       <ul>
         <li>PTSD & Complex PTSD</li>
-        <li>Religious Trauma</li>
-        <li>Racial & Identity Trauma</li>
+        <li>Religious & Spiritual Trauma</li>
+        <li>Racial & Identity-Based Trauma</li>
         <li>Islamophobia & Discrimination</li>
         <li>Intergenerational Trauma</li>
         <li>Immigration & Acculturation</li>
         <li>Childhood Trauma</li>
         <li>Dissociation</li>
+        <li>Cultural Identity Conflict</li>
       </ul>
     </div>
-    <div class="condition-category">
+    <div class="cond-col">
       <h4>Relationships & Life</h4>
       <ul>
         <li>Marriage & Couple Conflict</li>
-        <li>Pre-marital Counseling</li>
+        <li>Pre-Marital Preparation</li>
         <li>Parenting Challenges</li>
-        <li>Family Conflict</li>
+        <li>Family Conflict & Estrangement</li>
         <li>Grief & Bereavement</li>
-        <li>Self-Esteem & Self-Worth</li>
-        <li>Burnout & Stress</li>
-        <li>Anger Management</li>
+        <li>Self-Esteem & Boundaries</li>
+        <li>Life Transitions</li>
+        <li>Anger & Emotional Regulation</li>
+        <li>Women's Mental Health</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- CTA #5 -->
+<!-- CTA 5 -->
 <div class="cta-strip">
   <p>Don't see what you're looking for? Reach out — we'll point you in the right direction.</p>
-  <a href="contact.html">Send a Message →</a>
-</div>
-
-<!-- INSURANCE -->
-<section class="insurance-section" id="insurance">
-  <div class="insurance-intro">
-    <div class="insurance-intro-left">
-      <div class="section-label">Payment & Insurance</div>
-      <h2 class="section-title">Accessible care for <em>everyone</em>.</h2>
-      <div class="divider"></div>
-      <p class="section-desc">
-        We accept most major insurance plans and offer self-pay options for those who prefer privacy or are out-of-network. Our team will help verify your benefits before your first session — at no cost.
-      </p>
-    </div>
-    <div style="display:flex; flex-direction:column; gap:12px; flex-shrink:0;">
-      <a href="tel:+14703001234" class="btn-outline">Verify My Coverage</a>
-      <a href="billing.html" class="btn-primary">Pay My Bill</a>
-    </div>
-  </div>
-  <div class="insurance-grid">
-    <div class="insurance-item">Aetna</div>
-    <div class="insurance-item">Anthem Blue Cross Blue Shield</div>
-    <div class="insurance-item">Blue Cross Blue Shield</div>
-    <div class="insurance-item">ChampVA</div>
-    <div class="insurance-item">Cigna / Evernorth</div>
-    <div class="insurance-item">Claritev (Multiplan)</div>
-    <div class="insurance-item">Magellan</div>
-    <div class="insurance-item">Magellan EAP</div>
-    <div class="insurance-item">Medicare</div>
-    <div class="insurance-item">Optum / United Healthcare</div>
-    <div class="insurance-item">Tricare Certified</div>
-    <div class="insurance-item">Self-Pay Available</div>
-  </div>
-  <div class="insurance-note">
-    <strong style="color:var(--ink); font-weight:500;">Don't see your insurance?</strong> We're often able to work with out-of-network plans and can provide superbills for reimbursement. Sliding-scale options are also available for clients experiencing financial hardship — just ask.
-  </div>
-</section>
-
-<!-- CTA #6 -->
-<div class="cta-card">
-  <div>
-    <h4>Not sure if your insurance is accepted?</h4>
-    <p>We'll verify your coverage before your first session — completely free, no commitment.</p>
-  </div>
-  <div class="cta-card-actions">
-    <a href="tel:+14703001234" class="btn-primary">Call Us</a>
-    <a href="contact.html" class="btn-outline">Send a Message</a>
-  </div>
+  <a href="schedule.html">Schedule a Free Consult →</a>
 </div>
 
 <!-- GROUPS -->
 <section class="group-section" id="groups">
-  <div class="section-label">Group Therapy</div>
-  <h2 class="section-title">Heal alongside <em>community</em>.</h2>
-  <p class="section-desc">Our small, confidential groups bring together people walking through similar life chapters. Each is led by a licensed therapist and limited to 6–8 participants.</p>
-  <div class="divider"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:56px">
+    <div>
+      <div class="sec-label">Group Therapy</div>
+      <h2 class="sec-title">Heal alongside <em>community.</em></h2>
+      <div class="divider"></div>
+    </div>
+    <p class="sec-desc">Our small, confidential groups bring together people walking through similar life chapters. Each is facilitated by a licensed therapist and limited to 6–8 participants. New cohorts begin every quarter.</p>
+  </div>
   <div class="group-grid">
     <div class="group-card">
-      <span class="group-age">Ages 18–65</span>
+      <!-- Illustration: group circle -->
+      <svg class="group-card-icon" viewBox="0 0 56 56" fill="none">
+        <circle cx="28" cy="28" r="22" stroke="#2d5a45" stroke-width="1" opacity="0.2"/>
+        <circle cx="28" cy="14" r="5" fill="#2d5a45" opacity="0.3"/>
+        <circle cx="42" cy="36" r="5" fill="#2d5a45" opacity="0.3"/>
+        <circle cx="14" cy="36" r="5" fill="#2d5a45" opacity="0.3"/>
+        <path d="M 28 19 L 38 31 M 28 19 L 18 31 M 18 36 L 38 36" stroke="#b8963e" stroke-width="1" opacity="0.6"/>
+      </svg>
+      <span class="group-age">Adults 18+</span>
       <h4>Muslim Identity & Belonging</h4>
-      <p>An eight-week process group for Muslim adults navigating questions of identity, belonging, and faith in American society. Explore how your religious and cultural identity shapes your wellbeing in a confidential, affirming space.</p>
-      <a href="contact.html">Reserve Your Spot →</a>
+      <p>An 8-week process group for Muslim adults navigating identity, belonging, and faith in American society. Explore how your religious and cultural identity shapes your mental wellbeing in a safe, affirming, and confidential setting.</p>
+      <a href="schedule.html">Reserve Your Spot →</a>
     </div>
     <div class="group-card">
-      <span class="group-age">Ages 14–17</span>
-      <h4>Teen Muslim Minds: Anxiety & Depression</h4>
-      <p>A skills-based group for Muslim teens experiencing anxiety, depression, or mood difficulties. Combines evidence-based CBT methods with Islamic concepts of resilience to help teens build confidence and healthy coping.</p>
-      <a href="contact.html">Reserve Your Spot →</a>
+      <svg class="group-card-icon" viewBox="0 0 56 56" fill="none">
+        <circle cx="28" cy="16" r="7" stroke="#2d5a45" stroke-width="1.5"/>
+        <path d="M 12 50 C 12 38 19 30 28 30 C 37 30 44 38 44 50" stroke="#2d5a45" stroke-width="1.5" fill="none"/>
+        <!-- lightning bolt = energy/anxiety -->
+        <path d="M 32 4 L 28 12 L 32 12 L 28 22" stroke="#b8963e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(4, -2)"/>
+      </svg>
+      <span class="group-age">Teens 14–17</span>
+      <h4>Teen Muslim Minds</h4>
+      <p>A skills-based group for Muslim teens experiencing anxiety, depression, or mood difficulties. Combines evidence-based CBT tools with Islamic concepts of resilience to help teens build confidence, coping strategies, and community.</p>
+      <a href="schedule.html">Reserve Your Spot →</a>
     </div>
     <div class="group-card">
-      <span class="group-age">Ages 25–55</span>
-      <h4>Sisters' Circle: Women's Wellness</h4>
-      <p>A closed support group for Muslim women navigating marriage, motherhood, grief, and personal growth. A space to speak freely, be witnessed, and heal together — with privacy honored at every step.</p>
-      <a href="contact.html">Reserve Your Spot →</a>
+      <svg class="group-card-icon" viewBox="0 0 56 56" fill="none">
+        <!-- Women symbol -->
+        <circle cx="28" cy="22" r="12" stroke="#2d5a45" stroke-width="1.5"/>
+        <line x1="28" y1="34" x2="28" y2="48" stroke="#2d5a45" stroke-width="1.5"/>
+        <line x1="20" y1="42" x2="36" y2="42" stroke="#2d5a45" stroke-width="1.5"/>
+        <!-- flower petal decoration -->
+        <circle cx="40" cy="10" r="4" fill="#b8963e" opacity="0.25"/>
+        <circle cx="44" cy="18" r="3" fill="#b8963e" opacity="0.2"/>
+      </svg>
+      <span class="group-age">Women 25–55</span>
+      <h4>Sisters' Circle</h4>
+      <p>A closed support group for Muslim women navigating marriage, motherhood, grief, and personal growth. A space to speak freely, be witnessed, and heal together — with complete privacy honored at every step.</p>
+      <a href="schedule.html">Reserve Your Spot →</a>
     </div>
     <div class="group-card">
-      <span class="group-age">Ages 22–42</span>
+      <svg class="group-card-icon" viewBox="0 0 56 56" fill="none">
+        <!-- Parent + baby -->
+        <circle cx="22" cy="16" r="8" stroke="#2d5a45" stroke-width="1.5"/>
+        <path d="M 6 50 C 6 40 13 34 22 34" stroke="#2d5a45" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <!-- Baby -->
+        <circle cx="38" cy="32" r="6" stroke="#2d5a45" stroke-width="1.5"/>
+        <path d="M 32 38 C 32 44 34 48 38 48 C 42 48 44 44 44 38" stroke="#2d5a45" stroke-width="1.5" fill="none"/>
+        <path d="M 28 24 Q 32 20 36 24" stroke="#b8963e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="group-age">Parents 22–42</span>
       <h4>New Parents Support Group</h4>
-      <p>For Muslim new parents facing postpartum adjustment, parenting anxiety, or the transition to parenthood. Balancing faith, family, and personal wellbeing is hard — you don't have to do it alone.</p>
-      <a href="contact.html">Reserve Your Spot →</a>
+      <p>For Muslim new parents facing postpartum adjustment, parenting anxiety, or the transition to parenthood. Balancing faith, family expectations, and personal wellbeing is hard — this group exists so you don't have to do it alone.</p>
+      <a href="schedule.html">Reserve Your Spot →</a>
     </div>
   </div>
 </section>
 
-<!-- CTA #7 -->
-<div class="cta-banner" style="background: var(--gold);">
+<!-- CTA 6 -->
+<div class="cta-green" style="background:var(--gold)">
   <div>
-    <h3 style="color:var(--ink);">New group cohorts begin every quarter.</h3>
-    <p style="color:rgba(0,0,0,0.6);">Spots fill quickly — let us know which group interests you and we'll save your place.</p>
+    <h3 style="color:var(--ink)">New group cohorts begin every quarter.</h3>
+    <p style="color:rgba(0,0,0,.55)">Spots fill quickly — let us know which group interests you and we'll save your place for the next opening.</p>
   </div>
-  <div class="cta-banner-actions">
-    <a href="tel:+14703001234" class="btn-dark">Call to Reserve</a>
-    <a href="contact.html" class="btn-outline" style="border-color:var(--ink); color:var(--ink);">Email Us</a>
+  <div class="cta-green-btns">
+    <a href="tel:+14703001234" class="btn-dk">Call to Reserve</a>
+    <a href="schedule.html" class="btn-o" style="border-color:var(--ink);color:var(--ink)">Send a Message</a>
   </div>
 </div>
 
 <!-- FAQ -->
 <section class="faq-section" id="faq">
-  <div class="section-label">Frequently Asked</div>
-  <h2 class="section-title">Common <em>questions</em>, honest answers.</h2>
-  <div class="divider"></div>
-  <div class="faq-grid">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:0">
+    <div>
+      <div class="sec-label">Frequently Asked</div>
+      <h2 class="sec-title">Common questions,<br><em>honest answers.</em></h2>
+      <div class="divider"></div>
+    </div>
+    <p class="sec-desc" style="margin-bottom:0">Starting therapy brings up a lot of questions. Here are the ones we're asked most often by new clients — answered straightforwardly.</p>
+  </div>
+  <div class="faq-grid" style="margin-top:56px">
     <div class="faq-item">
       <h4>Do I have to be religious to come here?</h4>
-      <p>Not at all. We work with Muslims across the full spectrum of practice and belief — from devout to questioning to non-practicing. Whatever your relationship with faith looks like, you'll be respected. Our work is shaped by cultural understanding, not religious requirement.</p>
+      <p>Not at all. We work with Muslims across the full spectrum of belief and practice — from devout to questioning to non-practicing. Our space is shaped by cultural understanding, not religious requirement. Whatever your relationship with faith looks like, you are welcome here exactly as you are.</p>
     </div>
     <div class="faq-item">
-      <h4>Will my therapist try to bring religion into sessions?</h4>
-      <p>Only if you want them to. Faith-integrated therapy is available on request, but it's never imposed. Many of our clients want a therapist who simply understands their cultural context — and that's enough on its own.</p>
+      <h4>Will my therapist bring religion into sessions?</h4>
+      <p>Only if you want them to. Faith-integrated therapy is available and meaningful for many clients — but it's always offered, never imposed. Many clients simply want a therapist who understands their cultural context, and that alone is more than enough.</p>
     </div>
     <div class="faq-item">
       <h4>How private is therapy? My family is close-knit.</h4>
-      <p>Therapy is legally and ethically confidential. We do not share information with family members, employers, or anyone else without your written consent — with very narrow exceptions related to immediate safety. Your sessions are yours alone.</p>
+      <p>Therapy is legally and ethically confidential. We never share information with family members, employers, or anyone else without your written consent — with only very narrow, legally mandated exceptions related to immediate safety. Your sessions are yours alone.</p>
     </div>
     <div class="faq-item">
-      <h4>How long does therapy take?</h4>
-      <p>It depends on your goals. Some clients work through a specific issue in 8–12 sessions; others find ongoing therapy supportive over many months or years. We'll discuss your goals and timeline during your first session and revisit them regularly.</p>
+      <h4>How long does therapy typically take?</h4>
+      <p>It depends entirely on your goals. Some clients address a specific concern in 8–12 sessions; others find ongoing therapy valuable over many months or longer. We'll discuss your goals in your first session and revisit them regularly. The pace is always guided by your progress and your preferences.</p>
     </div>
     <div class="faq-item">
-      <h4>What if I can't afford therapy?</h4>
-      <p>We accept most insurance plans, which significantly reduces out-of-pocket costs. We also offer a limited number of sliding-scale spots based on financial need — just ask. Mental health care should not be a luxury.</p>
+      <h4>Is online therapy really as effective?</h4>
+      <p>For most concerns — anxiety, depression, relationships, life transitions — research consistently shows telehealth is as effective as in-person therapy. Some highly specialized work may be better suited to an in-person setting. We'll discuss which option is the best fit for your situation during the consultation.</p>
     </div>
     <div class="faq-item">
-      <h4>Is online therapy as effective as in-person?</h4>
-      <p>For most concerns — anxiety, depression, life transitions, relationship issues — research shows online therapy is just as effective as in-person care. Some specialized work, like certain trauma processing, may be better in person. We'll discuss what's right for you.</p>
+      <h4>How do I know if Amna is the right therapist for me?</h4>
+      <p>That's exactly what the free 15-minute consultation is for. You'll get a real sense of Amna's approach and personality, and she'll make sure she can genuinely help with what you're going through. If she's not the right fit, she'll do her best to connect you with someone who is.</p>
     </div>
   </div>
 </section>
 
-<!-- CTA #8 -->
-<div class="cta-quote" style="background: var(--cream);">
-  <p class="cta-quote-text">"Still have questions? We'd love to <em>answer them.</em>"</p>
-  <div class="cta-quote-actions">
-    <a href="tel:+14703001234" class="btn-primary">Call (470) 300-1234</a>
-    <a href="contact.html" class="btn-outline">Send a Message</a>
-  </div>
-</div>
-
-<!-- BLOG -->
-<section class="blog-section" id="blog">
-  <div class="section-label">Resources & Insights</div>
-  <h2 class="section-title">Tips for a more <em>balanced</em> life.</h2>
-  <p class="section-desc">Reflections on faith, mental health, family, and wellbeing — written for the Muslim community we serve.</p>
-  <div class="divider"></div>
-  <div class="blog-grid">
-    <div class="blog-card">
-      <div class="blog-tag">Faith & Mental Health</div>
-      <h4>How Sabr & Tawakkul Can Support — Not Replace — Therapy</h4>
-      <p>Islamic teachings on patience and trust offer profound psychological wisdom. But what does it look like to draw on them while also seeking professional mental health support? A reflection on faith and healing as partners.</p>
-      <div class="blog-author">By Dr. Fatima Hassan, PhD</div>
-    </div>
-    <div class="blog-card">
-      <div class="blog-tag">Community & Belonging</div>
-      <h4>Why Muslim Americans Seek Culturally Informed Therapy</h4>
-      <p>When your therapist understands your culture, your faith, and your family dynamics, you spend less time explaining and more time healing. Here's why representation in mental health matters more than people realize.</p>
-      <div class="blog-author">By Dr. Fatima Hassan, PhD</div>
-    </div>
-    <div class="blog-card">
-      <div class="blog-tag">Teen Mental Health</div>
-      <h4>Raising Resilient Muslim Teens in a Polarizing World</h4>
-      <p>Muslim adolescents face unique pressures at school, online, and within their communities. Practical, faith-affirming strategies for parents to support their teen's mental health without losing connection.</p>
-      <div class="blog-author">By Dr. Fatima Hassan, PhD</div>
-    </div>
-    <div class="blog-card">
-      <div class="blog-tag">Marriage & Family</div>
-      <h4>What Pre-Marital Counseling Actually Looks Like</h4>
-      <p>It's not about predicting whether you'll work as a couple — it's about giving you the tools to grow together when life gets hard. A look at the conversations every Muslim couple should have before getting married.</p>
-      <div class="blog-author">By Dr. Fatima Hassan, PhD</div>
-    </div>
-    <div class="blog-card">
-      <div class="blog-tag">Identity & Trauma</div>
-      <h4>Understanding Religious Trauma in Muslim Communities</h4>
-      <p>Religious trauma isn't always about leaving the faith — sometimes it's about reconciling painful experiences with a belief system you still hold. How therapy can help you sort through complex spiritual injuries.</p>
-      <div class="blog-author">By Dr. Fatima Hassan, PhD</div>
-    </div>
-    <div class="blog-card">
-      <div class="blog-tag">Daily Wellbeing</div>
-      <h4>5 Small Mental Health Practices Rooted in Islamic Tradition</h4>
-      <p>Gratitude (shukr), reflection (muhasaba), and intentional rest (qaylulah) aren't just spiritual practices — they're psychologically powerful. Simple ways to weave them into your everyday wellbeing.</p>
-      <div class="blog-author">By Dr. Fatima Hassan, PhD</div>
-    </div>
-  </div>
-  <div style="text-align:center; margin-top:48px;">
-    <a href="blog.html" class="btn-outline">View All Articles →</a>
-  </div>
-</section>
-
-<!-- CTA #9 -->
-<div class="cta-banner">
-  <div>
-    <h3>Ready to begin your healing journey?</h3>
-    <p>Most clients are seen within a week of their first inquiry. We'd be honored to walk this path with you.</p>
-  </div>
-  <div class="cta-banner-actions">
-    <a href="tel:+14703001234" class="btn-gold">Call Now</a>
-    <a href="schedule.html" class="btn-outline" style="border-color:white; color:white;">Schedule Online</a>
+<!-- CTA 7 -->
+<div class="cta-quote" style="background:var(--cream)">
+  <p class="cta-quote-txt">"Still have questions? We'd love to <em>answer them.</em>"</p>
+  <div class="cta-q-btns">
+    <a href="tel:+14703001234" class="btn-g">Call (470) 300-1234</a>
+    <a href="schedule.html" class="btn-o">Schedule a Free Consult</a>
   </div>
 </div>
 
 <!-- LOCATION -->
-<section class="location-section" id="location">
+<section class="loc-section" id="location">
   <div>
-    <div class="section-label">Find Us</div>
-    <h2 class="section-title">Our Johns Creek <em>office</em></h2>
-    <div class="location-detail">
+    <div class="sec-label">Find Us</div>
+    <h2 class="sec-title">Our Lawrenceville <em>office</em></h2>
+    <div class="loc-detail">
       <div class="loc-block">
         <h4>Address</h4>
-        <p>4895 Kimball Bridge Road<br>Suite 204<br>Johns Creek, GA 30022</p>
-        <a href="https://maps.google.com" target="_blank" style="color:var(--green); font-size:13px; text-transform:uppercase; letter-spacing:0.06em; font-weight:500;">Get Directions →</a>
+        <p>455 Grayson Highway<br>Suite 301<br>Lawrenceville, GA 30046</p>
+        <a href="https://maps.google.com" target="_blank" style="color:var(--green);font-size:13px;text-transform:uppercase;letter-spacing:.07em;font-weight:500;margin-top:8px">Get Directions →</a>
       </div>
       <div class="loc-block">
         <h4>Office Hours</h4>
-        <p>Monday – Friday: 9:00 AM – 7:00 PM<br>Saturday: 10:00 AM – 2:00 PM<br>Sunday: Closed<br><em style="color:var(--ink-light);">By appointment only</em></p>
+        <p>Monday – Friday: 9:00 AM – 7:00 PM<br>Saturday: 10:00 AM – 2:00 PM<br>Sunday: Closed</p>
+        <p style="font-size:13px;color:var(--ink-light);margin-top:6px;font-style:italic">By appointment only. Telehealth available statewide.</p>
       </div>
       <div class="loc-block">
-        <h4>Contact</h4>
-        <p><a href="tel:+14703001234">(470) 300-1234</a></p>
-        <p><a href="tel:+14703001235">(470) 300-1235 (Fax)</a></p>
-        <p><a href="mailto:info@mymuslimtherapists.com">info@mymuslimtherapists.com</a></p>
+        <h4>Reach Us</h4>
+        <a href="tel:+14703001234">(470) 300-1234</a>
+        <a href="mailto:info@mymuslimtherapists.com">info@mymuslimtherapists.com</a>
       </div>
       <div class="loc-block">
         <h4>Connect</h4>
-        <div class="social-links">
-          <a href="#">Google Reviews</a>
+        <div class="soc-links">
+          <a href="#">Google</a>
           <a href="#">Instagram</a>
           <a href="#">Facebook</a>
           <a href="#">LinkedIn</a>
@@ -957,19 +1088,37 @@
       </div>
     </div>
   </div>
+  <!-- Map illustration -->
   <div>
-    <div class="map-placeholder">
+    <div class="map-box">
       <div class="map-inner">
-        <svg class="map-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-          <circle cx="12" cy="10" r="3"/>
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="28" fill="#2d5a45" opacity="0.07"/>
+          <path d="M 50 28 C 50 42 32 56 32 56 C 32 56 14 42 14 28 A 18 18 0 0 1 50 28 Z" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.1"/>
+          <circle cx="32" cy="28" r="6" stroke="#2d5a45" stroke-width="1.5"/>
+          <circle cx="32" cy="28" r="2" fill="#b8963e"/>
+          <!-- Roads -->
+          <line x1="0" y1="56" x2="64" y2="56" stroke="#e4e0d8" stroke-width="2"/>
+          <line x1="32" y1="56" x2="32" y2="64" stroke="#e4e0d8" stroke-width="2"/>
         </svg>
-        <p>4895 Kimball Bridge Road, Suite 204<br>Johns Creek, GA 30022</p>
+        <p style="font-size:14px;font-weight:400;color:var(--ink-mid);margin-top:4px">455 Grayson Highway, Suite 301<br>Lawrenceville, GA 30046</p>
         <a href="https://maps.google.com" target="_blank">Open in Google Maps →</a>
       </div>
     </div>
   </div>
 </section>
+
+<!-- FINAL CTA -->
+<div class="cta-green">
+  <div>
+    <h3>Ready to begin your healing journey?</h3>
+    <p>Most clients are seen within a week of their first inquiry. We'd be honored to walk this path with you.</p>
+  </div>
+  <div class="cta-green-btns">
+    <a href="tel:+14703001234" class="btn-gold">Call Now</a>
+    <a href="schedule.html" class="btn-o" style="border-color:white;color:white">Schedule Online</a>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -977,54 +1126,45 @@
     <div class="footer-brand">
       <div class="footer-logo">
         <div class="footer-logo-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-            <path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4"/>
+          <svg width="22" height="22" viewBox="0 0 44 44" fill="none">
+            <defs><mask id="fm"><rect width="44" height="44" fill="white"/><circle cx="28" cy="19" r="13" fill="black"/></mask></defs>
+            <circle cx="20" cy="22" r="15" fill="white" mask="url(#fm)"/>
+            <path d="M 11 25 Q 15 30 19 25" stroke="#2d5a45" stroke-width="2" fill="none" stroke-linecap="round"/>
           </svg>
         </div>
         <span class="footer-logo-text">mymuslimtherapists</span>
       </div>
-      <p class="footer-tagline">Compassionate, culturally-informed mental health care for Muslim individuals, couples, and families. Serving Johns Creek, Georgia and surrounding communities.</p>
+      <p class="footer-tagline">Compassionate, culturally-informed mental health care for Muslim individuals, couples, and families. Serving Lawrenceville, Georgia and surrounding communities.</p>
     </div>
     <div class="footer-col">
-      <h5>Pages</h5>
+      <h5>Navigate</h5>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html">About Amna</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="insurance.html">Insurance</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="schedule.html">Schedule Now</a></li>
+        <li><a href="billing.html">Pay My Bill</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h5>Services</h5>
       <ul>
-        <li><a href="services.html#individual">Individual Therapy</a></li>
-        <li><a href="services.html#couples">Couples Counseling</a></li>
-        <li><a href="services.html#family">Family Therapy</a></li>
-        <li><a href="services.html#online">Online Therapy</a></li>
-        <li><a href="services.html#trauma">Trauma & EMDR</a></li>
-        <li><a href="services.html#groups">Group Therapy</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Contact</h5>
-      <ul>
-        <li>4895 Kimball Bridge Rd, Suite 204</li>
-        <li>Johns Creek, GA 30022</li>
-        <li><a href="tel:+14703001234">(470) 300-1234</a></li>
-        <li><a href="mailto:info@mymuslimtherapists.com">info@mymuslimtherapists.com</a></li>
-        <li><a href="schedule.html">Schedule Online</a></li>
+        <li><a href="services.html">Individual Therapy</a></li>
+        <li><a href="services.html">Couples Counseling</a></li>
+        <li><a href="services.html">Family Therapy</a></li>
+        <li><a href="services.html">Online Therapy</a></li>
+        <li><a href="services.html">Adolescent Therapy</a></li>
+        <li><a href="services.html">Group Therapy</a></li>
+        <li><a href="services.html">Grief Counseling</a></li>
       </ul>
     </div>
   </div>
-  <div class="crisis-banner">
-    <strong style="color:#bbb;">mymuslimtherapists is not a crisis facility.</strong> If you or someone you know is experiencing a mental health emergency, please call or text <a href="tel:988">988</a> (Suicide & Crisis Lifeline) at any time to be connected with a trained counselor. For ongoing mental health care, we're here to support you.
+  <div class="crisis">
+    <strong style="color:#bbb">mymuslimtherapists is not a crisis facility.</strong> If you or someone you know is experiencing a mental health emergency, please call or text <a href="tel:988">988</a> (Suicide & Crisis Lifeline) to be connected with a trained counselor at any time. For ongoing mental health care, we are here for you.
   </div>
-  <div class="footer-bottom">
-    <p>© 2025 mymuslimtherapists. All Rights Reserved.</p>
-    <p><a href="privacy.html">Privacy Policy</a> · <a href="legal.html">Legal & Compliance</a> · <a href="accessibility.html">Accessibility</a></p>
+  <div class="footer-btm">
+    <p>© 2025 mymuslimtherapists · Lawrenceville, Georgia · All Rights Reserved.</p>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="accessibility.html">Accessibility</a></p>
   </div>
 </footer>
 
