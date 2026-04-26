@@ -300,6 +300,54 @@
     .t-left{min-height:500px}
     .hero-right{min-height:380px}
   }
+  @media(max-width:600px){
+  /* LAYOUT — collapse every multi-column grid to single column */
+  .hero,.therapist,.loc-section{grid-template-columns:1fr}
+  .hero-right,.t-left-art{display:none}
+  .trust{grid-template-columns:1fr 1fr}
+  .approach-grid,.svc-grid,.cond-cols,.group-grid,.faq-grid,.blog-grid{grid-template-columns:1fr}
+  .expect-grid{grid-template-columns:1fr 1fr}
+  .svc-intro,.cond-header,.cta-split{grid-template-columns:1fr}
+  .t-meta{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .cta-card{grid-template-columns:1fr;margin:24px 20px;padding:28px 20px}
+  .sched-row{grid-template-columns:1fr}
+  .sched-phone{border-right:none;border-bottom:1px solid var(--border);padding-bottom:16px}
+  .sched-checks{flex-wrap:wrap;gap:12px}
+
+  /* PADDING — reduce all large spacings */
+  section{padding:48px 20px}
+  .hero-left,.t-right{padding:40px 20px}
+  .cta-green,.cta-quote,.cta-dark{padding:36px 20px}
+  .cta-strip{padding:20px}
+  .cta-half{padding:32px 20px}
+  .loc-section{padding:48px 20px}
+  footer{padding:48px 20px 24px}
+  .t-inner{padding:40px 20px}
+  .approach-card,.svc-card,.group-card,.faq-item{padding:28px 20px}
+  .expect-step{padding:28px 16px}
+
+  /* FONT SIZES — scale down for small screens */
+  .hero h1{font-size:34px}
+  h2.sec-title{font-size:28px}
+  .cta-quote-txt{font-size:24px}
+  .cta-green h3{font-size:22px}
+  .cta-dark h4{font-size:20px}
+  .cta-half h4{font-size:20px}
+  .svc-name{font-size:22px}
+  .approach-card h4{font-size:20px}
+  .group-card h4{font-size:20px}
+  .sched-num{font-size:22px}
+
+  /* MISC */
+  .hero h1 br{display:none}
+  .top-bar{font-size:11px;padding:8px 16px}
+  nav{padding:0 16px;height:68px}
+  .logo-text{font-size:18px}
+  .cta-green-btns{flex-direction:column;width:100%}
+  .cta-green-btns a{text-align:center}
+  .map-box{height:280px}
+}
 </style>
 </head>
 <body>
