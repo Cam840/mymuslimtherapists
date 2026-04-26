@@ -35,6 +35,12 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px 
 .nav-cta{background:var(--green);color:var(--white)!important;padding:12px 26px;font-weight:400!important;transition:background .2s!important}
 .nav-cta:hover{background:var(--green-light)!important}
 
+/* QUICK NAV */
+.qnav{background:var(--cream);border-bottom:1px solid var(--border);display:flex;justify-content:center;overflow-x:auto}
+.qnav a{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mid);text-decoration:none;padding:13px 20px;border-right:1px solid var(--border);white-space:nowrap;transition:background .2s,color .2s;font-weight:400}
+.qnav a:first-child{border-left:1px solid var(--border)}
+.qnav a:hover{background:var(--green);color:var(--white)}
+
 
 /* SOCIAL ICONS */
 .nav-social{display:flex;align-items:center;gap:8px;margin-left:16px}
@@ -320,6 +326,17 @@ footer{background:var(--ink);color:#aaa;padding:72px 80px 32px}
   </a>
 </div>
 
+<!-- QUICK NAV -->
+<div class="qnav">
+  <a href="#profile">Meet Amna</a>
+  <a href="#email-section">Send a Message</a>
+  <a href="#philosophy">Philosophy</a>
+  <a href="#credentials">Credentials</a>
+  <a href="#specialties">Specialties</a>
+  <a href="#values">Values</a>
+  <a href="schedule.html">Book Now</a>
+</div>
+
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-inner">
@@ -437,7 +454,7 @@ function submitAboutForm() {
 </script>
 
 <!-- PROFILE SPLIT -->
-<div class="profile-split">
+<div class="profile-split" id="profile">
   <div class="profile-photo-col">
     <!-- Background art -->
     <svg class="profile-photo-art" viewBox="0 0 420 800" fill="none" style="position:absolute;inset:0;width:100%;height:100%">
@@ -518,7 +535,7 @@ function submitAboutForm() {
 </div>
 
 <!-- THERAPEUTIC PHILOSOPHY -->
-<section class="philosophy-section">
+<section class="philosophy-section" id="philosophy">
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:56px">
     <div>
       <div class="sec-label">Therapeutic Philosophy</div>
@@ -574,7 +591,7 @@ function submitAboutForm() {
 </section>
 
 <!-- CREDENTIALS & TRAINING -->
-<section class="creds-section">
+<section class="creds-section" id="credentials">
   <div class="sec-label">Education & Training</div>
   <h2 class="sec-title">Clinical background & <em>credentials.</em></h2>
   <div class="divider"></div>
@@ -641,7 +658,7 @@ function submitAboutForm() {
 </section>
 
 <!-- SPECIALTIES SECTION -->
-<section class="spec-section">
+<section class="spec-section" id="specialties">
   <div class="sec-label">Areas of Focus</div>
   <h2 class="sec-title">What Amna <em>specializes</em> in.</h2>
   <div class="divider"></div>
@@ -719,7 +736,7 @@ function submitAboutForm() {
 </section>
 
 <!-- VALUES TABLE -->
-<section class="values-section">
+<section class="values-section" id="values">
   <div class="sec-label">Core Values</div>
   <h2 class="sec-title">What this practice <em>stands for.</em></h2>
   <div class="divider"></div>
