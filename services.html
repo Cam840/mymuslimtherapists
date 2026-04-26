@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Therapy Services | My Muslim Therapists · Lawrenceville, GA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf9f7;--bg2:#f3f0eb;
+  --ink:#1a1a18;--ink-mid:#4a4a45;--ink-light:#9a9a94;
+  --green:#2d5a45;--green-light:#3d7a5f;--green-dark:#1f3f30;
+  --gold:#b8963e;--gold-light:#d4af6a;
+  --cream:#f7f3ec;--white:#fff;--border:#e4e0d8;
+  --fd:'Cormorant Garamond',serif;--fb:'DM Sans',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;font-weight:300}
+
+.top-bar{background:var(--green-dark);color:#c9e8d8;font-size:12px;letter-spacing:.06em;text-align:center;padding:9px 24px}
+.top-bar a{color:var(--gold-light);text-decoration:none}.top-bar a:hover{color:var(--white)}
+
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:76px}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+.logo-icon{width:46px;height:46px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.logo-text{font-family:var(--fd);font-size:22px;font-weight:500;color:var(--ink)}
+.logo-text em{font-style:normal;color:var(--green)}
+.nav-links{display:flex;align-items:center;gap:40px;list-style:none}
+.nav-links a{font-size:12px;font-weight:400;letter-spacing:.08em;color:var(--ink-mid);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--green)}
+.nav-cta{background:var(--green);color:var(--white)!important;padding:12px 26px;font-weight:400!important;transition:background .2s!important}
+.nav-cta:hover{background:var(--green-light)!important}
+
+/* QUICK NAV */
+.qnav{background:var(--cream);border-bottom:1px solid var(--border);display:flex;justify-content:center;overflow-x:auto}
+.qnav a{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mid);text-decoration:none;padding:13px 18px;border-right:1px solid var(--border);white-space:nowrap;transition:background .2s,color .2s;font-weight:400}
+.qnav a:first-child{border-left:1px solid var(--border)}.qnav a:hover{background:var(--green);color:var(--white)}
+
+section{padding:96px 80px}
+.sec-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.sec-label::before{content:'';display:block;width:24px;height:1px;background:var(--gold)}
+h2.sec-title{font-family:var(--fd);font-size:46px;font-weight:300;line-height:1.12;color:var(--ink);margin-bottom:16px;letter-spacing:-.01em}
+h2.sec-title em{font-style:italic;color:var(--green)}
+.divider{width:44px;height:1px;background:var(--gold);margin:22px 0}
+.sec-desc{color:var(--ink-mid);font-size:16px;line-height:1.8;font-weight:300;max-width:640px}
+.btn-g,.btn-o,.btn-gold,.btn-dk{padding:14px 30px;font-family:var(--fb);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid;cursor:pointer;transition:all .2s;display:inline-block;font-weight:400}
+.btn-g{background:var(--green);color:var(--white);border-color:var(--green)}.btn-g:hover{background:var(--green-light);border-color:var(--green-light)}
+.btn-o{background:transparent;color:var(--green);border-color:var(--green)}.btn-o:hover{background:var(--green);color:var(--white)}
+.btn-gold{background:var(--gold);color:var(--white);border-color:var(--gold)}.btn-gold:hover{background:var(--gold-light)}
+.btn-dk{background:var(--ink);color:var(--white);border-color:var(--ink)}.btn-dk:hover{background:var(--green);border-color:var(--green)}
+
+/* PAGE HERO */
+.page-hero{background:var(--green);padding:96px 80px;position:relative;overflow:hidden}
+.page-hero-inner{position:relative;z-index:2;max-width:700px}
+.page-hero-crumb{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:28px;display:flex;align-items:center;gap:8px}
+.page-hero-crumb a{color:rgba(255,255,255,.45);text-decoration:none}.page-hero-crumb a:hover{color:var(--gold-light)}
+.page-hero-crumb span{color:rgba(255,255,255,.25)}
+.page-hero h1{font-family:var(--fd);font-size:62px;font-weight:300;line-height:1.06;color:var(--white);letter-spacing:-.015em;margin-bottom:24px}
+.page-hero h1 em{font-style:italic;color:var(--gold-light)}
+.page-hero-sub{font-size:18px;color:rgba(255,255,255,.72);line-height:1.7;font-weight:300;margin-bottom:36px}
+.hero-art-bg{position:absolute;inset:0;z-index:1}
+
+/* SERVICES OVERVIEW GRID */
+.services-overview{background:var(--white)}
+.overview-intro{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:64px}
+.svc-index{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:80px}
+.svc-index-item{background:var(--white);padding:20px 22px;font-size:13px;color:var(--ink-mid);text-decoration:none;display:flex;align-items:center;gap:10px;transition:background .2s;font-weight:300;border-bottom:2px solid transparent}
+.svc-index-item:hover{background:var(--cream);border-bottom-color:var(--gold);color:var(--ink)}
+.svc-index-item::before{content:'↓';color:var(--gold);font-size:11px}
+
+/* INDIVIDUAL SERVICE BLOCKS */
+.svc-block{padding:0;margin-bottom:1px}
+.svc-block-inner{display:grid;grid-template-columns:1fr 480px;background:var(--white)}
+.svc-block-inner.reverse{grid-template-columns:480px 1fr}
+.svc-content{padding:80px 72px;display:flex;flex-direction:column;gap:20px}
+.svc-content h3{font-family:var(--fd);font-size:40px;font-weight:400;color:var(--ink);line-height:1.15}
+.svc-content h3 em{font-style:italic;color:var(--green)}
+.svc-content p{font-size:15px;color:var(--ink-mid);line-height:1.88;font-weight:300}
+.svc-content h4{font-family:var(--fd);font-size:20px;font-weight:500;color:var(--ink);margin-top:8px}
+.svc-meta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:4px}
+.svc-tag{font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--green);background:rgba(45,90,69,.07);padding:5px 12px;border:1px solid rgba(45,90,69,.12)}
+.svc-ideal{background:var(--cream);border-left:3px solid var(--gold);padding:18px 24px;font-size:14px;color:var(--ink-mid);line-height:1.7;font-weight:300}
+.svc-ideal strong{color:var(--ink);font-weight:400;font-family:var(--fd);font-size:16px}
+.svc-art{position:relative;overflow:hidden;min-height:500px}
+.svc-art-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.svc-art.bg-green{background:var(--green)}
+.svc-art.bg-cream{background:var(--cream)}
+.svc-art.bg-bg2{background:var(--bg2)}
+.svc-art.bg-dark{background:var(--green-dark)}
+.svc-art.bg-gold{background:#f0e8d2}
+
+/* PROCESS */
+.process-section{background:var(--bg2)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;border:1px solid var(--border)}
+.process-step{padding:40px 28px;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:12px}
+.process-step:last-child{border-right:none}
+.process-num{font-family:var(--fd);font-size:48px;font-weight:300;color:var(--gold);line-height:1;opacity:.4}
+.process-step h4{font-family:var(--fd);font-size:22px;font-weight:500;color:var(--ink)}
+.process-step p{font-size:14px;color:var(--ink-mid);line-height:1.78;font-weight:300}
+
+/* CONDITIONS */
+.cond-section{background:var(--green)}
+.cond-section .sec-label{color:var(--gold-light)}.cond-section .sec-label::before{background:var(--gold-light)}
+.cond-section h2.sec-title{color:var(--white)}.cond-section .divider{background:var(--gold-light)}.cond-section .sec-desc{color:#c9e8d8}
+.cond-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:56px}
+.cond-col h4{font-family:var(--fd);font-size:20px;color:var(--white);font-weight:500;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.15)}
+.cond-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.cond-col ul li{font-size:14px;color:#c9e8d8;padding-left:18px;position:relative;font-weight:300}
+.cond-col ul li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+
+/* GROUPS */
+.groups-section{background:var(--white)}
+.groups-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);margin-top:56px}
+.group-card{background:var(--white);padding:48px 44px;display:flex;flex-direction:column;gap:16px;transition:background .2s}
+.group-card:hover{background:var(--cream)}
+.group-card-icon{width:64px;height:64px;margin-bottom:8px}
+.group-tag{display:inline-block;font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--gold);font-weight:500;background:var(--cream);padding:5px 12px;border:1px solid var(--border);width:fit-content}
+.group-card h4{font-family:var(--fd);font-size:26px;font-weight:500;color:var(--ink)}
+.group-card p{font-size:14px;color:var(--ink-mid);line-height:1.82;font-weight:300}
+.group-card-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+.group-card-meta span{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-light);border:1px solid var(--border);padding:4px 10px}
+.group-card a{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--green);text-decoration:none;font-weight:500;margin-top:8px}
+
+/* CTA VARIATIONS */
+.cta-green{background:var(--green);padding:56px 80px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.cta-green h3{font-family:var(--fd);font-size:32px;font-weight:300;font-style:italic;color:var(--white);line-height:1.3}
+.cta-green p{font-size:14px;color:#c9e8d8;margin-top:6px}
+.cta-green-btns{display:flex;gap:12px;flex-shrink:0}
+.cta-split{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.cta-half{padding:52px 64px;display:flex;flex-direction:column;gap:12px;border-right:1px solid var(--border)}
+.cta-half:last-child{border-right:none;background:var(--white)}
+.cta-half h4{font-family:var(--fd);font-size:26px;font-weight:400;color:var(--ink)}
+.cta-half p{font-size:14px;color:var(--ink-mid)}
+.cta-half .big-phone{font-family:var(--fd);font-size:34px;font-weight:500;color:var(--green);text-decoration:none;display:block;margin-top:4px}
+.cta-half .btn-g{width:fit-content;margin-top:8px}
+.cta-dark{background:var(--ink);padding:46px 80px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.cta-dark h4{font-family:var(--fd);font-size:26px;font-weight:400;font-style:italic;color:var(--white)}
+.cta-dark p{font-size:13px;color:#888;margin-top:4px}
+
+/* FOOTER */
+footer{background:var(--ink);color:#aaa;padding:72px 80px 32px}
+.footer-top{display:grid;grid-template-columns:300px 1fr 1fr;gap:56px;margin-bottom:56px}
+.footer-brand{display:flex;flex-direction:column;gap:18px}
+.footer-logo{display:flex;align-items:center;gap:12px}
+.footer-logo-icon{width:38px;height:38px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.footer-logo-text{font-family:var(--fd);font-size:19px;font-weight:400;color:var(--white)}
+.footer-tagline{font-size:13px;color:#666;line-height:1.75;font-weight:300}
+.footer-col h5{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-light);margin-bottom:20px;font-weight:500}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul li,.footer-col ul li a{font-size:13px;color:#777;text-decoration:none;font-weight:300;transition:color .2s}
+.footer-col ul li a:hover{color:var(--white)}
+.footer-btm{border-top:1px solid rgba(255,255,255,.06);padding-top:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-btm p{font-size:12px;color:#555}
+.footer-btm a{color:#666;text-decoration:none}.footer-btm a:hover{color:var(--white)}
+.crisis{background:rgba(184,150,62,.1);border:1px solid rgba(184,150,62,.2);padding:18px 24px;margin-top:32px;font-size:13px;color:#999;line-height:1.65}
+.crisis a{color:var(--gold-light)}
+
+@media(max-width:1024px){
+  nav{padding:0 24px}.nav-links{gap:18px}
+  section,.cta-green,.cta-dark,footer{padding-left:24px;padding-right:24px}
+  .page-hero{padding:64px 24px}
+  .overview-intro,.svc-block-inner,.svc-block-inner.reverse,.cond-cols,.groups-grid{grid-template-columns:1fr}
+  .svc-index{grid-template-columns:1fr 1fr}
+  .svc-art{min-height:300px}
+  .svc-content{padding:48px 24px}
+  .process-steps{grid-template-columns:1fr 1fr}
+  .cta-split{grid-template-columns:1fr}
+  .cta-half{border-right:none;border-bottom:1px solid var(--border)}
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  Now Accepting New Clients &nbsp;·&nbsp; <a href="tel:+14703001234">(470) 300-1234</a> &nbsp;·&nbsp; Lawrenceville, GA &nbsp;·&nbsp; <a href="schedule.html">Book a Free Consultation</a>
+</div>
+
+<nav>
+  <a class="logo" href="index.html">
+    <div class="logo-icon">
+      <svg width="30" height="30" viewBox="0 0 44 44" fill="none">
+        <defs><mask id="cm"><rect width="44" height="44" fill="white"/><circle cx="28" cy="19" r="13" fill="black"/></mask></defs>
+        <circle cx="20" cy="22" r="15" fill="white" mask="url(#cm)"/>
+        <path d="M 11 25 Q 15 30 19 25" stroke="#2d5a45" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <circle cx="11.5" cy="20" r="1.4" fill="#2d5a45"/>
+        <circle cx="17.5" cy="18" r="1.4" fill="#2d5a45"/>
+      </svg>
+    </div>
+    <span class="logo-text">my<em>muslim</em>therapists</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="schedule.html" class="nav-cta">Schedule Now</a></li>
+  </ul>
+</nav>
+
+<!-- QUICK NAV -->
+<div class="qnav">
+  <a href="#individual">Individual</a>
+  <a href="#couples">Couples</a>
+  <a href="#family">Family</a>
+  <a href="#online">Online</a>
+  <a href="#trauma">Trauma</a>
+  <a href="#adolescent">Teens</a>
+  <a href="#grief">Grief</a>
+  <a href="#groups">Groups</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="hero-art-bg">
+    <svg width="100%" height="100%" viewBox="0 0 1200 440" fill="none" preserveAspectRatio="xMidYMid slice">
+      <g stroke="white" stroke-width="0.5" opacity="0.06" fill="none">
+        <polygon points="1100,0 1200,55 1200,165 1100,220 1000,165 1000,55"/>
+        <polygon points="1100,20 1180,63 1180,157 1100,200 1020,157 1020,63"/>
+        <circle cx="1100" cy="110" r="80"/>
+        <circle cx="1100" cy="110" r="50"/>
+      </g>
+      <g stroke="#b8963e" stroke-width="0.6" opacity="0.15" fill="none">
+        <path d="M 0 0 Q 60 0 60 60 Q 60 0 120 0"/>
+        <path d="M 0 0 Q 0 60 60 60"/>
+        <path d="M 0 440 Q 60 440 60 380 Q 60 440 120 440"/>
+        <path d="M 0 440 Q 0 380 60 380"/>
+      </g>
+    </svg>
+  </div>
+  <div class="page-hero-inner">
+    <div class="page-hero-crumb">
+      <a href="index.html">Home</a><span>›</span><span style="color:rgba(255,255,255,.7)">Services</span>
+    </div>
+    <h1>Therapy services<br>rooted in <em>care.</em></h1>
+    <p class="page-hero-sub">Culturally informed, evidence-based therapy for Muslim individuals, couples, and families — in Lawrenceville and online throughout Georgia.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="schedule.html" class="btn-gold">Book a Free Consult</a>
+      <a href="#individual" class="btn-o" style="border-color:rgba(255,255,255,.4);color:white">Browse Services ↓</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE INDEX -->
+<section class="services-overview">
+  <div class="overview-intro">
+    <div>
+      <div class="sec-label">All Services</div>
+      <h2 class="sec-title">What we <em>offer.</em></h2>
+      <div class="divider"></div>
+    </div>
+    <p class="sec-desc">Every service we offer is grounded in evidence-based clinical practice and delivered with the cultural sensitivity your community deserves. Whether you're seen in person or online, you work exclusively with Amna Ahmad, LPC.</p>
+  </div>
+  <div class="svc-index">
+    <a href="#individual" class="svc-index-item">Individual Therapy</a>
+    <a href="#couples" class="svc-index-item">Couples Counseling</a>
+    <a href="#family" class="svc-index-item">Family Therapy</a>
+    <a href="#online" class="svc-index-item">Online Therapy</a>
+    <a href="#trauma" class="svc-index-item">Trauma-Focused</a>
+    <a href="#adolescent" class="svc-index-item">Adolescent Therapy</a>
+    <a href="#grief" class="svc-index-item">Grief & Loss</a>
+    <a href="#groups" class="svc-index-item">Group Therapy</a>
+  </div>
+</section>
+
+<!-- INDIVIDUAL THERAPY -->
+<div class="svc-block" id="individual">
+  <div class="svc-block-inner">
+    <div class="svc-content">
+      <div class="sec-label">Service 01</div>
+      <h3>Individual<br><em>Therapy</em></h3>
+      <div class="divider"></div>
+      <p>One-on-one sessions with Amna, tailored entirely to your needs, goals, and pace. Individual therapy is a space to talk openly about what's weighing on you — without editing yourself for family, community, or cultural expectations. Whether you're navigating anxiety, processing a painful experience, struggling with your sense of self, or simply feeling stuck, individual therapy creates the conditions for real, lasting change.</p>
+      <p>Amna uses an integrative approach that combines Cognitive Behavioral Therapy, Acceptance and Commitment Therapy, and other evidence-based tools — always adapted to your cultural background and your relationship with your faith.</p>
+      <h4>What you'll work on:</h4>
+      <p>Understanding the root causes of your distress — not just managing symptoms. Building lasting coping skills. Processing difficult memories or experiences. Improving your relationship with yourself, your faith, and your emotions. Creating a life that feels more aligned and less exhausting.</p>
+      <div class="svc-ideal">
+        <strong>Ideal for:</strong> Adults experiencing anxiety, depression, burnout, life transitions, identity questions, self-worth struggles, relationship stress, or anyone simply ready to invest in their mental wellbeing.
+      </div>
+      <div class="svc-meta-row">
+        <span class="svc-tag">50 minutes</span>
+        <span class="svc-tag">Weekly or biweekly</span>
+        <span class="svc-tag">In person + online</span>
+        <span class="svc-tag">Ages 18+</span>
+      </div>
+      <a href="schedule.html" class="btn-g" style="width:fit-content;margin-top:8px">Schedule a Consult</a>
+    </div>
+    <div class="svc-art bg-green">
+      <div class="svc-art-inner">
+        <svg width="300" height="320" viewBox="0 0 300 320" fill="none">
+          <g stroke="white" stroke-width="0.5" opacity="0.1" fill="none">
+            <circle cx="150" cy="160" r="130"/>
+            <circle cx="150" cy="160" r="90"/>
+            <circle cx="150" cy="160" r="50"/>
+          </g>
+          <!-- Person silhouette centered with rays of light -->
+          <circle cx="150" cy="110" r="38" stroke="white" stroke-width="1.5" fill="white" opacity="0.12"/>
+          <path d="M 90 220 C 90 185 115 165 150 165 C 185 165 210 185 210 220" stroke="white" stroke-width="1.5" fill="white" opacity="0.1"/>
+          <!-- Rays of light above -->
+          <line x1="150" y1="55" x2="150" y2="35" stroke="#b8963e" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+          <line x1="175" y1="65" x2="188" y2="50" stroke="#b8963e" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          <line x1="125" y1="65" x2="112" y2="50" stroke="#b8963e" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          <line x1="193" y1="85" x2="208" y2="78" stroke="#b8963e" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+          <line x1="107" y1="85" x2="92" y2="78" stroke="#b8963e" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+          <!-- crescent halo -->
+          <defs><mask id="indm"><rect width="300" height="320" fill="white"/><circle cx="162" cy="95" r="26" fill="black"/></mask></defs>
+          <circle cx="145" cy="100" r="30" stroke="#b8963e" stroke-width="1" fill="none" opacity="0.4" mask="url(#indm)"/>
+          <text x="150" y="280" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="14" font-style="italic" fill="white" opacity="0.6">"A space entirely your own."</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COUPLES -->
+<div class="svc-block" id="couples" style="border-top:1px solid var(--border)">
+  <div class="svc-block-inner reverse">
+    <div class="svc-art bg-cream">
+      <div class="svc-art-inner">
+        <svg width="300" height="320" viewBox="0 0 300 320" fill="none">
+          <!-- Two overlapping circles -->
+          <circle cx="115" cy="150" r="75" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.08"/>
+          <circle cx="185" cy="150" r="75" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.08"/>
+          <!-- Heart in overlap -->
+          <path d="M 150 145 C 150 140 143 136 143 142 C 143 148 150 155 150 155 C 150 155 157 148 157 142 C 157 136 150 140 150 145Z" fill="#b8963e" opacity="0.6"/>
+          <!-- Stars above each -->
+          <circle cx="95" cy="68" r="3.5" fill="#b8963e" opacity="0.5"/>
+          <circle cx="205" cy="68" r="3.5" fill="#b8963e" opacity="0.5"/>
+          <!-- Linked hands symbolic -->
+          <path d="M 115 200 Q 150 210 185 200" stroke="#2d5a45" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <!-- Crescent moons small -->
+          <defs>
+            <mask id="cm1"><rect width="50" height="50" fill="white"/><circle cx="32" cy="14" r="10" fill="black"/></mask>
+            <mask id="cm2"><rect width="50" height="50" fill="white"/><circle cx="32" cy="14" r="10" fill="black"/></mask>
+          </defs>
+          <circle cx="22" cy="18" r="12" fill="#b8963e" opacity="0.2" transform="translate(68, 48)" mask="url(#cm1)"/>
+          <circle cx="22" cy="18" r="12" fill="#b8963e" opacity="0.2" transform="translate(178, 48)" mask="url(#cm2)"/>
+          <text x="150" y="270" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="14" font-style="italic" fill="#2d5a45" opacity="0.6">"Growing stronger together."</text>
+        </svg>
+      </div>
+    </div>
+    <div class="svc-content">
+      <div class="sec-label">Service 02</div>
+      <h3>Couples &<br><em>Marriage Counseling</em></h3>
+      <div class="divider"></div>
+      <p>Couples therapy is for any partnership that wants to communicate better, understand each other more deeply, and grow stronger through difficulty — not just survive it. Amna offers both pre-marital counseling for couples preparing for marriage and ongoing couples work for those navigating conflict, disconnection, or major life transitions together.</p>
+      <p>Her approach is informed by emotion-focused therapy and Gottman Method principles, thoughtfully adapted to honor Islamic values around marriage, family, and commitment. Amna creates a space where both partners feel equally heard — without blame, favoritism, or judgment.</p>
+      <h4>Common topics in couples therapy:</h4>
+      <p>Communication breakdowns and conflict cycles. Navigating in-law relationships. Parenting disagreements. Intimacy and emotional distance. Cultural or religious differences within the marriage. Processing infidelity or broken trust. Pre-marital preparation and expectations-setting.</p>
+      <div class="svc-ideal">
+        <strong>Ideal for:</strong> Couples at any stage — engaged couples seeking pre-marital counseling, newlyweds building strong foundations, and long-married couples working through old patterns or new challenges.
+      </div>
+      <div class="svc-meta-row">
+        <span class="svc-tag">60–75 minutes</span>
+        <span class="svc-tag">Pre-marital welcome</span>
+        <span class="svc-tag">In person + online</span>
+      </div>
+      <a href="schedule.html" class="btn-g" style="width:fit-content;margin-top:8px">Schedule a Consult</a>
+    </div>
+  </div>
+</div>
+
+<!-- FAMILY -->
+<div class="svc-block" id="family" style="border-top:1px solid var(--border)">
+  <div class="svc-block-inner">
+    <div class="svc-content">
+      <div class="sec-label">Service 03</div>
+      <h3>Family<br><em>Therapy</em></h3>
+      <div class="divider"></div>
+      <p>Family therapy brings together family members to improve communication, resolve conflict, and support one another through difficulty. Whether you're dealing with a child's mental health challenges, a family member's substance use, recurring conflict between parents and teens, grief, or the stress of major life transitions, family therapy creates a structured, neutral space to do the hard work together.</p>
+      <p>Amna is particularly experienced with the dynamics of Muslim families — multigenerational households, the weight of cultural expectation, the challenge of children straddling two worlds, and the complex role of religion in family decision-making. She works with the family you have, not the family a textbook assumes you are.</p>
+      <div class="svc-ideal">
+        <strong>Ideal for:</strong> Parents and children experiencing conflict. Blended or multigenerational families. Families supporting a member through mental health challenges. Families navigating shared grief, divorce, or relocation.
+      </div>
+      <div class="svc-meta-row">
+        <span class="svc-tag">60–90 minutes</span>
+        <span class="svc-tag">All family structures</span>
+        <span class="svc-tag">In person</span>
+      </div>
+      <a href="schedule.html" class="btn-g" style="width:fit-content;margin-top:8px">Schedule a Consult</a>
+    </div>
+    <div class="svc-art bg-bg2">
+      <div class="svc-art-inner">
+        <svg width="300" height="320" viewBox="0 0 300 320" fill="none">
+          <!-- Family tree shape -->
+          <circle cx="150" cy="90" r="32" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.1"/>
+          <circle cx="90" cy="185" r="26" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.1"/>
+          <circle cx="210" cy="185" r="26" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.1"/>
+          <circle cx="60" cy="265" r="20" stroke="#2d5a45" stroke-width="1.2" fill="#2d5a45" opacity="0.08"/>
+          <circle cx="120" cy="265" r="20" stroke="#2d5a45" stroke-width="1.2" fill="#2d5a45" opacity="0.08"/>
+          <circle cx="180" cy="265" r="20" stroke="#2d5a45" stroke-width="1.2" fill="#2d5a45" opacity="0.08"/>
+          <circle cx="240" cy="265" r="20" stroke="#2d5a45" stroke-width="1.2" fill="#2d5a45" opacity="0.08"/>
+          <!-- Connecting lines -->
+          <line x1="150" y1="122" x2="100" y2="159" stroke="#b8963e" stroke-width="1" opacity="0.5"/>
+          <line x1="150" y1="122" x2="200" y2="159" stroke="#b8963e" stroke-width="1" opacity="0.5"/>
+          <line x1="90" y1="211" x2="70" y2="245" stroke="#b8963e" stroke-width="1" opacity="0.4"/>
+          <line x1="90" y1="211" x2="120" y2="245" stroke="#b8963e" stroke-width="1" opacity="0.4"/>
+          <line x1="210" y1="211" x2="185" y2="245" stroke="#b8963e" stroke-width="1" opacity="0.4"/>
+          <line x1="210" y1="211" x2="235" y2="245" stroke="#b8963e" stroke-width="1" opacity="0.4"/>
+          <!-- Gold star at root -->
+          <circle cx="150" cy="48" r="4" fill="#b8963e" opacity="0.7"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BREAK -->
+<div class="cta-split" style="background:var(--cream)">
+  <div class="cta-half" style="background:var(--cream)">
+    <h4>Not sure which service is right for you?</h4>
+    <p>The free 15-minute consultation is exactly for this. Amna will help you figure out what kind of support fits your situation best.</p>
+    <a href="schedule.html" class="btn-g">Book Free Consult</a>
+  </div>
+  <div class="cta-half">
+    <h4>Prefer to ask first?</h4>
+    <p>Call us directly and we'll answer any questions you have before committing to anything.</p>
+    <a href="tel:+14703001234" class="big-phone">(470) 300-1234</a>
+  </div>
+</div>
+
+<!-- ONLINE -->
+<div class="svc-block" id="online" style="border-top:1px solid var(--border)">
+  <div class="svc-block-inner reverse">
+    <div class="svc-art bg-dark">
+      <div class="svc-art-inner">
+        <svg width="300" height="320" viewBox="0 0 300 320" fill="none">
+          <!-- Laptop/screen frame -->
+          <rect x="60" y="80" width="180" height="120" rx="8" stroke="white" stroke-width="1.5" fill="white" opacity="0.07"/>
+          <rect x="68" y="88" width="164" height="104" rx="4" fill="white" opacity="0.05"/>
+          <line x1="120" y1="200" x2="180" y2="200" stroke="white" stroke-width="1" opacity="0.3"/>
+          <ellipse cx="150" cy="210" rx="40" ry="8" stroke="white" stroke-width="1" opacity="0.2"/>
+          <!-- Face in screen -->
+          <circle cx="150" cy="140" r="28" fill="white" opacity="0.1" stroke="white" stroke-width="1"/>
+          <!-- Crescent smile in screen -->
+          <defs><mask id="scm"><rect x="110" y="100" width="80" height="80" fill="white"/><circle cx="162" cy="128" r="20" fill="black"/></mask></defs>
+          <circle cx="146" cy="134" r="22" fill="#b8963e" opacity="0.3" mask="url(#scm)"/>
+          <path d="M 140 146 Q 150 154 160 146" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <!-- Wifi signal -->
+          <path d="M 130 60 Q 150 48 170 60" stroke="#b8963e" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+          <path d="M 136 50 Q 150 42 164 50" stroke="#b8963e" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.5"/>
+          <circle cx="150" cy="43" r="2.5" fill="#b8963e" opacity="0.7"/>
+          <!-- Georgia state outline hint -->
+          <path d="M 70 265 L 80 250 L 230 250 L 240 265 L 230 280 L 80 280 Z" stroke="white" stroke-width="0.5" opacity="0.12" fill="white" opacity="0.04"/>
+          <text x="150" y="270" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" letter-spacing="2" fill="white" opacity="0.4">SERVING ALL OF GEORGIA</text>
+        </svg>
+      </div>
+    </div>
+    <div class="svc-content">
+      <div class="sec-label">Service 04</div>
+      <h3>Online<br><em>Therapy (Telehealth)</em></h3>
+      <div class="divider"></div>
+      <p>All of Amna's services are available via secure telehealth to clients anywhere in Georgia. Online sessions take place over a HIPAA-compliant video platform — the same confidentiality, the same quality of care, and the same therapeutic relationship as in-person sessions.</p>
+      <p>Research consistently shows that telehealth therapy is equally effective to in-person care for most clinical concerns, including anxiety, depression, relationship issues, and life transitions. For busy professionals, parents, college students, those without easy transportation, or anyone who feels more comfortable in their own space — online therapy is a genuinely powerful option.</p>
+      <h4>How it works:</h4>
+      <p>After scheduling, you'll receive a secure link to your private video session. All you need is a quiet, private space and a phone or computer. Sessions run the same length as in-person appointments and follow the same clinical approach — there's no difference in the level of care you receive.</p>
+      <div class="svc-ideal">
+        <strong>Ideal for:</strong> Anyone in Georgia who prefers online access — parents at home, professionals with limited time, those in rural areas, or clients who find the comfort of home supports their therapeutic work.
+      </div>
+      <div class="svc-meta-row">
+        <span class="svc-tag">All of Georgia</span>
+        <span class="svc-tag">HIPAA secure</span>
+        <span class="svc-tag">Any device</span>
+        <span class="svc-tag">Same therapist</span>
+      </div>
+      <a href="schedule.html" class="btn-g" style="width:fit-content;margin-top:8px">Schedule Online</a>
+    </div>
+  </div>
+</div>
+
+<!-- TRAUMA -->
+<div class="svc-block" id="trauma" style="border-top:1px solid var(--border)">
+  <div class="svc-block-inner">
+    <div class="svc-content">
+      <div class="sec-label">Service 05</div>
+      <h3>Trauma-Focused<br><em>Therapy</em></h3>
+      <div class="divider"></div>
+      <p>Trauma is not always visible — and it doesn't have to be dramatic to be real. Amna specializes in helping clients process unresolved traumatic experiences using trauma-informed, evidence-based methods, paced entirely to the client's readiness and comfort.</p>
+      <p>This includes childhood trauma, religious trauma, racial and identity-based trauma, immigration and acculturation trauma, domestic trauma, acute incidents, and complex PTSD. Amna is particularly experienced with trauma that is entangled with faith — including experiences of spiritual abuse, religious coercion, or a loss of faith following trauma — and creates a non-judgmental, culturally attuned space to work through it.</p>
+      <h4>What trauma-focused therapy involves:</h4>
+      <p>Building safety and stability first — we never dive into traumatic material before you're ready. Gradually developing the tools and capacity to process difficult memories. Addressing the ways past trauma is affecting your present-day relationships, self-image, and daily life. Moving toward integration, meaning-making, and post-traumatic growth.</p>
+      <div class="svc-ideal">
+        <strong>Ideal for:</strong> Adults experiencing PTSD symptoms, complex trauma, religious or identity trauma, racial trauma, or any unresolved distressing experience affecting their present functioning.
+      </div>
+      <div class="svc-meta-row">
+        <span class="svc-tag">Trauma-informed</span>
+        <span class="svc-tag">Paced to your readiness</span>
+        <span class="svc-tag">In person + online</span>
+      </div>
+      <a href="schedule.html" class="btn-g" style="width:fit-content;margin-top:8px">Schedule a Consult</a>
+    </div>
+    <div class="svc-art" style="background:#e8f0ec">
+      <div class="svc-art-inner">
+        <svg width="300" height="320" viewBox="0 0 300 320" fill="none">
+          <!-- Protective shield with warmth inside -->
+          <path d="M 150 40 C 150 40 220 75 220 140 C 220 200 150 240 150 240 C 150 240 80 200 80 140 C 80 75 150 40 150 40Z" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.07"/>
+          <path d="M 150 65 C 150 65 200 92 200 145 C 200 190 150 220 150 220 C 150 220 100 190 100 145 C 100 92 150 65 150 65Z" stroke="#2d5a45" stroke-width="1" fill="#2d5a45" opacity="0.05"/>
+          <!-- Butterfly (transformation) in center -->
+          <path d="M 150 150 Q 130 130 120 140 Q 115 152 130 158 Q 140 162 150 155" stroke="#b8963e" stroke-width="1.5" fill="#b8963e" opacity="0.2"/>
+          <path d="M 150 150 Q 170 130 180 140 Q 185 152 170 158 Q 160 162 150 155" stroke="#b8963e" stroke-width="1.5" fill="#b8963e" opacity="0.2"/>
+          <line x1="150" y1="145" x2="150" y2="165" stroke="#2d5a45" stroke-width="1.2"/>
+          <line x1="148" y1="148" x2="145" y2="142" stroke="#2d5a45" stroke-width="1"/>
+          <line x1="152" y1="148" x2="155" y2="142" stroke="#2d5a45" stroke-width="1"/>
+          <!-- Gold dots of hope -->
+          <circle cx="150" cy="38" r="4" fill="#b8963e" opacity="0.7"/>
+          <circle cx="126" cy="48" r="2.5" fill="#b8963e" opacity="0.5"/>
+          <circle cx="174" cy="48" r="2.5" fill="#b8963e" opacity="0.5"/>
+          <text x="150" y="285" text-anchor="middle" font-family="Cormorant Garamath,serif" font-size="14" font-style="italic" fill="#2d5a45" opacity="0.55">"Paced entirely to you."</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADOLESCENT -->
+<div class="svc-block" id="adolescent" style="border-top:1px solid var(--border)">
+  <div class="svc-block-inner reverse">
+    <div class="svc-art bg-green">
+      <div class="svc-art-inner">
+        <svg width="300" height="320" viewBox="0 0 300 320" fill="none">
+          <!-- Young person with stars and question marks of growth -->
+          <circle cx="150" cy="110" r="36" stroke="white" stroke-width="1.5" fill="white" opacity="0.1"/>
+          <path d="M 95 225 C 95 190 118 170 150 170 C 182 170 205 190 205 225" stroke="white" stroke-width="1.5" fill="white" opacity="0.08"/>
+          <!-- Stars of potential -->
+          <circle cx="105" cy="72" r="4" fill="#b8963e" opacity="0.8"/>
+          <circle cx="195" cy="65" r="3" fill="#b8963e" opacity="0.6"/>
+          <circle cx="220" cy="95" r="2.5" fill="#b8963e" opacity="0.5"/>
+          <circle cx="80" cy="100" r="2.5" fill="#b8963e" opacity="0.5"/>
+          <!-- Phone/social media pressure (small icon showing the weight) -->
+          <rect x="55" y="140" width="22" height="36" rx="3" stroke="white" stroke-width="1" opacity="0.25"/>
+          <rect x="223" y="140" width="22" height="36" rx="3" stroke="white" stroke-width="1" opacity="0.25"/>
+          <!-- Connecting arrows from these boxes toward teen = pressure -->
+          <path d="M 77 158 Q 100 155 113 145" stroke="white" stroke-width="0.8" opacity="0.2" marker-end="none"/>
+          <path d="M 223 158 Q 200 155 187 145" stroke="white" stroke-width="0.8" opacity="0.2"/>
+          <!-- Crescent above (faith/identity) -->
+          <defs><mask id="tm"><rect x="120" y="55" width="60" height="40" fill="white"/><circle cx="166" cy="65" r="18" fill="black"/></mask></defs>
+          <circle cx="150" cy="70" r="20" fill="#b8963e" opacity="0.3" mask="url(#tm)"/>
+          <text x="150" y="285" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="13" font-style="italic" fill="white" opacity="0.65">"Identity is still being written."</text>
+        </svg>
+      </div>
+    </div>
+    <div class="svc-content">
+      <div class="sec-label">Service 06</div>
+      <h3>Adolescent<br><em>Therapy</em></h3>
+      <div class="divider"></div>
+      <p>Growing up Muslim in America brings a unique set of pressures — navigating two cultural worlds simultaneously, managing family expectations, experiencing Islamophobia, forming an identity under social media scrutiny, and trying to understand how faith fits into a complex modern life. Amna works with Muslim teens (ages 14 and up) with deep understanding of these specific pressures and genuine respect for where each teen is on their journey.</p>
+      <p>She works collaboratively with parents to ensure they feel informed and supported — while maintaining appropriate confidentiality with the teen and centering the teen's autonomy, voice, and dignity throughout the process. Therapy is teen-led, not parent-driven.</p>
+      <h4>Common topics for teen clients:</h4>
+      <p>Anxiety, depression, and mood. Identity questions and faith struggles. School stress and academic pressure. Social isolation or peer conflict. Family conflict and communication breakdowns. Social media and body image. College transition anxiety.</p>
+      <div class="svc-ideal">
+        <strong>Ideal for:</strong> Muslim teens ages 14–17 experiencing emotional, behavioral, or identity challenges. Parents who want collaborative support — not to override their teen, but to better understand and connect with them.
+      </div>
+      <div class="svc-meta-row">
+        <span class="svc-tag">Ages 14+</span>
+        <span class="svc-tag">Parent-aware</span>
+        <span class="svc-tag">In person + online</span>
+        <span class="svc-tag">Teen-centered</span>
+      </div>
+      <a href="schedule.html" class="btn-g" style="width:fit-content;margin-top:8px">Schedule a Consult</a>
+    </div>
+  </div>
+</div>
+
+<!-- GRIEF -->
+<div class="svc-block" id="grief" style="border-top:1px solid var(--border)">
+  <div class="svc-block-inner">
+    <div class="svc-content">
+      <div class="sec-label">Service 07</div>
+      <h3>Grief &<br><em>Loss Counseling</em></h3>
+      <div class="divider"></div>
+      <p>Grief is not a problem to solve — it's a human experience to be accompanied through. Whether you are grieving the death of someone you loved, the end of a marriage, a pregnancy lost, a friendship that fell apart, a home left behind, a career or identity that no longer exists, or a version of yourself or your faith that you've had to let go — your loss is real and your grief deserves space.</p>
+      <p>Amna draws on Islamic perspectives on loss and remembrance when clients find this helpful — understanding grief through the lens of faith, trusting in God's plan, honoring the deceased through du'a, and finding meaning after loss. She also works with clients in a secular framework when that is more fitting, meeting each person where they are.</p>
+      <div class="svc-ideal">
+        <strong>Ideal for:</strong> Anyone experiencing any form of loss — death, divorce, pregnancy, career, identity, faith, relationships, or the grief of leaving one life behind and entering another.
+      </div>
+      <div class="svc-meta-row">
+        <span class="svc-tag">All forms of loss</span>
+        <span class="svc-tag">Faith-sensitive</span>
+        <span class="svc-tag">In person + online</span>
+      </div>
+      <a href="schedule.html" class="btn-g" style="width:fit-content;margin-top:8px">Schedule a Consult</a>
+    </div>
+    <div class="svc-art" style="background:var(--gold-pale)">
+      <div class="svc-art-inner">
+        <svg width="300" height="320" viewBox="0 0 300 320" fill="none">
+          <!-- Heart held gently -->
+          <path d="M 150 200 C 150 200 100 170 100 135 C 100 115 118 108 130 115 C 138 120 150 132 150 132 C 150 132 162 120 170 115 C 182 108 200 115 200 135 C 200 170 150 200 150 200Z" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.12"/>
+          <!-- Rain drops of tears -->
+          <line x1="120" y1="80" x2="118" y2="100" stroke="#2d5a45" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+          <line x1="150" y1="70" x2="148" y2="95" stroke="#2d5a45" stroke-width="1" opacity="0.2" stroke-linecap="round"/>
+          <line x1="180" y1="80" x2="178" y2="100" stroke="#2d5a45" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+          <!-- New growth from grief - small plant sprout -->
+          <path d="M 150 218 L 150 255" stroke="#2d5a45" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M 150 235 Q 138 225 132 230" stroke="#2d5a45" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <path d="M 150 245 Q 162 235 168 240" stroke="#2d5a45" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <!-- Crescent of hope -->
+          <defs><mask id="gm"><rect width="300" height="320" fill="white"/><circle cx="165" cy="108" r="14" fill="black"/></mask></defs>
+          <circle cx="152" cy="112" r="16" fill="#b8963e" opacity="0.2" mask="url(#gm)"/>
+          <text x="150" y="288" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="14" font-style="italic" fill="#2d5a45" opacity="0.55">"Grief deserves space."</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div class="sec-label">Getting Started</div>
+  <h2 class="sec-title">How to begin <em>therapy.</em></h2>
+  <div class="divider"></div>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="process-num">01</div>
+      <h4>Reach Out</h4>
+      <p>Call, text, or fill out our online form. We respond within one business day — usually much sooner. No lengthy forms required upfront.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num">02</div>
+      <h4>Free Consult</h4>
+      <p>A complimentary 15-minute phone call with Amna. She'll understand what you're looking for and confirm she's the right fit — before any commitment.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num">03</div>
+      <h4>First Session</h4>
+      <p>Your first full 50-minute session. A thorough, unhurried conversation about your history, your goals, and how you'd like to work together. No pressure.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num">04</div>
+      <h4>Ongoing Care</h4>
+      <p>Weekly or biweekly sessions. Regular check-ins on your progress and adjustments to your care plan as your needs evolve. You're always in control.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONDITIONS -->
+<section class="cond-section" id="conditions">
+  <div class="sec-label">Conditions Treated</div>
+  <h2 class="sec-title">What we can <em>help with.</em></h2>
+  <div class="divider"></div>
+  <div class="cond-cols">
+    <div class="cond-col">
+      <h4>Mood & Anxiety</h4>
+      <ul>
+        <li>Generalized Anxiety Disorder</li>
+        <li>Panic Disorder</li>
+        <li>Social Anxiety</li>
+        <li>Depression</li>
+        <li>Postpartum Depression & Anxiety</li>
+        <li>Bipolar Disorder</li>
+        <li>OCD</li>
+        <li>Phobias</li>
+        <li>Burnout & Chronic Stress</li>
+      </ul>
+    </div>
+    <div class="cond-col">
+      <h4>Trauma & Identity</h4>
+      <ul>
+        <li>PTSD & Complex PTSD</li>
+        <li>Religious & Spiritual Trauma</li>
+        <li>Racial & Identity Trauma</li>
+        <li>Islamophobia & Discrimination</li>
+        <li>Intergenerational Trauma</li>
+        <li>Immigration Stress</li>
+        <li>Childhood Trauma</li>
+        <li>Dissociation</li>
+        <li>Bicultural Identity Conflict</li>
+      </ul>
+    </div>
+    <div class="cond-col">
+      <h4>Relationships & Life</h4>
+      <ul>
+        <li>Marriage & Couple Conflict</li>
+        <li>Pre-Marital Preparation</li>
+        <li>Parenting Challenges</li>
+        <li>Family Conflict & Estrangement</li>
+        <li>Grief & Bereavement</li>
+        <li>Self-Esteem & Boundaries</li>
+        <li>Life Transitions</li>
+        <li>Anger & Emotional Regulation</li>
+        <li>Women's Mental Health</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- GROUPS -->
+<section class="groups-section" id="groups">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:0">
+    <div>
+      <div class="sec-label">Group Therapy</div>
+      <h2 class="sec-title">Heal in <em>community.</em></h2>
+      <div class="divider"></div>
+    </div>
+    <p class="sec-desc">Our small, confidential groups bring together Muslims walking through similar experiences. Led by Amna, capped at 6–8 participants. New cohorts begin quarterly.</p>
+  </div>
+  <div class="groups-grid">
+    <div class="group-card">
+      <svg class="group-card-icon" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="26" stroke="#2d5a45" stroke-width="1" opacity="0.2"/>
+        <circle cx="32" cy="16" r="7" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.1"/>
+        <circle cx="48" cy="44" r="7" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.1"/>
+        <circle cx="16" cy="44" r="7" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.1"/>
+        <path d="M 32 23 L 43 37 M 32 23 L 21 37 M 21 44 L 43 44" stroke="#b8963e" stroke-width="1" opacity="0.6"/>
+        <defs><mask id="gim"><rect width="64" height="64" fill="white"/><circle cx="40" cy="10" r="9" fill="black"/></mask></defs>
+        <circle cx="32" cy="14" r="10" fill="#b8963e" opacity="0.15" mask="url(#gim)"/>
+      </svg>
+      <span class="group-tag">Adults 18+</span>
+      <h4>Muslim Identity & Belonging</h4>
+      <p>An 8-week process group for Muslim adults navigating questions of identity, belonging, and faith in American society. Explore how your religious and cultural identity shapes your mental wellbeing in a confidential, affirming space. Facilitated discussion, peer support, and guided reflection.</p>
+      <div class="group-card-meta">
+        <span>8 weeks</span>
+        <span>6–8 participants</span>
+        <span>Quarterly</span>
+      </div>
+      <a href="schedule.html">Reserve Your Spot →</a>
+    </div>
+    <div class="group-card">
+      <svg class="group-card-icon" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="20" r="10" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.1"/>
+        <path d="M 12 58 C 12 44 21 36 32 36 C 43 36 52 44 52 58" stroke="#2d5a45" stroke-width="1.5" fill="none"/>
+        <path d="M 36 8 L 32 16 L 37 16 L 32 26" stroke="#b8963e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+        <circle cx="50" cy="14" r="3" fill="#b8963e" opacity="0.4"/>
+      </svg>
+      <span class="group-tag">Teens 14–17</span>
+      <h4>Teen Muslim Minds</h4>
+      <p>A structured group for Muslim teens experiencing anxiety, depression, or mood challenges. Combines CBT skills-building with culturally grounded conversations about faith, identity, and resilience. A safe space to be honest without judgment from family or community.</p>
+      <div class="group-card-meta">
+        <span>10 weeks</span>
+        <span>6–8 teens</span>
+        <span>Quarterly</span>
+      </div>
+      <a href="schedule.html">Reserve Your Spot →</a>
+    </div>
+    <div class="group-card">
+      <svg class="group-card-icon" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="24" r="12" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.1"/>
+        <line x1="32" y1="36" x2="32" y2="52" stroke="#2d5a45" stroke-width="1.5"/>
+        <line x1="22" y1="46" x2="42" y2="46" stroke="#2d5a45" stroke-width="1.5"/>
+        <circle cx="46" cy="12" r="5" fill="#b8963e" opacity="0.2"/>
+        <circle cx="50" cy="20" r="3" fill="#b8963e" opacity="0.15"/>
+      </svg>
+      <span class="group-tag">Women 25–55</span>
+      <h4>Sisters' Circle</h4>
+      <p>A closed support group for Muslim women navigating marriage, motherhood, grief, burnout, and personal growth. A space to speak freely among other Muslim women — without the pressure of being "strong" for everyone else in your life. Full privacy guaranteed.</p>
+      <div class="group-card-meta">
+        <span>12 weeks</span>
+        <span>6–8 women</span>
+        <span>Quarterly</span>
+      </div>
+      <a href="schedule.html">Reserve Your Spot →</a>
+    </div>
+    <div class="group-card">
+      <svg class="group-card-icon" viewBox="0 0 64 64" fill="none">
+        <circle cx="24" cy="20" r="10" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.1"/>
+        <path d="M 6 56 C 6 44 13 38 24 38" stroke="#2d5a45" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <circle cx="44" cy="38" r="8" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.1"/>
+        <path d="M 36 46 C 36 54 38 58 44 58 C 50 58 52 54 52 46" stroke="#2d5a45" stroke-width="1.5" fill="none"/>
+        <path d="M 26 32 Q 32 28 38 32" stroke="#b8963e" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.7"/>
+      </svg>
+      <span class="group-tag">Parents 22–42</span>
+      <h4>New Parents Support Group</h4>
+      <p>For Muslim new parents navigating postpartum adjustment, parenting anxiety, sleep deprivation, and the identity shift of parenthood. Balancing faith, extended family, and new parenthood is hard — this group exists so you don't have to figure it out alone.</p>
+      <div class="group-card-meta">
+        <span>8 weeks</span>
+        <span>4–6 parents</span>
+        <span>Quarterly</span>
+      </div>
+      <a href="schedule.html">Reserve Your Spot →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="cta-green">
+  <div>
+    <h3>Ready to take the next step?</h3>
+    <p>Start with a free 15-minute consultation — no commitment, just a conversation with Amna to see if we're the right fit.</p>
+  </div>
+  <div class="cta-green-btns">
+    <a href="schedule.html" class="btn-gold">Book Free Consult</a>
+    <a href="about.html" class="btn-o" style="border-color:white;color:white">Meet Amna →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">
+          <svg width="22" height="22" viewBox="0 0 44 44" fill="none">
+            <defs><mask id="fm"><rect width="44" height="44" fill="white"/><circle cx="28" cy="19" r="13" fill="black"/></mask></defs>
+            <circle cx="20" cy="22" r="15" fill="white" mask="url(#fm)"/>
+            <path d="M 11 25 Q 15 30 19 25" stroke="#2d5a45" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="footer-logo-text">mymuslimtherapists</span>
+      </div>
+      <p class="footer-tagline">Compassionate, culturally-informed mental health care for Muslim individuals, couples, and families. Serving Lawrenceville, Georgia and surrounding communities.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navigate</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Amna</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="schedule.html">Schedule Now</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#individual">Individual Therapy</a></li>
+        <li><a href="#couples">Couples Counseling</a></li>
+        <li><a href="#family">Family Therapy</a></li>
+        <li><a href="#online">Online Therapy</a></li>
+        <li><a href="#adolescent">Adolescent Therapy</a></li>
+        <li><a href="#groups">Group Therapy</a></li>
+        <li><a href="#grief">Grief Counseling</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="crisis">
+    <strong style="color:#bbb">mymuslimtherapists is not a crisis facility.</strong> If you or someone you know is in a mental health emergency, call or text <a href="tel:988">988</a> (Suicide & Crisis Lifeline) at any time.
+  </div>
+  <div class="footer-btm">
+    <p>© 2025 mymuslimtherapists · Lawrenceville, Georgia · All Rights Reserved.</p>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="accessibility.html">Accessibility</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

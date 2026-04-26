@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Amna Ahmad | My Muslim Therapists · Lawrenceville, GA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf9f7;--bg2:#f3f0eb;
+  --ink:#1a1a18;--ink-mid:#4a4a45;--ink-light:#9a9a94;
+  --green:#2d5a45;--green-light:#3d7a5f;--green-dark:#1f3f30;
+  --gold:#b8963e;--gold-light:#d4af6a;--gold-pale:#f5edd8;
+  --cream:#f7f3ec;--white:#fff;--border:#e4e0d8;
+  --fd:'Cormorant Garamond',serif;--fb:'DM Sans',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;font-weight:300}
+
+/* TOP BAR */
+.top-bar{background:var(--green-dark);color:#c9e8d8;font-size:12px;letter-spacing:.06em;text-align:center;padding:9px 24px}
+.top-bar a{color:var(--gold-light);text-decoration:none}.top-bar a:hover{color:var(--white)}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:76px}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+.logo-icon{width:46px;height:46px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.logo-text{font-family:var(--fd);font-size:22px;font-weight:500;color:var(--ink)}
+.logo-text em{font-style:normal;color:var(--green)}
+.nav-links{display:flex;align-items:center;gap:40px;list-style:none}
+.nav-links a{font-size:12px;font-weight:400;letter-spacing:.08em;color:var(--ink-mid);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--green)}
+.nav-cta{background:var(--green);color:var(--white)!important;padding:12px 26px;font-weight:400!important;transition:background .2s!important}
+.nav-cta:hover{background:var(--green-light)!important}
+
+/* SHARED */
+section{padding:96px 80px}
+.sec-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.sec-label::before{content:'';display:block;width:24px;height:1px;background:var(--gold)}
+h2.sec-title{font-family:var(--fd);font-size:46px;font-weight:300;line-height:1.12;color:var(--ink);margin-bottom:16px;letter-spacing:-.01em}
+h2.sec-title em{font-style:italic;color:var(--green)}
+.divider{width:44px;height:1px;background:var(--gold);margin:22px 0}
+.sec-desc{color:var(--ink-mid);font-size:16px;line-height:1.8;font-weight:300}
+.btn-g,.btn-o,.btn-gold{padding:14px 30px;font-family:var(--fb);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid;cursor:pointer;transition:all .2s;display:inline-block;font-weight:400}
+.btn-g{background:var(--green);color:var(--white);border-color:var(--green)}.btn-g:hover{background:var(--green-light);border-color:var(--green-light)}
+.btn-o{background:transparent;color:var(--green);border-color:var(--green)}.btn-o:hover{background:var(--green);color:var(--white)}
+.btn-gold{background:var(--gold);color:var(--white);border-color:var(--gold)}.btn-gold:hover{background:var(--gold-light)}
+
+/* PAGE HERO */
+.page-hero{background:var(--green);position:relative;overflow:hidden;padding:0}
+.page-hero-inner{display:grid;grid-template-columns:1fr 520px;min-height:580px}
+.page-hero-left{padding:88px 64px 88px 80px;display:flex;flex-direction:column;justify-content:center;gap:28px;position:relative;z-index:2}
+.page-hero-crumb{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:8px}
+.page-hero-crumb a{color:rgba(255,255,255,.5);text-decoration:none}.page-hero-crumb a:hover{color:var(--gold-light)}
+.page-hero-crumb span{color:rgba(255,255,255,.3)}
+.page-hero h1{font-family:var(--fd);font-size:60px;font-weight:300;line-height:1.06;color:var(--white);letter-spacing:-.015em}
+.page-hero h1 em{font-style:italic;color:var(--gold-light)}
+.page-hero-sub{font-size:17px;color:rgba(255,255,255,.75);line-height:1.7;max-width:480px;font-weight:300}
+.page-hero-right{position:relative;overflow:hidden}
+/* geometric pattern right panel */
+.page-hero-art{position:absolute;inset:0}
+
+/* PROFILE SPLIT */
+.profile-split{display:grid;grid-template-columns:420px 1fr;background:var(--white)}
+.profile-photo-col{background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:64px 48px;position:relative;overflow:hidden}
+.profile-photo-art{position:absolute;inset:0;opacity:.05}
+.avatar-ring{position:relative;z-index:2}
+.avatar{width:240px;height:240px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:80px;font-weight:300;color:var(--white);box-shadow:0 16px 48px rgba(45,90,69,.2);border:5px solid var(--white)}
+.avatar-ring::after{content:'';position:absolute;inset:-12px;border-radius:50%;border:1px solid var(--gold);opacity:.3}
+.profile-name{text-align:center;z-index:2;position:relative}
+.profile-name h2{font-family:var(--fd);font-size:34px;font-weight:500;color:var(--ink);margin-bottom:8px}
+.profile-name .creds{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.profile-deco{display:flex;align-items:center;gap:12px;margin-top:4px;z-index:2;position:relative}
+.profile-deco-line{flex:1;height:1px;background:var(--gold);opacity:.4;width:40px}
+.profile-deco-star{color:var(--gold);font-size:16px}
+.profile-badges{display:flex;flex-direction:column;gap:10px;z-index:2;position:relative;width:100%}
+.profile-badge{background:var(--white);border:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;gap:14px;font-size:13px;color:var(--ink-mid);font-weight:300}
+.profile-badge::before{content:'✓';color:var(--green);font-size:12px;font-weight:600;flex-shrink:0}
+
+.profile-content{padding:72px 64px;display:flex;flex-direction:column;gap:24px;overflow-y:auto}
+.profile-content h3{font-family:var(--fd);font-size:26px;font-weight:500;color:var(--ink);margin-top:8px}
+.profile-content p{font-size:15px;color:var(--ink-mid);line-height:1.9;font-weight:300}
+.profile-content blockquote{border-left:3px solid var(--gold);padding:16px 24px;background:var(--cream);font-family:var(--fd);font-size:22px;font-style:italic;color:var(--ink);line-height:1.5}
+
+/* APPROACH PHILOSOPHY */
+.philosophy-section{background:var(--bg2)}
+.philosophy-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;margin-top:56px}
+.philosophy-item{display:flex;gap:24px;align-items:start}
+.philosophy-num{font-family:var(--fd);font-size:48px;font-weight:300;color:var(--gold);line-height:1;flex-shrink:0;opacity:.5;min-width:44px}
+.philosophy-body h4{font-family:var(--fd);font-size:22px;font-weight:500;color:var(--ink);margin-bottom:10px}
+.philosophy-body p{font-size:14px;color:var(--ink-mid);line-height:1.8;font-weight:300}
+
+/* CREDENTIALS */
+.creds-section{background:var(--white)}
+.creds-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:56px;background:var(--border);border:1px solid var(--border)}
+.cred-card{background:var(--white);padding:40px 36px;display:flex;flex-direction:column;gap:16px;transition:background .2s}
+.cred-card:hover{background:var(--cream)}
+.cred-icon{width:56px;height:56px;margin-bottom:4px}
+.cred-card h4{font-family:var(--fd);font-size:22px;font-weight:500;color:var(--ink)}
+.cred-card p{font-size:14px;color:var(--ink-mid);line-height:1.8;font-weight:300}
+
+/* SPECIALTIES */
+.spec-section{background:var(--green)}
+.spec-section .sec-label{color:var(--gold-light)}.spec-section .sec-label::before{background:var(--gold-light)}
+.spec-section h2.sec-title{color:var(--white)}.spec-section .divider{background:var(--gold-light)}
+.spec-section .sec-desc{color:#c9e8d8}
+.spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:56px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1)}
+.spec-item{background:rgba(255,255,255,.05);padding:28px 24px;border-right:none;display:flex;flex-direction:column;gap:8px;transition:background .2s}
+.spec-item:hover{background:rgba(255,255,255,.1)}
+.spec-item-icon{width:32px;height:32px;margin-bottom:4px}
+.spec-item h5{font-family:var(--fd);font-size:18px;font-weight:500;color:var(--white)}
+.spec-item p{font-size:13px;color:#c9e8d8;font-weight:300;line-height:1.7}
+
+/* PERSONAL SECTION */
+.personal-section{background:var(--cream)}
+.personal-inner{display:grid;grid-template-columns:1fr 480px;gap:80px;align-items:center}
+.personal-art{position:relative}
+
+/* VALUES */
+.values-section{background:var(--white)}
+.values-list{display:flex;flex-direction:column;gap:0;margin-top:56px;border:1px solid var(--border)}
+.value-row{display:grid;grid-template-columns:80px 1fr 1fr;gap:0;border-bottom:1px solid var(--border)}
+.value-row:last-child{border-bottom:none}
+.value-num{padding:36px 28px;font-family:var(--fd);font-size:32px;font-weight:300;color:var(--gold);border-right:1px solid var(--border);display:flex;align-items:center;line-height:1}
+.value-title{padding:36px 40px;border-right:1px solid var(--border);display:flex;align-items:center}
+.value-title h4{font-family:var(--fd);font-size:22px;font-weight:500;color:var(--ink)}
+.value-body{padding:36px 40px;display:flex;align-items:center}
+.value-body p{font-size:14px;color:var(--ink-mid);line-height:1.8;font-weight:300}
+
+/* CTA */
+.cta-green{background:var(--green);padding:56px 80px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.cta-green h3{font-family:var(--fd);font-size:32px;font-weight:300;font-style:italic;color:var(--white);line-height:1.3}
+.cta-green p{font-size:14px;color:#c9e8d8;margin-top:6px}
+.cta-green-btns{display:flex;gap:12px;flex-shrink:0}
+
+/* FOOTER */
+footer{background:var(--ink);color:#aaa;padding:72px 80px 32px}
+.footer-top{display:grid;grid-template-columns:300px 1fr 1fr;gap:56px;margin-bottom:56px}
+.footer-brand{display:flex;flex-direction:column;gap:18px}
+.footer-logo{display:flex;align-items:center;gap:12px}
+.footer-logo-icon{width:38px;height:38px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.footer-logo-text{font-family:var(--fd);font-size:19px;font-weight:400;color:var(--white)}
+.footer-tagline{font-size:13px;color:#666;line-height:1.75;font-weight:300}
+.footer-col h5{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-light);margin-bottom:20px;font-weight:500}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul li,.footer-col ul li a{font-size:13px;color:#777;text-decoration:none;font-weight:300;transition:color .2s}
+.footer-col ul li a:hover{color:var(--white)}
+.footer-btm{border-top:1px solid rgba(255,255,255,.06);padding-top:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-btm p{font-size:12px;color:#555}
+.footer-btm a{color:#666;text-decoration:none}.footer-btm a:hover{color:var(--white)}
+.crisis{background:rgba(184,150,62,.1);border:1px solid rgba(184,150,62,.2);padding:18px 24px;margin-top:32px;font-size:13px;color:#999;line-height:1.65}
+.crisis a{color:var(--gold-light)}
+
+@media(max-width:1024px){
+  nav{padding:0 24px}.nav-links{gap:18px}
+  .page-hero-inner,.profile-split,.personal-inner{grid-template-columns:1fr}
+  .page-hero-right{display:none}
+  .page-hero-left,.profile-content{padding:52px 24px}
+  .profile-photo-col{min-height:auto;padding:52px 24px}
+  section,.cta-green,footer{padding-left:24px;padding-right:24px}
+  .creds-grid,.spec-grid{grid-template-columns:1fr 1fr}
+  .philosophy-grid,.values-list{grid-template-columns:1fr}
+  .value-row{grid-template-columns:60px 1fr}
+  .value-body{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  Now Accepting New Clients &nbsp;·&nbsp; <a href="tel:+14703001234">(470) 300-1234</a> &nbsp;·&nbsp; Lawrenceville, GA &nbsp;·&nbsp; <a href="schedule.html">Book a Free Consultation</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="index.html">
+    <div class="logo-icon">
+      <svg width="30" height="30" viewBox="0 0 44 44" fill="none">
+        <defs><mask id="cm"><rect width="44" height="44" fill="white"/><circle cx="28" cy="19" r="13" fill="black"/></mask></defs>
+        <circle cx="20" cy="22" r="15" fill="white" mask="url(#cm)"/>
+        <path d="M 11 25 Q 15 30 19 25" stroke="#2d5a45" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <circle cx="11.5" cy="20" r="1.4" fill="#2d5a45"/>
+        <circle cx="17.5" cy="18" r="1.4" fill="#2d5a45"/>
+      </svg>
+    </div>
+    <span class="logo-text">my<em>muslim</em>therapists</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="schedule.html" class="nav-cta">Schedule Now</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-left">
+      <div class="page-hero-crumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span style="color:rgba(255,255,255,.7)">About</span>
+      </div>
+      <h1>Meet<br><em>Amna Ahmad,</em><br>LPC</h1>
+      <p class="page-hero-sub">Licensed Professional Counselor, founder of mymuslimtherapists, and a therapist who believes you should never have to explain your faith to feel understood.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+        <a href="schedule.html" class="btn-gold">Book a Free Consult</a>
+        <a href="tel:+14703001234" class="btn-o" style="border-color:rgba(255,255,255,.4);color:white">(470) 300-1234</a>
+      </div>
+    </div>
+    <div class="page-hero-right">
+      <div class="page-hero-art">
+        <svg width="100%" height="100%" viewBox="0 0 520 580" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="520" height="580" fill="#1f3f30"/>
+          <!-- Large geometric rings -->
+          <g stroke="#ffffff" stroke-width="0.5" opacity="0.08" fill="none">
+            <circle cx="260" cy="290" r="240"/>
+            <circle cx="260" cy="290" r="190"/>
+            <circle cx="260" cy="290" r="140"/>
+            <circle cx="260" cy="290" r="90"/>
+            <!-- Intersecting lines -->
+            <line x1="260" y1="50" x2="260" y2="530"/>
+            <line x1="20" y1="290" x2="500" y2="290"/>
+            <line x1="85" y1="115" x2="435" y2="465"/>
+            <line x1="435" y1="115" x2="85" y2="465"/>
+          </g>
+          <!-- Gold arabesque motifs -->
+          <g stroke="#b8963e" stroke-width="0.7" opacity="0.22" fill="none">
+            <!-- Top corner flourish -->
+            <path d="M 0 0 Q 80 0 80 80 Q 80 0 160 0"/>
+            <path d="M 0 0 Q 0 80 80 80 Q 0 80 0 160"/>
+            <path d="M 15 15 Q 70 15 70 70 Q 70 15 130 15"/>
+            <!-- Bottom corner -->
+            <path d="M 520 580 Q 440 580 440 500 Q 440 580 360 580"/>
+            <path d="M 520 580 Q 520 500 440 500 Q 520 500 520 420"/>
+          </g>
+          <!-- Central crescent -->
+          <g transform="translate(260,255)">
+            <defs><mask id="phm"><rect x="-100" y="-100" width="200" height="200" fill="white"/><circle cx="28" cy="-20" r="66" fill="black"/></mask></defs>
+            <circle cx="0" cy="0" r="78" fill="white" opacity="0.88" mask="url(#phm)"/>
+            <path d="M -25 18 Q 0 36 25 18" stroke="#2d5a45" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="-18" cy="4" r="4.5" fill="#2d5a45"/>
+            <circle cx="12" cy="-4" r="4.5" fill="#2d5a45"/>
+          </g>
+          <!-- Stars -->
+          <g fill="#b8963e" opacity="0.6">
+            <circle cx="80" cy="80" r="3"/>
+            <circle cx="440" cy="120" r="2.5"/>
+            <circle cx="100" cy="460" r="2"/>
+            <circle cx="460" cy="440" r="3"/>
+            <circle cx="260" cy="60" r="2"/>
+          </g>
+          <!-- Quote at bottom -->
+          <text x="260" y="440" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="17" font-style="italic" fill="white" opacity="0.8">"Healing is not a luxury — it's a right."</text>
+          <line x1="100" y1="460" x2="420" y2="460" stroke="#b8963e" stroke-width="0.5" opacity="0.25"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROFILE SPLIT -->
+<div class="profile-split">
+  <div class="profile-photo-col">
+    <!-- Background art -->
+    <svg class="profile-photo-art" viewBox="0 0 420 800" fill="none" style="position:absolute;inset:0;width:100%;height:100%">
+      <g stroke="#2d5a45" stroke-width="1" fill="none">
+        <polygon points="210,10 410,120 410,680 210,790 10,680 10,120"/>
+        <polygon points="210,40 380,140 380,660 210,760 40,660 40,140"/>
+        <circle cx="210" cy="400" r="180"/>
+        <circle cx="210" cy="400" r="130"/>
+        <circle cx="210" cy="400" r="80"/>
+      </g>
+    </svg>
+    <!-- Avatar -->
+    <div class="avatar-ring" style="position:relative;z-index:2">
+      <div class="avatar">AA</div>
+    </div>
+    <!-- Name block -->
+    <div class="profile-name">
+      <h2>Amna Ahmad</h2>
+      <p class="creds">LPC &nbsp;·&nbsp; Licensed Professional Counselor</p>
+      <div class="profile-deco" style="justify-content:center">
+        <div class="profile-deco-line"></div>
+        <span class="profile-deco-star">✦</span>
+        <div class="profile-deco-line"></div>
+      </div>
+    </div>
+    <!-- Credential badges -->
+    <div class="profile-badges">
+      <div class="profile-badge">Licensed Professional Counselor — Georgia</div>
+      <div class="profile-badge">10+ Years Clinical Experience</div>
+      <div class="profile-badge">Trauma-Informed Practitioner</div>
+      <div class="profile-badge">Faith-Integrated Therapy</div>
+      <div class="profile-badge">In Person & Telehealth Statewide</div>
+    </div>
+    <!-- Small crescent decoration -->
+    <svg width="56" height="32" viewBox="0 0 56 32" fill="none" style="margin-top:8px;z-index:2;position:relative">
+      <defs><mask id="sm2"><rect width="56" height="32" fill="white"/><circle cx="32" cy="13" r="11" fill="black"/></mask></defs>
+      <circle cx="24" cy="16" r="14" fill="#b8963e" opacity="0.2" mask="url(#sm2)"/>
+      <path d="M 14 19 Q 20 25 26 19" stroke="#b8963e" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+    </svg>
+  </div>
+
+  <div class="profile-content">
+    <div class="sec-label">My Story</div>
+    <h2 class="sec-title" style="font-size:38px;">A therapist who <em>understands<br>your world.</em></h2>
+    <div class="divider"></div>
+
+    <p>Amna Ahmad is a Licensed Professional Counselor with over a decade of clinical experience working with Muslim individuals, couples, and families. Born and raised in a Muslim household herself, Amna understands firsthand the unique intersection of faith, culture, family expectation, and personal identity that her clients navigate every day.</p>
+
+    <p>She founded mymuslimtherapists after years of watching Muslim clients spend their precious therapy time explaining cultural context — their family dynamics, their faith practices, why they couldn't "just leave" or "just talk to an imam." She knew there had to be a better way. A space where clients could walk in and simply be known.</p>
+
+    <blockquote>"I wanted to create a place where you never have to translate yourself. Where your faith, your family, and your cultural identity are not obstacles to understand — they're the starting point."</blockquote>
+
+    <h3>A Clinical Foundation in Evidence-Based Care</h3>
+    <p>Amna's approach is grounded in established, research-supported therapeutic frameworks. She draws from Cognitive Behavioral Therapy (CBT), Acceptance and Commitment Therapy (ACT), trauma-informed care, and family systems theory — adapting each modality to fit the individual in front of her rather than applying a one-size-fits-all model.</p>
+
+    <p>For clients who wish to incorporate faith, Amna is fluent in Islamic concepts of sabr (patience), tawakkul (trust in God), muhasaba (self-reflection), and shukr (gratitude) — and knows how to weave them alongside clinical frameworks in ways that feel authentic, not performative. For clients who prefer a purely secular approach, that is equally honored.</p>
+
+    <h3>Who She Works With</h3>
+    <p>Amna specializes in supporting Muslim adults, teens, couples, and families navigating anxiety, depression, trauma, relationship challenges, parenting, life transitions, and identity questions. She has a particular passion for second-generation Muslim Americans who feel caught between cultures, women carrying invisible burdens in silence, and individuals processing religious or intergenerational trauma.</p>
+
+    <p>She works with Muslims across the full spectrum of practice — from the devout to the questioning to the non-practicing — and believes every person deserves compassionate care without judgment about where they fall on that spectrum.</p>
+
+    <h3>Beyond the Office</h3>
+    <p>When she's not in session, Amna is an avid reader of Islamic philosophy and contemporary psychology, a passionate cook who believes food is a form of cultural memory, and a mother who knows firsthand the juggling act of faith, family, and self-care. These human experiences make her not just a better therapist — but a more present one.</p>
+  </div>
+</div>
+
+<!-- CTA BETWEEN SECTIONS -->
+<div class="cta-green">
+  <div>
+    <h3>Ready to work with Amna?</h3>
+    <p>Start with a free 15-minute phone consultation — no commitment, just a conversation.</p>
+  </div>
+  <div class="cta-green-btns">
+    <a href="schedule.html" class="btn-gold">Book Free Consult</a>
+    <a href="tel:+14703001234" class="btn-o" style="border-color:white;color:white">Call (470) 300-1234</a>
+  </div>
+</div>
+
+<!-- THERAPEUTIC PHILOSOPHY -->
+<section class="philosophy-section">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:56px">
+    <div>
+      <div class="sec-label">Therapeutic Philosophy</div>
+      <h2 class="sec-title">How Amna <em>approaches</em> healing.</h2>
+      <div class="divider"></div>
+    </div>
+    <p class="sec-desc">Therapy with Amna is collaborative, honest, and rooted in both clinical science and cultural sensitivity. Here are the core beliefs that guide every session.</p>
+  </div>
+  <div class="philosophy-grid">
+    <div class="philosophy-item">
+      <div class="philosophy-num">01</div>
+      <div class="philosophy-body">
+        <h4>You are the expert on your own life.</h4>
+        <p>Amna's job is not to tell you what to do — it's to help you understand yourself more deeply, so you can make choices that are truly yours. She will offer tools, frameworks, and perspective, but you remain the author of your own story throughout the therapeutic process.</p>
+      </div>
+    </div>
+    <div class="philosophy-item">
+      <div class="philosophy-num">02</div>
+      <div class="philosophy-body">
+        <h4>Culture is not a complication — it's context.</h4>
+        <p>Traditional therapy often treats cultural and religious factors as obstacles to "Western" psychological models. Amna sees it differently: your culture, your faith, and your family dynamics are not complications to work around. They are the essential context in which your healing happens.</p>
+      </div>
+    </div>
+    <div class="philosophy-item">
+      <div class="philosophy-num">03</div>
+      <div class="philosophy-body">
+        <h4>Evidence matters — and so does your intuition.</h4>
+        <p>Amna uses research-backed methods because they work. She also deeply respects each client's inner wisdom, lived experience, and sense of what feels right. The best therapy happens when science and self-knowledge work together, not when one overrides the other.</p>
+      </div>
+    </div>
+    <div class="philosophy-item">
+      <div class="philosophy-num">04</div>
+      <div class="philosophy-body">
+        <h4>Progress, not perfection.</h4>
+        <p>Healing is rarely linear. There will be hard sessions and easier ones, breakthroughs and setbacks. Amna holds space for all of it — without rushing, without judgment, without an agenda for how your healing is supposed to look. The only goal is meaningful, sustainable change on your terms.</p>
+      </div>
+    </div>
+    <div class="philosophy-item">
+      <div class="philosophy-num">05</div>
+      <div class="philosophy-body">
+        <h4>The therapeutic relationship is the foundation.</h4>
+        <p>Research consistently shows that the quality of the therapist-client relationship is one of the strongest predictors of therapy outcomes. Amna invests in genuine connection, real trust, and deep listening — because everything else builds from there.</p>
+      </div>
+    </div>
+    <div class="philosophy-item">
+      <div class="philosophy-num">06</div>
+      <div class="philosophy-body">
+        <h4>You don't need to be in crisis to deserve support.</h4>
+        <p>Many Muslim clients wait until they're overwhelmed before seeking help — because asking for support can feel like admitting weakness. Amna rejects that framing entirely. Proactive care, maintenance, and growth are all equally valid reasons to be in therapy. You don't have to be broken to deserve to feel better.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS & TRAINING -->
+<section class="creds-section">
+  <div class="sec-label">Education & Training</div>
+  <h2 class="sec-title">Clinical background & <em>credentials.</em></h2>
+  <div class="divider"></div>
+  <div class="creds-grid">
+    <div class="cred-card">
+      <svg class="cred-icon" viewBox="0 0 56 56" fill="none">
+        <rect x="8" y="16" width="40" height="32" rx="2" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.07"/>
+        <path d="M 28 10 L 50 20 L 28 30 L 6 20 Z" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.1"/>
+        <path d="M 18 25 L 18 40 Q 28 46 38 40 L 38 25" stroke="#2d5a45" stroke-width="1.5" fill="none"/>
+        <circle cx="42" cy="12" r="4" fill="#b8963e" opacity="0.6"/>
+      </svg>
+      <h4>Education</h4>
+      <p>Master of Arts in Counseling Psychology with a concentration in clinical practice. Undergraduate degree in Psychology. Trained in the use of evidence-based modalities including CBT, ACT, and trauma-focused care.</p>
+    </div>
+    <div class="cred-card">
+      <svg class="cred-icon" viewBox="0 0 56 56" fill="none">
+        <path d="M 12 14 L 28 8 L 44 14 L 44 30 C 44 42 28 50 28 50 C 28 50 12 42 12 30 Z" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.08"/>
+        <path d="M 20 30 L 25.5 35.5 L 36 23" stroke="#2d5a45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="42" cy="10" r="3.5" fill="#b8963e" opacity="0.6"/>
+      </svg>
+      <h4>Licensure</h4>
+      <p>Licensed Professional Counselor (LPC) in the State of Georgia. Maintains active licensure in good standing with all required continuing education. Authorized to provide telehealth services statewide throughout Georgia.</p>
+    </div>
+    <div class="cred-card">
+      <svg class="cred-icon" viewBox="0 0 56 56" fill="none">
+        <circle cx="28" cy="28" r="18" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.07"/>
+        <circle cx="28" cy="28" r="11" stroke="#2d5a45" stroke-width="1"/>
+        <path d="M 24 28 L 27 31 L 34 24" stroke="#b8963e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h4>Clinical Training</h4>
+      <p>Completed supervised clinical hours in community mental health, university counseling settings, and private practice. Specialized training in trauma-informed care, culturally responsive therapy, and faith-sensitive counseling with Muslim populations.</p>
+    </div>
+    <div class="cred-card">
+      <svg class="cred-icon" viewBox="0 0 56 56" fill="none">
+        <circle cx="28" cy="18" r="10" stroke="#2d5a45" stroke-width="1.5"/>
+        <path d="M 10 50 C 10 39 18 32 28 32 C 38 32 46 39 46 50" stroke="#2d5a45" stroke-width="1.5" fill="none"/>
+        <path d="M 22 8 Q 28 4 34 8" stroke="#b8963e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <h4>Continuing Education</h4>
+      <p>Regularly attends professional development trainings in culturally responsive mental health, Islamic psychology, and contemporary therapeutic modalities. Active member of professional counseling associations.</p>
+    </div>
+    <div class="cred-card">
+      <svg class="cred-icon" viewBox="0 0 56 56" fill="none">
+        <rect x="10" y="10" width="36" height="36" rx="2" stroke="#2d5a45" stroke-width="1.5" fill="#2d5a45" opacity="0.07"/>
+        <line x1="18" y1="22" x2="38" y2="22" stroke="#2d5a45" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="18" y1="30" x2="30" y2="30" stroke="#2d5a45" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="42" cy="44" r="6" fill="#b8963e" opacity="0.3" stroke="#b8963e" stroke-width="1"/>
+        <path d="M 39 44 L 41.5 46.5 L 46 41" stroke="#b8963e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h4>Ethics & Compliance</h4>
+      <p>Practices in full accordance with Georgia LPC Board ethical guidelines and HIPAA privacy regulations. Maintains professional liability insurance. Committed to culturally competent, non-discriminatory, affirming care for all clients.</p>
+    </div>
+    <div class="cred-card">
+      <svg class="cred-icon" viewBox="0 0 56 56" fill="none">
+        <circle cx="16" cy="28" r="8" stroke="#2d5a45" stroke-width="1.5"/>
+        <circle cx="40" cy="28" r="8" stroke="#2d5a45" stroke-width="1.5"/>
+        <path d="M 24 28 L 32 28" stroke="#b8963e" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="28" cy="28" r="3" fill="#b8963e" opacity="0.4"/>
+      </svg>
+      <h4>Languages</h4>
+      <p>Provides therapy in English. Conversational in Urdu and Arabic, which supports cultural connection and nuance with clients from South Asian and Arab Muslim communities. Understanding of cultural idioms of distress across Muslim communities.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALTIES SECTION -->
+<section class="spec-section">
+  <div class="sec-label">Areas of Focus</div>
+  <h2 class="sec-title">What Amna <em>specializes</em> in.</h2>
+  <div class="divider"></div>
+  <p class="sec-desc" style="margin-bottom:0">These are the areas where Amna has the deepest clinical experience and training — and where she brings the most to each client's healing process.</p>
+  <div class="spec-grid">
+    <div class="spec-item">
+      <svg class="spec-item-icon" viewBox="0 0 32 32" fill="none" stroke="white" stroke-width="1.2">
+        <circle cx="16" cy="16" r="12" opacity="0.3"/>
+        <path d="M 10 16 Q 16 10 22 16 Q 16 22 10 16"/>
+      </svg>
+      <h5>Anxiety & Depression</h5>
+      <p>Including generalized anxiety, panic, social anxiety, postpartum depression, and treatment-resistant mood concerns.</p>
+    </div>
+    <div class="spec-item">
+      <svg class="spec-item-icon" viewBox="0 0 32 32" fill="none" stroke="white" stroke-width="1.2">
+        <path d="M 16 4 C 16 4 28 12 28 20 C 28 26 22 30 16 30 C 10 30 4 26 4 20 C 4 12 16 4 16 4Z" opacity="0.4"/>
+        <path d="M 11 20 L 15 24 L 22 15" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h5>Trauma & PTSD</h5>
+      <p>Religious trauma, racial trauma, childhood trauma, complex PTSD, intergenerational trauma, and immigration experiences.</p>
+    </div>
+    <div class="spec-item">
+      <svg class="spec-item-icon" viewBox="0 0 32 32" fill="none" stroke="white" stroke-width="1.2">
+        <circle cx="12" cy="12" r="7" opacity="0.4"/>
+        <circle cx="22" cy="20" r="7" opacity="0.4"/>
+        <path d="M 14 16 Q 18 14 20 18"/>
+      </svg>
+      <h5>Marriage & Couples</h5>
+      <p>Pre-marital counseling, conflict resolution, communication, intimacy, and navigating cultural expectations in partnership.</p>
+    </div>
+    <div class="spec-item">
+      <svg class="spec-item-icon" viewBox="0 0 32 32" fill="none" stroke="white" stroke-width="1.2">
+        <circle cx="16" cy="10" r="5" opacity="0.4"/>
+        <path d="M 6 28 C 6 22 10 18 16 18 C 22 18 26 22 26 28"/>
+        <path d="M 10 8 Q 16 4 22 8" stroke-linecap="round"/>
+      </svg>
+      <h5>Identity & Belonging</h5>
+      <p>Second-generation Muslim Americans, bicultural identity, navigating faith and secular worlds, and cultural conflict.</p>
+    </div>
+    <div class="spec-item">
+      <svg class="spec-item-icon" viewBox="0 0 32 32" fill="none" stroke="white" stroke-width="1.2">
+        <path d="M 16 28 C 16 28 6 22 6 14 C 6 9 10 6 16 9 C 22 6 26 9 26 14 C 26 22 16 28 16 28Z" opacity="0.4"/>
+        <path d="M 12 16 Q 16 20 20 16" stroke-linecap="round"/>
+      </svg>
+      <h5>Women's Mental Health</h5>
+      <p>Postpartum challenges, boundary-setting, caregiver burnout, self-worth, and the invisible labor of Muslim women.</p>
+    </div>
+    <div class="spec-item">
+      <svg class="spec-item-icon" viewBox="0 0 32 32" fill="none" stroke="white" stroke-width="1.2">
+        <circle cx="16" cy="12" r="6" opacity="0.4"/>
+        <path d="M 4 28 C 4 22 9 18 16 18 C 23 18 28 22 28 28"/>
+        <circle cx="26" cy="6" r="3" opacity="0.5"/>
+      </svg>
+      <h5>Adolescent Therapy</h5>
+      <p>Muslim teens navigating identity, school stress, social media, family conflict, and anxiety. Ages 14 and up.</p>
+    </div>
+    <div class="spec-item">
+      <svg class="spec-item-icon" viewBox="0 0 32 32" fill="none" stroke="white" stroke-width="1.2">
+        <path d="M 16 28 C 16 28 6 20 6 12 Q 6 6 16 6 Q 26 6 26 12 C 26 20 16 28 16 28Z" opacity="0.4"/>
+        <path d="M 16 10 L 16 20 M 12 16 L 20 16" opacity="0.6"/>
+      </svg>
+      <h5>Grief & Loss</h5>
+      <p>All forms of grief including death, divorce, pregnancy loss, leaving home, and the end of a cherished identity or role.</p>
+    </div>
+    <div class="spec-item">
+      <svg class="spec-item-icon" viewBox="0 0 32 32" fill="none" stroke="white" stroke-width="1.2">
+        <circle cx="16" cy="16" r="12" stroke-dasharray="3 4" opacity="0.3"/>
+        <circle cx="16" cy="16" r="7" opacity="0.4"/>
+        <path d="M 12 16 L 14.5 18.5 L 20 13" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h5>Family Dynamics</h5>
+      <p>Multigenerational conflict, parenting challenges, estrangement, in-law dynamics, and rebuilding family relationships.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES TABLE -->
+<section class="values-section">
+  <div class="sec-label">Core Values</div>
+  <h2 class="sec-title">What this practice <em>stands for.</em></h2>
+  <div class="divider"></div>
+  <div class="values-list">
+    <div class="value-row">
+      <div class="value-num">1</div>
+      <div class="value-title"><h4>Cultural Safety</h4></div>
+      <div class="value-body"><p>Every client deserves a space where their cultural identity — including their faith — is treated as an asset, not a barrier. We actively work to ensure Muslim clients feel seen, safe, and never othered in their own therapy sessions.</p></div>
+    </div>
+    <div class="value-row">
+      <div class="value-num">2</div>
+      <div class="value-title"><h4>Radical Confidentiality</h4></div>
+      <div class="value-body"><p>In communities where stigma around mental health is real, we take privacy seriously. Your sessions, your records, and your presence here belong to you alone. We maintain the highest standards of ethical confidentiality at all times.</p></div>
+    </div>
+    <div class="value-row">
+      <div class="value-num">3</div>
+      <div class="value-title"><h4>Non-Judgment</h4></div>
+      <div class="value-body"><p>Whether you're struggling with your faith, your marriage, your mental health, or something you've never said out loud — there is no judgment here. This practice exists precisely for the things that are hardest to say anywhere else.</p></div>
+    </div>
+    <div class="value-row">
+      <div class="value-num">4</div>
+      <div class="value-title"><h4>Clinical Excellence</h4></div>
+      <div class="value-body"><p>Being a Muslim-centered practice does not mean compromising on clinical standards. We use evidence-based methods because they produce real results — and our clients deserve nothing less than excellent care.</p></div>
+    </div>
+    <div class="value-row">
+      <div class="value-num">5</div>
+      <div class="value-title"><h4>Accessibility</h4></div>
+      <div class="value-body"><p>Mental health care should not be a privilege of the few. We offer telehealth throughout Georgia, work to accommodate schedules, and are committed to discussing financial accessibility with clients who need it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="cta-green">
+  <div>
+    <h3>Begin your healing journey with Amna.</h3>
+    <p>Free 15-minute consultation · Lawrenceville, GA · Telehealth available statewide.</p>
+  </div>
+  <div class="cta-green-btns">
+    <a href="schedule.html" class="btn-gold">Book Now</a>
+    <a href="services.html" class="btn-o" style="border-color:white;color:white">See All Services</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">
+          <svg width="22" height="22" viewBox="0 0 44 44" fill="none">
+            <defs><mask id="fm"><rect width="44" height="44" fill="white"/><circle cx="28" cy="19" r="13" fill="black"/></mask></defs>
+            <circle cx="20" cy="22" r="15" fill="white" mask="url(#fm)"/>
+            <path d="M 11 25 Q 15 30 19 25" stroke="#2d5a45" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="footer-logo-text">mymuslimtherapists</span>
+      </div>
+      <p class="footer-tagline">Compassionate, culturally-informed mental health care for Muslim individuals, couples, and families. Serving Lawrenceville, Georgia and surrounding communities.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navigate</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Amna</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="schedule.html">Schedule Now</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="services.html">Individual Therapy</a></li>
+        <li><a href="services.html">Couples Counseling</a></li>
+        <li><a href="services.html">Family Therapy</a></li>
+        <li><a href="services.html">Online Therapy</a></li>
+        <li><a href="services.html">Adolescent Therapy</a></li>
+        <li><a href="services.html">Group Therapy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="crisis">
+    <strong style="color:#bbb">mymuslimtherapists is not a crisis facility.</strong> If you or someone you know is in a mental health emergency, please call or text <a href="tel:988">988</a> (Suicide & Crisis Lifeline) at any time.
+  </div>
+  <div class="footer-btm">
+    <p>© 2025 mymuslimtherapists · Lawrenceville, Georgia · All Rights Reserved.</p>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="accessibility.html">Accessibility</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

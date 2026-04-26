@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schedule a Session | My Muslim Therapists · Lawrenceville, GA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf9f7;--bg2:#f3f0eb;
+  --ink:#1a1a18;--ink-mid:#4a4a45;--ink-light:#9a9a94;
+  --green:#2d5a45;--green-light:#3d7a5f;--green-dark:#1f3f30;
+  --gold:#b8963e;--gold-light:#d4af6a;
+  --cream:#f7f3ec;--white:#fff;--border:#e4e0d8;
+  --fd:'Cormorant Garamond',serif;--fb:'DM Sans',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;font-weight:300}
+
+.top-bar{background:var(--green-dark);color:#c9e8d8;font-size:12px;letter-spacing:.06em;text-align:center;padding:9px 24px}
+.top-bar a{color:var(--gold-light);text-decoration:none}.top-bar a:hover{color:var(--white)}
+
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:76px}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+.logo-icon{width:46px;height:46px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.logo-text{font-family:var(--fd);font-size:22px;font-weight:500;color:var(--ink)}
+.logo-text em{font-style:normal;color:var(--green)}
+.nav-links{display:flex;align-items:center;gap:40px;list-style:none}
+.nav-links a{font-size:12px;font-weight:400;letter-spacing:.08em;color:var(--ink-mid);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--green)}
+.nav-cta{background:var(--green);color:var(--white)!important;padding:12px 26px;font-weight:400!important;transition:background .2s!important}
+.nav-cta:hover{background:var(--green-light)!important}
+
+/* PAGE HERO */
+.page-hero{background:var(--green);padding:80px 80px 0;position:relative;overflow:hidden}
+.page-hero-art{position:absolute;inset:0;z-index:1;pointer-events:none}
+.page-hero-inner{position:relative;z-index:2;text-align:center;max-width:720px;margin:0 auto;padding-bottom:64px}
+.crumb{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:24px;display:flex;align-items:center;gap:8px;justify-content:center}
+.crumb a{color:rgba(255,255,255,.4);text-decoration:none}.crumb a:hover{color:var(--gold-light)}
+.crumb span{color:rgba(255,255,255,.22)}
+.page-hero h1{font-family:var(--fd);font-size:60px;font-weight:300;color:var(--white);line-height:1.08;letter-spacing:-.015em;margin-bottom:20px}
+.page-hero h1 em{font-style:italic;color:var(--gold-light)}
+.page-hero-sub{font-size:17px;color:rgba(255,255,255,.7);line-height:1.7;font-weight:300;margin-bottom:36px}
+/* Step indicator below hero text */
+.steps-indicator{display:flex;align-items:center;justify-content:center;gap:0;margin-top:48px}
+.step-ind{display:flex;flex-direction:column;align-items:center;gap:8px;flex:1;max-width:180px}
+.step-ind-circle{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:18px;color:white;font-weight:400}
+.step-ind-circle.active{background:var(--gold);border-color:var(--gold)}
+.step-ind-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-align:center}
+.step-ind-line{flex:1;height:1px;background:rgba(255,255,255,.15);max-width:80px}
+
+/* MAIN BOOKING LAYOUT */
+.booking-main{display:grid;grid-template-columns:1fr 420px;gap:0;align-items:start;padding:0;background:var(--white)}
+
+/* LEFT: FORM AREA */
+.form-area{padding:72px 64px;border-right:1px solid var(--border)}
+.form-section-title{font-family:var(--fd);font-size:30px;font-weight:400;color:var(--ink);margin-bottom:8px}
+.form-section-sub{font-size:14px;color:var(--ink-mid);margin-bottom:36px;line-height:1.7;font-weight:300}
+
+/* OPTION CARDS (in-person vs online) */
+.mode-select{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:36px}
+.mode-card{border:2px solid var(--border);padding:20px 20px;cursor:pointer;transition:all .2s;position:relative;background:var(--white)}
+.mode-card:hover{border-color:var(--green);background:rgba(45,90,69,.03)}
+.mode-card.selected{border-color:var(--green);background:rgba(45,90,69,.04)}
+.mode-card.selected::after{content:'✓';position:absolute;top:14px;right:14px;width:22px;height:22px;background:var(--green);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600}
+.mode-card h4{font-family:var(--fd);font-size:18px;font-weight:500;color:var(--ink);margin-bottom:4px}
+.mode-card p{font-size:12px;color:var(--ink-light);line-height:1.5}
+.mode-card-icon{width:32px;height:32px;margin-bottom:12px}
+
+/* SERVICE SELECT */
+.service-select{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:36px}
+.svc-option{border:1px solid var(--border);padding:14px 16px;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-mid);font-weight:300;background:var(--white)}
+.svc-option:hover{border-color:var(--green);color:var(--ink);background:rgba(45,90,69,.03)}
+.svc-option.selected{border-color:var(--green);background:rgba(45,90,69,.05);color:var(--ink)}
+.svc-option::before{content:'';width:16px;height:16px;border:1px solid var(--border);border-radius:50%;flex-shrink:0;transition:all .2s}
+.svc-option.selected::before{background:var(--green);border-color:var(--green)}
+
+/* FORM FIELDS */
+.form-group{margin-bottom:24px}
+.form-group label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light);margin-bottom:8px;font-weight:500}
+.form-group label.required::after{content:' *';color:var(--gold)}
+.form-group input,.form-group select,.form-group textarea{width:100%;border:1px solid var(--border);background:var(--white);padding:14px 16px;font-family:var(--fb);font-size:14px;color:var(--ink);font-weight:300;transition:border-color .2s;appearance:none;outline:none;border-radius:0}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--green)}
+.form-group textarea{resize:vertical;min-height:120px;line-height:1.65}
+.form-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a9a94' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px;cursor:pointer}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-divider{border:none;border-top:1px solid var(--border);margin:36px 0}
+.privacy-note{display:flex;gap:12px;align-items:start;padding:18px 20px;background:var(--cream);border-left:3px solid var(--gold);margin-bottom:28px}
+.privacy-note svg{flex-shrink:0;margin-top:2px}
+.privacy-note p{font-size:12px;color:var(--ink-mid);line-height:1.65}
+.submit-btn{background:var(--green);color:var(--white);border:1px solid var(--green);padding:18px 40px;font-family:var(--fb);font-size:13px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s;font-weight:400;width:100%;display:block;text-align:center;text-decoration:none}
+.submit-btn:hover{background:var(--green-light)}
+.or-divider{display:flex;align-items:center;gap:16px;margin:20px 0}
+.or-divider::before,.or-divider::after{content:'';flex:1;height:1px;background:var(--border)}
+.or-divider span{font-size:11px;color:var(--ink-light);letter-spacing:.08em;text-transform:uppercase}
+.phone-cta-btn{display:block;text-align:center;padding:16px;border:1px solid var(--border);font-size:14px;color:var(--ink-mid);text-decoration:none;transition:all .2s;font-weight:300}
+.phone-cta-btn strong{font-family:var(--fd);font-size:20px;font-weight:500;color:var(--green);display:block;margin-top:4px}
+.phone-cta-btn:hover{border-color:var(--green);background:rgba(45,90,69,.03)}
+
+/* RIGHT SIDEBAR */
+.booking-sidebar{padding:56px 44px;background:var(--bg2);position:sticky;top:76px}
+.sidebar-section{margin-bottom:40px}
+.sidebar-section:last-child{margin-bottom:0}
+.sidebar-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.sidebar-label::before{content:'';display:block;width:18px;height:1px;background:var(--gold)}
+
+/* Therapist mini card */
+.therapist-mini{display:flex;align-items:center;gap:18px;padding:20px;background:var(--white);border:1px solid var(--border)}
+.therapist-mini-avatar{width:56px;height:56px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:22px;color:var(--white);font-weight:300;flex-shrink:0}
+.therapist-mini-name{font-family:var(--fd);font-size:20px;font-weight:500;color:var(--ink)}
+.therapist-mini-title{font-size:11px;color:var(--ink-light);letter-spacing:.05em;margin-top:2px}
+
+/* What to expect list */
+.expect-list{display:flex;flex-direction:column;gap:16px}
+.expect-list-item{display:flex;gap:14px;align-items:start}
+.expect-num-circle{width:28px;height:28px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:12px;color:white;flex-shrink:0;margin-top:1px;font-family:var(--fd);font-weight:400}
+.expect-list-item div h5{font-family:var(--fd);font-size:16px;font-weight:500;color:var(--ink);margin-bottom:3px}
+.expect-list-item div p{font-size:12px;color:var(--ink-mid);line-height:1.6;font-weight:300}
+
+/* FAQ mini */
+.faq-mini{display:flex;flex-direction:column;gap:0;border:1px solid var(--border)}
+.faq-mini-item{padding:16px 18px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .2s}
+.faq-mini-item:last-child{border-bottom:none}
+.faq-mini-item:hover{background:var(--cream)}
+.faq-mini-q{font-size:13px;color:var(--ink);font-weight:400;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.faq-mini-q span{color:var(--gold);font-size:11px;flex-shrink:0}
+.faq-mini-a{font-size:12px;color:var(--ink-mid);line-height:1.65;margin-top:8px;font-weight:300;display:none}
+.faq-mini-item.open .faq-mini-a{display:block}
+.faq-mini-item.open .faq-mini-q span{transform:rotate(180deg)}
+
+/* Contact options */
+.contact-options{display:flex;flex-direction:column;gap:12px}
+.contact-option{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--white);border:1px solid var(--border);text-decoration:none;transition:all .2s}
+.contact-option:hover{border-color:var(--green);background:rgba(45,90,69,.03)}
+.contact-option-icon{width:36px;height:36px;background:rgba(45,90,69,.08);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-option-text{display:flex;flex-direction:column}
+.contact-option-label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-light)}
+.contact-option-val{font-family:var(--fd);font-size:18px;color:var(--green);font-weight:500;line-height:1.2}
+
+/* CONFIRMATION / THANK YOU */
+.form-success{display:none;text-align:center;padding:48px 32px;background:var(--cream);border:1px solid var(--border)}
+.form-success svg{margin:0 auto 20px}
+.form-success h3{font-family:var(--fd);font-size:32px;font-weight:400;color:var(--ink);margin-bottom:12px}
+.form-success p{font-size:14px;color:var(--ink-mid);line-height:1.75;font-weight:300}
+
+/* TRUST STRIP */
+.trust{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{padding:28px 16px;text-align:center;border-right:1px solid var(--border)}
+.trust-item:last-child{border-right:none}
+.trust-num{font-family:var(--fd);font-size:32px;font-weight:400;color:var(--green);line-height:1;margin-bottom:6px}
+.trust-lbl{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light)}
+
+/* FAQ FULL */
+.faq-section{background:var(--white);padding:96px 80px}
+.sec-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.sec-label::before{content:'';display:block;width:24px;height:1px;background:var(--gold)}
+h2.sec-title{font-family:var(--fd);font-size:46px;font-weight:300;line-height:1.12;color:var(--ink);margin-bottom:16px;letter-spacing:-.01em}
+h2.sec-title em{font-style:italic;color:var(--green)}
+.divider{width:44px;height:1px;background:var(--gold);margin:22px 0}
+.faq-accordion{margin-top:48px;border:1px solid var(--border)}
+.faq-acc-item{border-bottom:1px solid var(--border)}
+.faq-acc-item:last-child{border-bottom:none}
+.faq-acc-q{padding:24px 32px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:background .2s;user-select:none}
+.faq-acc-q:hover{background:var(--cream)}
+.faq-acc-q h4{font-family:var(--fd);font-size:20px;font-weight:400;color:var(--ink)}
+.faq-acc-q .toggle{width:28px;height:28px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--gold);font-size:16px;transition:all .2s}
+.faq-acc-item.open .faq-acc-q{background:var(--cream)}
+.faq-acc-item.open .faq-acc-q .toggle{background:var(--green);border-color:var(--green);color:white;transform:rotate(45deg)}
+.faq-acc-a{display:none;padding:0 32px 28px;font-size:14px;color:var(--ink-mid);line-height:1.82;font-weight:300}
+.faq-acc-item.open .faq-acc-a{display:block}
+
+/* FOOTER */
+footer{background:var(--ink);color:#aaa;padding:72px 80px 32px}
+.footer-top{display:grid;grid-template-columns:300px 1fr 1fr;gap:56px;margin-bottom:56px}
+.footer-brand{display:flex;flex-direction:column;gap:18px}
+.footer-logo{display:flex;align-items:center;gap:12px}
+.footer-logo-icon{width:38px;height:38px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.footer-logo-text{font-family:var(--fd);font-size:19px;font-weight:400;color:var(--white)}
+.footer-tagline{font-size:13px;color:#666;line-height:1.75;font-weight:300}
+.footer-col h5{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-light);margin-bottom:20px;font-weight:500}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul li,.footer-col ul li a{font-size:13px;color:#777;text-decoration:none;font-weight:300;transition:color .2s}
+.footer-col ul li a:hover{color:var(--white)}
+.footer-btm{border-top:1px solid rgba(255,255,255,.06);padding-top:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-btm p{font-size:12px;color:#555}
+.footer-btm a{color:#666;text-decoration:none}.footer-btm a:hover{color:var(--white)}
+.crisis{background:rgba(184,150,62,.1);border:1px solid rgba(184,150,62,.2);padding:18px 24px;margin-top:32px;font-size:13px;color:#999;line-height:1.65}
+.crisis a{color:var(--gold-light)}
+
+/* Form validation states */
+.form-group input.error,.form-group select.error,.form-group textarea.error{border-color:#c0392b}
+.field-error{font-size:11px;color:#c0392b;margin-top:4px;display:none}
+.form-group.has-error .field-error{display:block}
+.form-group.has-error input,.form-group.has-error select,.form-group.has-error textarea{border-color:#c0392b}
+
+@media(max-width:1024px){
+  nav{padding:0 24px}.nav-links{gap:18px}
+  .booking-main{grid-template-columns:1fr}
+  .booking-sidebar{position:static;border-top:1px solid var(--border)}
+  .form-area{padding:48px 24px}
+  .booking-sidebar{padding:48px 24px}
+  .mode-select,.service-select,.form-row{grid-template-columns:1fr}
+  .page-hero{padding:64px 24px 0}
+  .trust{grid-template-columns:1fr 1fr}
+  .faq-section,footer{padding-left:24px;padding-right:24px}
+  .steps-indicator{gap:4px}
+  .step-ind-line{max-width:30px}
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  Now Accepting New Clients &nbsp;·&nbsp; <a href="tel:+14703001234">(470) 300-1234</a> &nbsp;·&nbsp; Lawrenceville, GA &nbsp;·&nbsp; Free 15-min consultation available
+</div>
+
+<nav>
+  <a class="logo" href="index.html">
+    <div class="logo-icon">
+      <svg width="30" height="30" viewBox="0 0 44 44" fill="none">
+        <defs><mask id="cm"><rect width="44" height="44" fill="white"/><circle cx="28" cy="19" r="13" fill="black"/></mask></defs>
+        <circle cx="20" cy="22" r="15" fill="white" mask="url(#cm)"/>
+        <path d="M 11 25 Q 15 30 19 25" stroke="#2d5a45" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <circle cx="11.5" cy="20" r="1.4" fill="#2d5a45"/>
+        <circle cx="17.5" cy="18" r="1.4" fill="#2d5a45"/>
+      </svg>
+    </div>
+    <span class="logo-text">my<em>muslim</em>therapists</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="schedule.html" class="nav-cta">Schedule Now</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-art">
+    <svg width="100%" height="100%" viewBox="0 0 1200 400" fill="none" preserveAspectRatio="xMidYMid slice">
+      <g stroke="white" stroke-width="0.5" opacity="0.07" fill="none">
+        <polygon points="80,0 160,45 160,135 80,180 0,135 0,45"/>
+        <polygon points="80,20 140,55 140,125 80,160 20,125 20,55"/>
+        <polygon points="1120,0 1200,45 1200,135 1120,180 1040,135 1040,45"/>
+        <polygon points="1120,20 1180,55 1180,125 1120,160 1060,125 1060,55"/>
+      </g>
+      <g stroke="#b8963e" stroke-width="0.5" opacity="0.12" fill="none">
+        <!-- top left arabesque -->
+        <path d="M 0 0 Q 50 0 50 50 Q 50 0 100 0"/>
+        <path d="M 0 0 Q 0 50 50 50 Q 0 50 0 100"/>
+        <!-- top right arabesque -->
+        <path d="M 1200 0 Q 1150 0 1150 50 Q 1150 0 1100 0"/>
+        <path d="M 1200 0 Q 1200 50 1150 50 Q 1200 50 1200 100"/>
+      </g>
+      <!-- Center star constellation -->
+      <g fill="#b8963e" opacity="0.35">
+        <circle cx="600" cy="40" r="2.5"/>
+        <circle cx="560" cy="60" r="2"/>
+        <circle cx="640" cy="60" r="2"/>
+        <circle cx="580" cy="20" r="1.5"/>
+        <circle cx="620" cy="20" r="1.5"/>
+      </g>
+    </svg>
+  </div>
+  <div class="page-hero-inner">
+    <div class="crumb">
+      <a href="index.html">Home</a><span>›</span>
+      <span style="color:rgba(255,255,255,.7)">Schedule</span>
+    </div>
+    <h1>Book your first<br>session with <em>Amna.</em></h1>
+    <p class="page-hero-sub">Start with a free 15-minute phone consultation — no commitment, no pressure. Just a real conversation to see if we're a good fit.</p>
+
+    <!-- Step indicators -->
+    <div class="steps-indicator">
+      <div class="step-ind">
+        <div class="step-ind-circle active">1</div>
+        <div class="step-ind-label">Fill out<br>the form</div>
+      </div>
+      <div class="step-ind-line"></div>
+      <div class="step-ind">
+        <div class="step-ind-circle">2</div>
+        <div class="step-ind-label">Amna<br>reaches out</div>
+      </div>
+      <div class="step-ind-line"></div>
+      <div class="step-ind">
+        <div class="step-ind-circle">3</div>
+        <div class="step-ind-label">Free 15-min<br>consult</div>
+      </div>
+      <div class="step-ind-line"></div>
+      <div class="step-ind">
+        <div class="step-ind-circle">4</div>
+        <div class="step-ind-label">Book your<br>first session</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST STRIP -->
+<div class="trust">
+  <div class="trust-item">
+    <div class="trust-num">Free</div>
+    <div class="trust-lbl">Initial Consultation</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">&lt; 24h</div>
+    <div class="trust-lbl">Response Time</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">100%</div>
+    <div class="trust-lbl">Confidential</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">1 week</div>
+    <div class="trust-lbl">Avg Time to First Session</div>
+  </div>
+</div>
+
+<!-- BOOKING MAIN -->
+<div class="booking-main">
+
+  <!-- FORM AREA -->
+  <div class="form-area">
+    <div id="form-container">
+      <h2 class="form-section-title">Request an appointment</h2>
+      <p class="form-section-sub">Fill out the form below and Amna will personally reach out within one business day — often the same day. All information is completely confidential.</p>
+
+      <!-- Session type -->
+      <div>
+        <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-light);margin-bottom:12px;font-weight:500">How would you like to be seen?</div>
+        <div class="mode-select">
+          <div class="mode-card selected" onclick="selectMode(this)">
+            <svg class="mode-card-icon" viewBox="0 0 32 32" fill="none" stroke="#2d5a45" stroke-width="1.5">
+              <path d="M 16 4 C 16 4 28 10 28 20 C 28 28 22 30 16 30 C 10 30 4 28 4 20 C 4 10 16 4 16 4Z" opacity="0.3"/>
+              <circle cx="16" cy="16" r="4" fill="#2d5a45" opacity="0.3"/>
+            </svg>
+            <h4>In Person</h4>
+            <p>Lawrenceville, GA office<br>455 Grayson Hwy, Suite 301</p>
+          </div>
+          <div class="mode-card" onclick="selectMode(this)">
+            <svg class="mode-card-icon" viewBox="0 0 32 32" fill="none" stroke="#2d5a45" stroke-width="1.5">
+              <rect x="4" y="6" width="24" height="16" rx="2"/>
+              <path d="M 10 22 L 10 26 M 22 22 L 22 26 M 6 26 L 26 26"/>
+              <circle cx="16" cy="14" r="4" opacity="0.4"/>
+            </svg>
+            <h4>Online (Telehealth)</h4>
+            <p>Secure video session<br>Anywhere in Georgia</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service needed -->
+      <div style="margin-bottom:36px">
+        <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-light);margin-bottom:12px;font-weight:500">What type of support are you looking for?</div>
+        <div class="service-select">
+          <div class="svc-option selected" onclick="selectSvc(this)">Individual Therapy</div>
+          <div class="svc-option" onclick="selectSvc(this)">Couples / Marriage</div>
+          <div class="svc-option" onclick="selectSvc(this)">Family Therapy</div>
+          <div class="svc-option" onclick="selectSvc(this)">Teen / Adolescent</div>
+          <div class="svc-option" onclick="selectSvc(this)">Trauma-Focused</div>
+          <div class="svc-option" onclick="selectSvc(this)">Grief & Loss</div>
+          <div class="svc-option" onclick="selectSvc(this)">Group Therapy</div>
+          <div class="svc-option" onclick="selectSvc(this)">Not Sure Yet</div>
+        </div>
+      </div>
+
+      <hr class="form-divider">
+
+      <!-- Personal info -->
+      <h3 style="font-family:var(--fd);font-size:22px;font-weight:400;color:var(--ink);margin-bottom:24px">Your information</h3>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="required">First Name</label>
+          <input type="text" placeholder="Aisha" id="fname">
+          <div class="field-error">Please enter your first name.</div>
+        </div>
+        <div class="form-group">
+          <label class="required">Last Name</label>
+          <input type="text" placeholder="Khan" id="lname">
+          <div class="field-error">Please enter your last name.</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="required">Email Address</label>
+          <input type="email" placeholder="you@email.com" id="email">
+          <div class="field-error">Please enter a valid email.</div>
+        </div>
+        <div class="form-group">
+          <label class="required">Phone Number</label>
+          <input type="tel" placeholder="(470) 000-0000" id="phone">
+          <div class="field-error">Please enter your phone number.</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Age Range</label>
+          <select id="age">
+            <option value="">Select...</option>
+            <option>14–17 (Teen)</option>
+            <option>18–24</option>
+            <option>25–34</option>
+            <option>35–44</option>
+            <option>45–54</option>
+            <option>55+</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Best Time to Reach You</label>
+          <select id="time">
+            <option value="">Select...</option>
+            <option>Morning (9am – 12pm)</option>
+            <option>Afternoon (12pm – 4pm)</option>
+            <option>Evening (4pm – 7pm)</option>
+            <option>Saturday morning</option>
+            <option>Any time</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>How did you hear about us?</label>
+        <select id="referral">
+          <option value="">Select...</option>
+          <option>Google Search</option>
+          <option>Instagram</option>
+          <option>Facebook</option>
+          <option>Word of mouth / referral</option>
+          <option>Masjid or Islamic center</option>
+          <option>Psychology Today</option>
+          <option>Therapist referral</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <hr class="form-divider">
+
+      <!-- Message -->
+      <h3 style="font-family:var(--fd);font-size:22px;font-weight:400;color:var(--ink);margin-bottom:8px">A little about what's going on</h3>
+      <p style="font-size:13px;color:var(--ink-light);margin-bottom:20px;line-height:1.65">You don't need to write a lot — just a sentence or two is enough. Or leave it blank if you'd prefer to talk first. There's no wrong way to fill this out.</p>
+
+      <div class="form-group">
+        <label>What brings you in? <span style="color:var(--ink-light);font-size:10px;letter-spacing:0;text-transform:none;font-weight:300">(optional)</span></label>
+        <textarea placeholder="Share as much or as little as you're comfortable with. This helps Amna prepare for your consultation." id="message"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Anything else you'd like Amna to know? <span style="color:var(--ink-light);font-size:10px;letter-spacing:0;text-transform:none;font-weight:300">(optional)</span></label>
+        <textarea placeholder="Language preferences, accessibility needs, scheduling constraints, or anything else on your mind." id="notes" style="min-height:80px"></textarea>
+      </div>
+
+      <!-- Privacy note -->
+      <div class="privacy-note">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8963e" stroke-width="1.5" style="flex-shrink:0;margin-top:1px">
+          <rect x="3" y="11" width="18" height="11" rx="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+        <p>Your information is completely confidential and protected under HIPAA. It will never be shared with family members, employers, or anyone outside of your direct care. Submitting this form does not create a therapeutic relationship.</p>
+      </div>
+
+      <button class="submit-btn" onclick="submitForm()">Request My Appointment →</button>
+
+      <div class="or-divider"><span>or reach out directly</span></div>
+
+      <a href="tel:+14703001234" class="phone-cta-btn">
+        Prefer to call?
+        <strong>(470) 300-1234</strong>
+      </a>
+    </div>
+
+    <!-- Success state (hidden until submit) -->
+    <div class="form-success" id="form-success">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" style="display:block">
+        <circle cx="32" cy="32" r="28" fill="#2d5a45" opacity="0.1" stroke="#2d5a45" stroke-width="1.5"/>
+        <path d="M 20 32 L 28 40 L 44 24" stroke="#2d5a45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>Request received — <em>thank you.</em></h3>
+      <p>Amna will personally reach out within one business day to confirm your consultation time. If you need to reach us sooner, please call <a href="tel:+14703001234" style="color:var(--green)">(470) 300-1234</a>.</p>
+      <p style="margin-top:12px">In the meantime, feel free to explore <a href="about.html" style="color:var(--green)">Amna's background</a> or <a href="services.html" style="color:var(--green)">the services offered</a>.</p>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="booking-sidebar">
+
+    <!-- Therapist mini card -->
+    <div class="sidebar-section">
+      <div class="sidebar-label">Your Therapist</div>
+      <div class="therapist-mini">
+        <div class="therapist-mini-avatar">AA</div>
+        <div>
+          <div class="therapist-mini-name">Amna Ahmad</div>
+          <div class="therapist-mini-title">LPC · Licensed Professional Counselor</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- What to expect -->
+    <div class="sidebar-section">
+      <div class="sidebar-label">What Happens Next</div>
+      <div class="expect-list">
+        <div class="expect-list-item">
+          <div class="expect-num-circle">1</div>
+          <div>
+            <h5>We receive your request</h5>
+            <p>Your form is received securely. All information is protected and confidential from this moment forward.</p>
+          </div>
+        </div>
+        <div class="expect-list-item">
+          <div class="expect-num-circle">2</div>
+          <div>
+            <h5>Amna reaches out</h5>
+            <p>Within one business day — usually the same day — Amna will contact you by phone or email to schedule your consult.</p>
+          </div>
+        </div>
+        <div class="expect-list-item">
+          <div class="expect-num-circle">3</div>
+          <div>
+            <h5>Free 15-min consultation</h5>
+            <p>A no-pressure phone call. You'll learn how Amna works, she'll learn what's on your mind, and together you'll decide if it's a fit.</p>
+          </div>
+        </div>
+        <div class="expect-list-item">
+          <div class="expect-num-circle">4</div>
+          <div>
+            <h5>Book your first session</h5>
+            <p>If you'd like to move forward, you'll schedule your first full session. Most new clients are seen within one week.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick FAQ -->
+    <div class="sidebar-section">
+      <div class="sidebar-label">Quick Answers</div>
+      <div class="faq-mini">
+        <div class="faq-mini-item" onclick="toggleFaq(this)">
+          <div class="faq-mini-q">Is the consultation really free? <span>▾</span></div>
+          <div class="faq-mini-a">Yes — completely. The 15-minute phone consultation has no cost and no obligation. It exists entirely to help you decide if working with Amna is right for you.</div>
+        </div>
+        <div class="faq-mini-item" onclick="toggleFaq(this)">
+          <div class="faq-mini-q">How quickly can I be seen? <span>▾</span></div>
+          <div class="faq-mini-a">Most new clients have their first full session within one week of their initial inquiry. Amna responds to all requests within one business day.</div>
+        </div>
+        <div class="faq-mini-item" onclick="toggleFaq(this)">
+          <div class="faq-mini-q">Is this form confidential? <span>▾</span></div>
+          <div class="faq-mini-a">Completely. Your submission is protected under HIPAA and will never be shared with family members, employers, or anyone else without your explicit written consent.</div>
+        </div>
+        <div class="faq-mini-item" onclick="toggleFaq(this)">
+          <div class="faq-mini-q">What if I'm not sure what I need? <span>▾</span></div>
+          <div class="faq-mini-a">That's exactly what the consultation is for. You don't need to have it figured out — just reach out and Amna will help you understand what kind of support might fit best.</div>
+        </div>
+        <div class="faq-mini-item" onclick="toggleFaq(this)">
+          <div class="faq-mini-q">Do you take insurance? <span>▾</span></div>
+          <div class="faq-mini-a">Please ask about payment options during your consultation. Amna will walk you through what's available including self-pay rates and other options for making care accessible.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact alternatives -->
+    <div class="sidebar-section">
+      <div class="sidebar-label">Reach Us Directly</div>
+      <div class="contact-options">
+        <a href="tel:+14703001234" class="contact-option">
+          <div class="contact-option-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2d5a45" stroke-width="1.5">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.13 1 .37 1.97.71 2.91a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 5.55 5.55l.96-.96a2 2 0 0 1 2.11-.45c.94.34 1.91.58 2.91.71A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <div class="contact-option-text">
+            <span class="contact-option-label">Call or Text</span>
+            <span class="contact-option-val">(470) 300-1234</span>
+          </div>
+        </a>
+        <a href="mailto:info@mymuslimtherapists.com" class="contact-option">
+          <div class="contact-option-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2d5a45" stroke-width="1.5">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m2 7 10 7 10-7"/>
+            </svg>
+          </div>
+          <div class="contact-option-text">
+            <span class="contact-option-label">Email</span>
+            <span class="contact-option-val" style="font-size:14px;font-family:var(--fb);font-weight:300">info@mymuslimtherapists.com</span>
+          </div>
+        </a>
+        <div class="contact-option" style="cursor:default">
+          <div class="contact-option-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2d5a45" stroke-width="1.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div class="contact-option-text">
+            <span class="contact-option-label">Office Address</span>
+            <span style="font-size:13px;color:var(--ink-mid);font-weight:300;margin-top:2px;display:block;line-height:1.4">455 Grayson Hwy, Suite 301<br>Lawrenceville, GA 30046</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Office hours -->
+    <div class="sidebar-section">
+      <div class="sidebar-label">Office Hours</div>
+      <div style="background:var(--white);border:1px solid var(--border);padding:20px">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--ink-mid)">
+            <span>Monday – Friday</span>
+            <span style="color:var(--ink)">9:00 AM – 7:00 PM</span>
+          </div>
+          <div style="height:1px;background:var(--border)"></div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--ink-mid)">
+            <span>Saturday</span>
+            <span style="color:var(--ink)">10:00 AM – 2:00 PM</span>
+          </div>
+          <div style="height:1px;background:var(--border)"></div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--ink-mid)">
+            <span>Sunday</span>
+            <span style="color:var(--ink-light)">Closed</span>
+          </div>
+        </div>
+        <p style="font-size:11px;color:var(--ink-light);margin-top:14px;line-height:1.5;font-style:italic">By appointment only. Telehealth sessions available throughout all hours listed.</p>
+      </div>
+    </div>
+
+  </div><!-- /sidebar -->
+
+</div><!-- /booking-main -->
+
+<!-- FULL FAQ -->
+<section class="faq-section">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:0">
+    <div>
+      <div class="sec-label">Frequently Asked</div>
+      <h2 class="sec-title">Everything you might<br>want to <em>know first.</em></h2>
+      <div class="divider"></div>
+    </div>
+    <p style="color:var(--ink-mid);font-size:16px;line-height:1.8;font-weight:300">It's completely normal to have questions before reaching out. These are the ones Amna hears most often — answered honestly.</p>
+  </div>
+  <div class="faq-accordion">
+    <div class="faq-acc-item">
+      <div class="faq-acc-q" onclick="toggleAcc(this)">
+        <h4>Do I have to be religious or practicing to come here?</h4>
+        <div class="toggle">+</div>
+      </div>
+      <div class="faq-acc-a">Not at all. mymuslimtherapists works with Muslims across the full spectrum — from deeply practicing to questioning to culturally Muslim but not religiously active. The space is informed by cultural understanding and Islamic values, but it is not a requirement that clients practice, believe, or identify with Islam in any particular way. You are welcome exactly as you are.</div>
+    </div>
+    <div class="faq-acc-item">
+      <div class="faq-acc-q" onclick="toggleAcc(this)">
+        <h4>Will Amna bring religion or Islam into our sessions?</h4>
+        <div class="toggle">+</div>
+      </div>
+      <div class="faq-acc-a">Only if you want her to. Faith-integrated therapy is offered and meaningful for many clients — but it's always optional and client-directed. Amna will never impose religious framing, quote Quran or hadith without invitation, or assume that faith is relevant to your work. If it's meaningful to you, she'll weave it in. If not, she won't. You set the terms.</div>
+    </div>
+    <div class="faq-acc-item">
+      <div class="faq-acc-q" onclick="toggleAcc(this)">
+        <h4>What if a family member finds out I'm in therapy?</h4>
+        <div class="toggle">+</div>
+      </div>
+      <div class="faq-acc-a">Your privacy is protected under federal law (HIPAA) and Georgia state ethics guidelines. Amna cannot and will not share your participation in therapy with family members, spouses, parents, employers, imams, or anyone else without your explicit written consent. The only exceptions are narrow, legally mandated situations involving immediate safety — and Amna will always explain these limits clearly in your first session.</div>
+    </div>
+    <div class="faq-acc-item">
+      <div class="faq-acc-q" onclick="toggleAcc(this)">
+        <h4>How long does therapy usually take?</h4>
+        <div class="toggle">+</div>
+      </div>
+      <div class="faq-acc-a">It varies significantly by person and goal. Some clients resolve a specific issue in 8–12 sessions. Others find ongoing therapy valuable for a year or more. There's no fixed timeline — and no pressure. In your first session, you and Amna will discuss your goals and what a reasonable timeframe might look like. You can always reassess together as you go. You're never locked in.</div>
+    </div>
+    <div class="faq-acc-item">
+      <div class="faq-acc-q" onclick="toggleAcc(this)">
+        <h4>What should I expect from my very first session?</h4>
+        <div class="toggle">+</div>
+      </div>
+      <div class="faq-acc-a">Your first session is a thorough but relaxed conversation — not a test, not an interrogation, and not something you need to prepare for. Amna will ask about your background, your life, and what's been weighing on you. You share as much or as little as you're comfortable with. The goal of the first session is simply to get to know each other and build a foundation of trust. There are no wrong answers and no judgment.</div>
+    </div>
+    <div class="faq-acc-item">
+      <div class="faq-acc-q" onclick="toggleAcc(this)">
+        <h4>Is online therapy really as effective?</h4>
+        <div class="toggle">+</div>
+      </div>
+      <div class="faq-acc-a">Yes — for most concerns, research consistently shows that telehealth therapy produces outcomes equivalent to in-person sessions. This includes anxiety, depression, relationship issues, life transitions, grief, and many other common presentations. Amna uses a HIPAA-compliant video platform that is secure and stable. The only potential limitation is for certain types of advanced trauma processing work — Amna will be transparent with you if she ever feels in-person would genuinely serve you better.</div>
+    </div>
+    <div class="faq-acc-item">
+      <div class="faq-acc-q" onclick="toggleAcc(this)">
+        <h4>What if Amna and I aren't a good fit?</h4>
+        <div class="toggle">+</div>
+      </div>
+      <div class="faq-acc-a">That's exactly what the free consultation is for — to make sure there's a genuine fit before any commitment. If at any point during the therapeutic process you feel it's not working, Amna will always support you in finding a better match. The therapeutic relationship only works when trust is real, and Amna would rather help you find the right therapist than keep working together out of obligation.</div>
+    </div>
+    <div class="faq-acc-item">
+      <div class="faq-acc-q" onclick="toggleAcc(this)">
+        <h4>Can I bring my spouse or a family member to sessions?</h4>
+        <div class="toggle">+</div>
+      </div>
+      <div class="faq-acc-a">It depends on the type of therapy. Couples sessions, family therapy, and some adolescent therapy involve other people by design. For individual therapy, sessions are one-on-one unless you and Amna discuss and agree to have someone join for a specific session with a clear purpose. Your individual sessions are your space — there's no obligation to include anyone else.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">
+          <svg width="22" height="22" viewBox="0 0 44 44" fill="none">
+            <defs><mask id="fm"><rect width="44" height="44" fill="white"/><circle cx="28" cy="19" r="13" fill="black"/></mask></defs>
+            <circle cx="20" cy="22" r="15" fill="white" mask="url(#fm)"/>
+            <path d="M 11 25 Q 15 30 19 25" stroke="#2d5a45" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="footer-logo-text">mymuslimtherapists</span>
+      </div>
+      <p class="footer-tagline">Compassionate, culturally-informed mental health care for Muslim individuals, couples, and families. Serving Lawrenceville, Georgia and surrounding communities.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navigate</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Amna</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="schedule.html">Schedule Now</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="services.html">Individual Therapy</a></li>
+        <li><a href="services.html">Couples Counseling</a></li>
+        <li><a href="services.html">Family Therapy</a></li>
+        <li><a href="services.html">Online Therapy</a></li>
+        <li><a href="services.html">Adolescent Therapy</a></li>
+        <li><a href="services.html">Group Therapy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="crisis">
+    <strong style="color:#bbb">mymuslimtherapists is not a crisis facility.</strong> If you or someone you know is in a mental health emergency, call or text <a href="tel:988">988</a> (Suicide & Crisis Lifeline) at any time.
+  </div>
+  <div class="footer-btm">
+    <p>© 2025 mymuslimtherapists · Lawrenceville, Georgia · All Rights Reserved.</p>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="accessibility.html">Accessibility</a></p>
+  </div>
+</footer>
+
+<script>
+function selectMode(el) {
+  document.querySelectorAll('.mode-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+}
+function selectSvc(el) {
+  el.classList.toggle('selected');
+}
+function toggleFaq(el) {
+  el.classList.toggle('open');
+}
+function toggleAcc(el) {
+  const item = el.closest('.faq-acc-item');
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-acc-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+function submitForm() {
+  let valid = true;
+  const fields = [
+    { id: 'fname', label: 'First name' },
+    { id: 'lname', label: 'Last name' },
+    { id: 'email', label: 'Email' },
+    { id: 'phone', label: 'Phone' },
+  ];
+  fields.forEach(f => {
+    const el = document.getElementById(f.id);
+    const group = el.closest('.form-group');
+    if (!el.value.trim()) {
+      group.classList.add('has-error');
+      el.classList.add('error');
+      valid = false;
+    } else {
+      group.classList.remove('has-error');
+      el.classList.remove('error');
+    }
+  });
+  // basic email check
+  const emailEl = document.getElementById('email');
+  if (emailEl.value && !emailEl.value.includes('@')) {
+    emailEl.closest('.form-group').classList.add('has-error');
+    emailEl.classList.add('error');
+    valid = false;
+  }
+  if (valid) {
+    document.getElementById('form-container').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+    window.scrollTo({ top: document.querySelector('.booking-main').offsetTop - 100, behavior: 'smooth' });
+  } else {
+    const firstError = document.querySelector('.form-group.has-error input, .form-group.has-error select');
+    if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+</script>
+
+</body>
+</html>
