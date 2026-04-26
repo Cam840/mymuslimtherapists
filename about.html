@@ -203,6 +203,9 @@ footer{background:var(--ink);color:#aaa;padding:72px 80px 32px}
   .value-body{display:none}
 }
   @media(max-width:600px){
+  #email-section{padding:40px 20px !important}
+  #email-inner-grid{grid-template-columns:1fr !important;gap:32px !important}
+  #name-row{grid-template-columns:1fr !important}
   .page-hero-inner{grid-template-columns:1fr}
   .page-hero-right{display:none}
   .page-hero-left{padding:48px 20px}
@@ -294,8 +297,8 @@ footer{background:var(--ink);color:#aaa;padding:72px 80px 32px}
 </div>
 
 <!-- EMAIL AMNA DIRECTLY -->
-<div style="background:var(--cream);border-bottom:1px solid var(--border);padding:64px 80px">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;max-width:1100px;margin:0 auto">
+<div id="email-section" style="background:var(--cream);border-bottom:1px solid var(--border);padding:64px 80px">
+  <div id="email-inner-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;max-width:1100px;margin:0 auto">
 
     <!-- Left: intro text -->
     <div>
@@ -324,7 +327,7 @@ footer{background:var(--ink);color:#aaa;padding:72px 80px 32px}
     <!-- Right: email form -->
     <div>
       <div id="about-form-wrap">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+        <div id="name-row" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
           <div>
             <label style="display:block;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-light);margin-bottom:7px;font-weight:500">First Name <span style="color:var(--gold)">*</span></label>
             <input id="af-fname" type="text" placeholder="Aisha" style="width:100%;border:1px solid var(--border);background:var(--white);padding:13px 15px;font-family:var(--fb);font-size:14px;color:var(--ink);font-weight:300;outline:none;border-radius:0;transition:border-color .2s" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--border)'">
